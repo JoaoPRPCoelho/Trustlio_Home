@@ -1,0 +1,7 @@
+{
+  "id": "example-direct",
+  "name": "Example Brand Store",
+  "program": "direct",
+  "showPrices": false,
+  "buttonLabel": "View at Example Brand Store"
+}

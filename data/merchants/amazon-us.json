@@ -1,0 +1,8 @@
+{
+  "id": "amazon-us",
+  "name": "Amazon",
+  "program": "amazon",
+  "trackingTag": "replace-me-20",
+  "showPrices": false,
+  "buttonLabel": "Check price on Amazon"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "example-robot-vacuum-c",
+  "name": "Example Robot Vacuum C",
+  "brand": "Example Brand",
+  "model": "C",
+  "rubric": "robot-vacuum",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 120,
+    "max": 150,
+    "currency": "USD"
+  },
+  "summary": "Placeholder product used to build the templates. Example Robot Vacuum C is not a real product.",
+  "idealFor": [
+    "Tight budgets"
+  ],
+  "pros": [
+    "Very cheap",
+    "Compact dock"
+  ],
+  "cons": [
+    "No safety listing found",
+    "Random navigation"
+  ],
+  "specs": {
+    "Height (in)": 2.9,
+    "Dock footprint (in)": "10 x 5",
+    "Noise (dB)": 62,
+    "Runtime (min)": 90
+  },
+  "evidence": "research-based",
+  "scores": {
+    "small-space-fit": {
+      "score": 8,
+      "source": "Example source: replace with a real citation"
+    },
+    "performance": {
+      "score": 6,
+      "source": "Example source: replace with a real citation"
+    },
+    "reliability": {
+      "score": 6,
+      "source": "Example source: replace with a real citation"
+    },
+    "safety": {
+      "score": 3,
+      "source": "Example source: replace with a real citation"
+    },
+    "support": {
+      "score": 5,
+      "source": "Example source: replace with a real citation"
+    },
+    "value": {
+      "score": 9,
+      "source": "Example source: replace with a real citation"
+    }
+  },
+  "offers": [
+    {
+      "merchant": "amazon-us",
+      "asin": "B0EXAMPLEC"
+    }
+  ],
+  "lastVerified": "2026-10-26",
+  "example": true
+}

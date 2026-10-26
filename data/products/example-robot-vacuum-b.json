@@ -1,0 +1,73 @@
+{
+  "id": "example-robot-vacuum-b",
+  "name": "Example Robot Vacuum B",
+  "brand": "Example Brand",
+  "model": "B",
+  "rubric": "robot-vacuum",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 450,
+    "max": 520,
+    "currency": "USD"
+  },
+  "summary": "Placeholder product used to build the templates. Example Robot Vacuum B is not a real product.",
+  "idealFor": [
+    "Rugs and pet hair",
+    "One-bedroom apartments"
+  ],
+  "pros": [
+    "Strong suction on rugs",
+    "Self-emptying dock"
+  ],
+  "cons": [
+    "Tall dock needs floor space",
+    "Pricey"
+  ],
+  "specs": {
+    "Height (in)": 3.8,
+    "Dock footprint (in)": "15 x 16",
+    "Noise (dB)": 64,
+    "Runtime (min)": 150
+  },
+  "evidence": "research-based",
+  "scores": {
+    "small-space-fit": {
+      "score": 7,
+      "source": "Example source: replace with a real citation"
+    },
+    "performance": {
+      "score": 9,
+      "source": "Example source: replace with a real citation"
+    },
+    "reliability": {
+      "score": 8,
+      "source": "Example source: replace with a real citation"
+    },
+    "safety": {
+      "score": 8,
+      "source": "Example source: replace with a real citation"
+    },
+    "support": {
+      "score": 8,
+      "source": "Example source: replace with a real citation"
+    },
+    "value": {
+      "score": 6,
+      "source": "Example source: replace with a real citation"
+    }
+  },
+  "offers": [
+    {
+      "merchant": "amazon-us",
+      "asin": "B0EXAMPLEB"
+    },
+    {
+      "merchant": "example-direct",
+      "url": "https://example.com/robot-vacuum-b"
+    }
+  ],
+  "lastVerified": "2026-10-26",
+  "example": true
+}

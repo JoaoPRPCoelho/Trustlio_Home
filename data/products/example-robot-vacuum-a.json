@@ -1,0 +1,69 @@
+{
+  "id": "example-robot-vacuum-a",
+  "name": "Example Robot Vacuum A",
+  "brand": "Example Brand",
+  "model": "A",
+  "rubric": "robot-vacuum",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 250,
+    "max": 300,
+    "currency": "USD"
+  },
+  "summary": "Placeholder product used to build the templates. Example Robot Vacuum A is not a real product.",
+  "idealFor": [
+    "Studios with hard floors",
+    "Low sofas and beds"
+  ],
+  "pros": [
+    "Low 3.1 in profile",
+    "Quiet mode for open-plan studios"
+  ],
+  "cons": [
+    "Small dustbin",
+    "App needed for no-go zones"
+  ],
+  "specs": {
+    "Height (in)": 3.1,
+    "Dock footprint (in)": "12 x 6",
+    "Noise (dB)": 58,
+    "Runtime (min)": 120
+  },
+  "evidence": "research-based",
+  "scores": {
+    "small-space-fit": {
+      "score": 9,
+      "source": "Example source: replace with a real citation"
+    },
+    "performance": {
+      "score": 8,
+      "source": "Example source: replace with a real citation"
+    },
+    "reliability": {
+      "score": 7,
+      "source": "Example source: replace with a real citation"
+    },
+    "safety": {
+      "score": 9,
+      "source": "Example source: replace with a real citation"
+    },
+    "support": {
+      "score": 7,
+      "source": "Example source: replace with a real citation"
+    },
+    "value": {
+      "score": 8,
+      "source": "Example source: replace with a real citation"
+    }
+  },
+  "offers": [
+    {
+      "merchant": "amazon-us",
+      "asin": "B0EXAMPLEA"
+    }
+  ],
+  "lastVerified": "2026-10-26",
+  "example": true
+}
