@@ -1,20 +1,26 @@
 {
   "id": "robot-vacuum",
   "name": "Robot vacuums",
-  "version": "0.1-draft",
+  "version": "1.0",
   "updated": "2026-10-26",
   "criteria": [
     {
-      "id": "small-space-fit",
-      "name": "Small-space fit",
-      "description": "Height (fits under low furniture), dock footprint, noise level and how well it handles tight layouts.",
-      "weight": 50
+      "id": "footprint",
+      "name": "Footprint and clearance",
+      "description": "How much room the robot and its dock take. Robot height: up to 3.25 in = 5, up to 3.6 in = 4, up to 3.9 in = 3, up to 4.2 in = 2, taller = 1. Dock floor area (width × depth): up to 40 sq in = 5, up to 110 = 4, up to 200 = 3, up to 300 = 2, larger = 1. The score is the sum of both, from the maker's published dimensions or an independent measurement.",
+      "weight": 40
     },
     {
-      "id": "performance",
+      "id": "cleaning",
       "name": "Cleaning performance",
-      "description": "Suction, pickup on hard floors and rugs, navigation and obstacle avoidance, based on specs and independent tests.",
-      "weight": 50
+      "description": "Pickup on hard floors, carpet and hair in independent tests. 9–10: top results on all three. 7–8: strong on hard floors, good on carpet, one clear weakness. 5–6: good on hard floors, clear weaknesses on carpet or hair. 4 or less: struggles broadly.",
+      "weight": 35
+    },
+    {
+      "id": "navigation",
+      "name": "Navigation in tight spaces",
+      "description": "Mapping and obstacle avoidance in independent tests, which matter most in small, cluttered rooms. 9–10: avoids nearly every test obstacle. 7–8: good avoidance with occasional misses. 5–6: accurate maps but weak or patchy obstacle avoidance. 4 or less: unreliable mapping or frequently stuck.",
+      "weight": 25
     }
   ]
 }

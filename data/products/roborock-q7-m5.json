@@ -1,0 +1,178 @@
+{
+  "id": "roborock-q7-m5",
+  "name": "Roborock Q7 M5",
+  "brand": "Roborock",
+  "model": "Q7 M5",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 200,
+    "max": 300,
+    "currency": "USD"
+  },
+  "summary": "A budget robot vacuum and mop whose charge-only dock is just 6.3 × 2.8 in, small enough to slide under a sofa. Four independent reviews agree it has strong suction and reliable LiDAR mapping for the price, but two hit the same app bugs, and it has no front obstacle sensor.",
+  "idealFor": [
+    "The smallest apartments, where even a dock tower is too much",
+    "Buyers under $300 who can empty a bin by hand"
+  ],
+  "pros": [
+    "Tiny charge-only dock (6.3 × 2.8 in) that fits under a sofa",
+    "Strong suction for the price in Vacuum Wars bench tests",
+    "Accurate LiDAR mapping; chunky wheels clear tall thresholds"
+  ],
+  "cons": [
+    "Not self-emptying (the Q7 M5+ adds an auto-empty dock)",
+    "No front obstacle sensor: clear cables and socks first",
+    "TechRadar and T3 both hit app bugs: lost room names, zones that didn't save",
+    "Long hair wraps the roller, and the mop leaves floors wet"
+  ],
+  "specs": {
+    "Robot height (in)": 3.9,
+    "Dock (W × D × H, in)": "6.3 × 2.8 × 4",
+    "Dock": "Charge only",
+    "Rated suction (Pa)": "10,000",
+    "Mopping": "Fixed pad, no lift",
+    "Warranty": "1 year"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-26",
+    "summary": "Four independent hands-on reviews agree it vacuums well for the price, but TechRadar and T3 both report app bugs (room names lost, zones not saved), so it loses the recurring-failure check. Roborock publishes dimensions, an IEC-tested suction claim, a 1-year warranty and spare parts support. Safety scores 8/20: no CPSC recalls, but we could not verify a UL/ETL listing or FCC ID for this model.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 4,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "N",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "Partial",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2UsptoTrademark": "Y",
+      "b3YearsOnMarket": 9,
+      "w1WarrantyYears": 1,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "TechRadar: Roborock Q7 M5 robot vacuum review",
+        "url": "https://www.techradar.com/home/robot-vacuums/roborock-q7-m5-robot-vacuum-review",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Ruth Hamilton, July 2025, a week as the main vacuum. Reliable mapping, patchy obstacle avoidance; app forgot room names and failed to save a routine",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "E1",
+        "title": "T3: Roborock Q7 M5 review",
+        "url": "https://www.t3.com/home-living/vacuum-cleaners/roborock-q7-m5",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Lee Bell, July 2025, several weeks. Good on crumbs and pet hair; setup took about five attempts; room names disappeared and zones wouldn't save",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "E1",
+        "title": "Tom's Guide: Roborock Q7 M5 review",
+        "url": "https://www.tomsguide.com/home/smart-home/roborock-q7-m5-robot-vacuum-review",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Amy Cutmore, Oct 2025, three weeks at home. 93.3% on tile, 85% on carpet; 53–72 dB by phone meter at 1 m; stuck under a low TV cabinet; hair wraps the roller",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "E1",
+        "title": "Vacuum Wars: Roborock Q7 M5 and M5+ review",
+        "url": "https://vacuumwars.com/roborock-q7-m5-and-m5-review/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Bought by Vacuum Wars. Suction 2.24 kPa vs 0.83 average, 75% embedded sand, 79% pet hair, 43% hair wrap; no front obstacle avoidance",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'Roborock' since 2021-10-26",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Roborock&RecallDateStart=2021-10-26",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned for Roborock, also none with Roborock as importer",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "P1",
+        "title": "Roborock US: Q7 M5 product page",
+        "url": "https://us.roborock.com/products/roborock-q7-m5",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Robot 12.8 × 3.9 in, 7.28 lb; dock 6.3 × 2.76 × 3.98 in; 10,000 Pa per IEC 62885-2; 3,200 mAh; no materials; 1-year warranty",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B1",
+        "title": "Roborock US privacy policy, contact section",
+        "url": "https://us.roborock.com/pages/privacy-policy",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Beijing Roborock Technology Co., Ltd. postal address; US customer care 1-855-960-4321 and support-us@roborock.com",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B2",
+        "title": "Justia mirror of USPTO records: ROBOROCK (reg. 5547360)",
+        "url": "https://trademarks.justia.com/876/07/roborock-87607288.html",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered Aug 21, 2018 for robotic vacuum cleaners; owner Roborock Technology Co.; filed 2017",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "W1",
+        "title": "Roborock US returns and replacements",
+        "url": "https://us.roborock.com/pages/returns-and-replacements",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "1-year limited warranty from purchase; claims via support@roborock.com with proof of purchase",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "W3",
+        "title": "Roborock US repair policy and spare parts support",
+        "url": "https://us.roborock.com/pages/repair-policy-and-spare-parts-support",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Spare parts on request through support, paid repair out of warranty; no stated years of parts availability",
+        "accessed": "2026-10-26"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "robot-vacuum",
+    "scores": {
+      "footprint": {
+        "score": 8,
+        "source": "Roborock product page: robot 3.9 in tall (3), dock 6.3 × 2.76 in = 17 sq in (5)"
+      },
+      "cleaning": {
+        "score": 7,
+        "source": "Tom's Guide 93.3% on tile and 85% on carpet; Vacuum Wars 75% sand, 79% pet hair, above-average hair wrap"
+      },
+      "navigation": {
+        "score": 5,
+        "source": "Accurate LiDAR maps (TechRadar, T3), but no front obstacle sensor (Vacuum Wars) and patchy avoidance"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "roborock-us",
+      "url": "https://us.roborock.com/products/roborock-q7-m5"
+    }
+  ],
+  "lastVerified": "2026-10-26"
+}
