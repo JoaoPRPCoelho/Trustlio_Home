@@ -67,7 +67,7 @@ export default async function SubcategoryHub({ params }: PageProps<"/[subcategor
                 href={reviewPath(p)}
                 className="flex items-center gap-3 rounded-lg border border-border bg-white p-3 hover:border-accent"
               >
-                <TrustScoreBadge score={p.trust.total} />
+                <TrustScoreBadge trust={p.trustScore} />
                 <span className="font-medium">{p.name}</span>
               </Link>
             </li>

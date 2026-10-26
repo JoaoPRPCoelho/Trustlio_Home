@@ -14,6 +14,7 @@ import {
   type SubcategoryId,
 } from "./schemas";
 import { computeTrustScore, type TrustScore } from "./trust-score";
+import { computeFitScore, type FitScore } from "./fit-score";
 import { resolveOffers, type ResolvedOffer } from "./affiliate";
 
 // All data lives in the repo and is read once per build. Nothing here runs in
@@ -60,9 +61,11 @@ function load() {
     );
     // Fail the build early on any broken reference.
     for (const p of products.values()) {
-      const rubric = rubrics.get(p.rubric);
-      if (!rubric) throw new Error(`Product "${p.id}" uses unknown rubric "${p.rubric}"`);
-      computeTrustScore(p, rubric);
+      if (p.fit) {
+        const rubric = rubrics.get(p.fit.rubric);
+        if (!rubric) throw new Error(`Product "${p.id}" uses unknown rubric "${p.fit.rubric}"`);
+        computeFitScore(p, rubric);
+      }
       resolveOffers(p, merchants);
     }
     cache = { rubrics, merchants, products };
@@ -71,18 +74,20 @@ function load() {
 }
 
 export type ProductView = Omit<Product, "offers"> & {
-  trust: TrustScore;
+  trustScore: TrustScore;
+  fitScore?: FitScore;
   offers: ResolvedOffer[];
-  rubricName: string;
+  rubricName?: string;
 };
 
 function view(p: Product): ProductView {
   const { rubrics, merchants } = load();
-  const rubric = rubrics.get(p.rubric)!;
+  const rubric = p.fit ? rubrics.get(p.fit.rubric)! : undefined;
   return {
     ...p,
-    trust: computeTrustScore(p, rubric),
-    rubricName: rubric.name,
+    trustScore: computeTrustScore(p.trust.inputs, p.evidence === "hands-on-tested"),
+    fitScore: rubric ? computeFitScore(p, rubric) : undefined,
+    rubricName: rubric?.name,
     offers: resolveOffers(p, merchants),
   };
 }

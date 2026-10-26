@@ -8,41 +8,13 @@
       "id": "small-space-fit",
       "name": "Small-space fit",
       "description": "Height (fits under low furniture), dock footprint, noise level and how well it handles tight layouts.",
-      "weight": 25
+      "weight": 50
     },
     {
       "id": "performance",
       "name": "Cleaning performance",
       "description": "Suction, pickup on hard floors and rugs, navigation and obstacle avoidance, based on specs and independent tests.",
-      "weight": 25
-    },
-    {
-      "id": "reliability",
-      "name": "Reliability",
-      "description": "Recurring failure patterns in verified owner reviews and forums, build quality, battery longevity.",
-      "weight": 20
-    },
-    {
-      "id": "safety",
-      "name": "Safety and certifications",
-      "description": "Battery and electrical safety listings (UL/ETL), recall history (CPSC).",
-      "weight": 10,
-      "critical": {
-        "minimum": 4,
-        "cap": 50
-      }
-    },
-    {
-      "id": "support",
-      "name": "Support and warranty",
-      "description": "Warranty length, availability of parts and consumables, return policy.",
-      "weight": 10
-    },
-    {
-      "id": "value",
-      "name": "Value",
-      "description": "What it delivers for its price compared with other robot vacuums.",
-      "weight": 10
+      "weight": 50
     }
   ]
 }

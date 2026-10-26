@@ -8,10 +8,14 @@ Read `README.md` first for how products, rubrics and guides fit together.
 
 - Never write "we tested", "in our testing" or similar unless the product's
   `evidence` is `hands-on-tested`. Research-based pages say what the score is based on.
-- Every criterion score needs a `source`: a URL or a precise citation. Never
+- Every Trust Score check is backed by an entry in `trust.sources`, and every
+  fit criterion score needs a `source`: a URL or a precise citation. Never
   invent specs, prices, test results, owner quotes or certifications. If you
   can't find it, leave the product out or ask.
 - Don't write Amazon prices into content or data. Use `priceBand`.
+- Never use Amazon reviews, star ratings or review counts, in content or as
+  Trust Score evidence (Associates Program Policies). The schema rejects
+  Amazon URLs as sources.
 - Don't add `AggregateRating` or user-review markup anywhere.
 - Product images from Amazon may only come from its API or SiteStripe.
 
