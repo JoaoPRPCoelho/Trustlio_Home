@@ -1,0 +1,13 @@
+// Static-only Worker: Cloudflare serves the HTML that `next build` writes to
+// out/, with no Worker script and no OpenNext adapter. `_redirects` in out/
+// (generated from the product data) is applied natively.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "trustlio-home",
+  "compatibility_date": "2026-10-23",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

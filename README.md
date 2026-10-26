@@ -57,12 +57,18 @@ the sitemap. Replace them with real products before launch.
 - [ ] Set the rubric weights (`data/rubrics/robot-vacuum.json` is a draft).
 - [ ] Replace the example products and guide.
 
-## Deploying to Cloudflare Pages
+## Deploying to Cloudflare
 
-Connect this repository in Cloudflare Pages with:
+The site deploys as a static-only Cloudflare Worker (Workers Builds).
+`wrangler.jsonc` tells Cloudflare to serve `out/` as static assets, so no
+Worker script and no OpenNext adapter are involved. `_redirects` in `out/` is
+applied natively.
+
+Workers Builds settings:
 
 - Build command: `npm run build`
-- Build output directory: `out`
+- Deploy command: `npx wrangler deploy`
 - Environment variable: `NODE_VERSION=22`
 
-Every push to `main` deploys; every pull request gets a preview URL.
+Every push to `main` deploys. To check the output locally:
+`npm run build && npx wrangler dev`.
