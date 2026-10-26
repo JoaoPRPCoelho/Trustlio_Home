@@ -15,7 +15,7 @@ export default function About() {
         <h1>About {site.name}</h1>
         <p>
           {site.name} compares the gadgets and tools that make life in a small home easier. Every
-          product gets a trust score from a published rubric, with the sources behind it.
+          product gets a Trust Score from public, verifiable evidence, with the sources behind it.
         </p>
         <h2>Who writes this</h2>
         <p>{site.defaultAuthor}. Bio coming soon.</p>

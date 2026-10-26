@@ -49,24 +49,52 @@ const itemList = (items: string[]) => ({
   itemListElement: items.map((name, i) => ({ "@type": "ListItem", position: i + 1, name })),
 });
 
-export const productReview = (p: ProductView, author: string) => ({
-  "@context": "https://schema.org",
-  "@type": "Review",
-  name: `${p.name} review`,
-  url: absoluteUrl(reviewPath(p)),
-  itemReviewed: productNode(p),
-  reviewRating: {
-    "@type": "Rating",
-    ratingValue: p.trust.total,
-    bestRating: 100,
-    worstRating: 0,
-  },
-  author: person(author),
-  publisher: { "@type": "Organization", name: site.name },
-  dateModified: p.lastVerified,
-  positiveNotes: itemList(p.pros),
-  negativeNotes: itemList(p.cons),
-});
+// Review rating markup only for products we used ourselves: Google's review
+// snippet rules exclude reviews not based on a genuine experience. Research-based
+// products publish the trust score as a product property instead.
+export const productReview = (p: ProductView, author: string) => {
+  const trustProperty =
+    p.trustScore.total === null
+      ? {}
+      : {
+          additionalProperty: {
+            "@type": "PropertyValue",
+            name: `${site.name} Trust Score (methodology v${p.trustScore.version})`,
+            value: p.trustScore.total,
+            minValue: 0,
+            maxValue: 100,
+            url: absoluteUrl("/methodology/trust-score/"),
+          },
+        };
+
+  if (p.evidence !== "hands-on-tested" || p.trustScore.total === null) {
+    return {
+      "@context": "https://schema.org",
+      ...productNode(p),
+      url: absoluteUrl(reviewPath(p)),
+      ...trustProperty,
+    };
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    name: `${p.name} review`,
+    url: absoluteUrl(reviewPath(p)),
+    itemReviewed: { ...productNode(p), ...trustProperty },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: p.trustScore.total,
+      bestRating: 100,
+      worstRating: 0,
+    },
+    author: person(author),
+    publisher: { "@type": "Organization", name: site.name },
+    dateModified: p.trust.reviewed,
+    positiveNotes: itemList(p.pros),
+    negativeNotes: itemList(p.cons),
+  };
+};
 
 export const guideArticle = (
   meta: GuideMeta,

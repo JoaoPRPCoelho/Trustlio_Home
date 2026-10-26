@@ -2,7 +2,7 @@ import Link from "next/link";
 import { formatPriceBand } from "@/lib/affiliate";
 import { getProduct, type ProductView } from "@/lib/data";
 import { reviewPath } from "@/lib/paths";
-import { EvidenceTag, TrustScoreBadge } from "./trust-score";
+import { EvidenceTag, TrustScoreBadge, trustScoreText } from "./trust-score";
 
 export function BuyButtons({ product }: { product: ProductView }) {
   return (
@@ -34,7 +34,7 @@ export function ProductCard({ id, award }: { id: string; award?: string }) {
       className="not-prose my-6 rounded-lg border border-border bg-white p-5"
     >
       <div className="flex items-start gap-4">
-        <TrustScoreBadge score={product.trust.total} />
+        <TrustScoreBadge trust={product.trustScore} />
         <div className="flex-1">
           {award && (
             <p className="text-xs font-semibold uppercase tracking-wide text-accent">{award}</p>
@@ -100,10 +100,20 @@ export function ComparisonTable({ ids }: { ids: string[] }) {
             <td className="py-2 pr-4 text-muted">Trust score</td>
             {products.map((p) => (
               <td key={p.id} className="py-2 pr-4 font-semibold text-accent">
-                {p.trust.total}/100
+                {trustScoreText(p.trustScore)}
               </td>
             ))}
           </tr>
+          {products.some((p) => p.fitScore) && (
+            <tr className="border-b border-border">
+              <td className="py-2 pr-4 text-muted">Small-space fit</td>
+              {products.map((p) => (
+                <td key={p.id} className="py-2 pr-4">
+                  {p.fitScore ? `${p.fitScore.total}/100` : "—"}
+                </td>
+              ))}
+            </tr>
+          )}
           <tr className="border-b border-border">
             <td className="py-2 pr-4 text-muted">Price range</td>
             {products.map((p) => (

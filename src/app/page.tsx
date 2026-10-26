@@ -11,8 +11,8 @@ export default function Home() {
         <h1 className="text-3xl font-semibold">{site.name}</h1>
         <p className="max-w-2xl text-lg text-muted">{site.description}</p>
         <p className="max-w-2xl text-muted">
-          Every product gets a trust score from a published rubric, with the source behind each
-          criterion. We say plainly whether we tested it ourselves.
+          Every product gets a Trust Score from public, verifiable evidence, with a link behind
+          every check. We say plainly whether we tested it ourselves.
         </p>
       </section>
       <section className="grid gap-4 sm:grid-cols-2">

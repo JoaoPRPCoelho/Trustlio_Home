@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Breadcrumbs, JsonLd, PageShell } from "@/components/layout";
 import { AffiliateDisclosure, ExampleBanner } from "@/components/notices";
 import { BuyButtons } from "@/components/product";
-import { EvidenceTag, TrustScoreBreakdown } from "@/components/trust-score";
+import {
+  EvidenceTag,
+  FitScoreBreakdown,
+  TrustScoreBreakdown,
+  TrustSources,
+} from "@/components/trust-score";
 import { formatPriceBand } from "@/lib/affiliate";
 import { getProduct, getProducts } from "@/lib/data";
 import { hubPath, reviewPath } from "@/lib/paths";
@@ -49,8 +54,6 @@ export default async function ReviewPage({
       <header className="space-y-2">
         <h1 className="text-3xl font-semibold">{product.name} review</h1>
         <p className="flex flex-wrap items-center gap-2 text-sm text-muted">
-          <span>{product.rubricName}</span>
-          <span>·</span>
           <span>{formatPriceBand(product.priceBand)}</span>
           <EvidenceTag level={product.evidence} />
           <span>· Last verified {product.lastVerified}</span>
@@ -66,7 +69,15 @@ export default async function ReviewPage({
         <BuyButtons product={product} />
       </section>
 
-      <TrustScoreBreakdown trust={product.trust} />
+      <TrustScoreBreakdown
+        trust={product.trustScore}
+        data={product.trust}
+        handsOnTested={product.evidence === "hands-on-tested"}
+      />
+
+      {product.fitScore && product.rubricName && (
+        <FitScoreBreakdown fit={product.fitScore} rubricName={product.rubricName} />
+      )}
 
       <section className="grid gap-6 sm:grid-cols-2">
         <div>
@@ -102,23 +113,30 @@ export default async function ReviewPage({
       </section>
 
       <section>
-        <h2 className="text-xl font-semibold">Sources behind the score</h2>
-        <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
-          {product.trust.lines.map((line) => (
-            <li key={line.id}>
-              <span className="font-medium">{line.name}:</span>{" "}
-              {line.source.startsWith("http") ? (
-                <a href={line.source} className="underline" rel="nofollow noopener">
-                  {line.source}
-                </a>
-              ) : (
-                line.source
-              )}
-              {line.note && <span className="text-muted"> ({line.note})</span>}
-            </li>
-          ))}
-        </ul>
+        <h2 className="text-xl font-semibold">Sources behind the Trust Score</h2>
+        <TrustSources data={product.trust} />
       </section>
+
+      {product.fitScore && (
+        <section>
+          <h2 className="text-xl font-semibold">Sources behind the fit rating</h2>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
+            {product.fitScore.lines.map((line) => (
+              <li key={line.id}>
+                <span className="font-medium">{line.name}:</span>{" "}
+                {line.source.startsWith("http") ? (
+                  <a href={line.source} className="underline" rel="nofollow noopener">
+                    {line.source}
+                  </a>
+                ) : (
+                  line.source
+                )}
+                {line.note && <span className="text-muted"> ({line.note})</span>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <JsonLd data={productReview(product, site.defaultAuthor)} />
     </PageShell>

@@ -42,3 +42,6 @@ next-env.d.ts
 
 # wrangler
 .wrangler/
+
+# CPSC recall check output
+recalls-report.json

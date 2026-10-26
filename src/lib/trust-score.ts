@@ -1,80 +1,101 @@
-import type { Product, Rubric } from "./schemas";
+import type { TrustInputs } from "./schemas";
 
-export type ScoreLine = {
-  id: string;
+// Trust score v1.0: how safe a purchase is, from public, verifiable evidence.
+// Five fixed pillars worth 100 points, the same for every category, after two
+// gates. It never uses Amazon reviews, ratings or prices, and commission never
+// enters it. Mirrors the published methodology and the scoring sheet.
+
+export const METHODOLOGY_VERSION = "1.0";
+
+export type PillarKey = "evidence" | "safety" | "specs" | "brand" | "warranty";
+
+export type Pillar = {
+  key: PillarKey;
   name: string;
-  weight: number;
-  score: number;
-  source: string;
-  note?: string;
-  capped: boolean;
+  points: number;
+  max: number;
 };
+
+export type TrustStatus = "scored" | "active-recall" | "not-enough-evidence";
+export type TrustBand = "Excellent" | "Good" | "Fair" | "Poor";
+export type TrustConfidence = "High" | "Medium" | "Low";
 
 export type TrustScore = {
-  total: number;
-  uncapped: number;
-  cappedBy: string[];
-  lines: ScoreLine[];
-  rubricVersion: string;
+  status: TrustStatus;
+  // null when a gate stops the score from being published.
+  total: number | null;
+  band: TrustBand | null;
+  confidence: TrustConfidence | null;
+  pillars: Pillar[];
+  version: string;
 };
 
-// Trust score = 10 × Σ(wᵢ·sᵢ) / Σwᵢ, rounded, then limited by any critical
-// criterion that falls below its minimum. Commission never enters the formula.
-export function computeTrustScore(product: Product, rubric: Rubric): TrustScore {
-  if (product.rubric !== rubric.id) {
-    throw new Error(
-      `Product "${product.id}" uses rubric "${product.rubric}", not "${rubric.id}"`,
-    );
-  }
+const yn = (v: "Y" | "N", points: number) => (v === "Y" ? points : 0);
+const ypn = (v: "Y" | "Partial" | "N", full: number, half: number) =>
+  v === "Y" ? full : v === "Partial" ? half : 0;
+const round1 = (n: number) => Math.round(n * 10) / 10;
 
-  const missing = rubric.criteria.filter((c) => !product.scores[c.id]);
-  if (missing.length) {
-    throw new Error(
-      `Product "${product.id}" is missing scores for: ${missing.map((c) => c.id).join(", ")}`,
-    );
-  }
-  const unknown = Object.keys(product.scores).filter(
-    (id) => !rubric.criteria.some((c) => c.id === id),
-  );
-  if (unknown.length) {
-    throw new Error(
-      `Product "${product.id}" scores criteria not in rubric "${rubric.id}": ${unknown.join(", ")}`,
-    );
-  }
+export function computeTrustScore(i: TrustInputs, handsOnTested: boolean): TrustScore {
+  const evidence =
+    (i.e1IndependentSources >= 3 ? 10 : i.e1IndependentSources === 2 ? 5 : 0) +
+    ypn(i.e2Consensus, 10, 5) +
+    yn(i.e3NoRecurringFailure, 10);
 
-  let weighted = 0;
-  let weights = 0;
-  let cap = 100;
-  const cappedBy: string[] = [];
+  // When no certification applies to the category, S1 + S3 are scaled to 20.
+  const safety =
+    i.s2CertificationApplies === "Y"
+      ? yn(i.s1NoBrandRecalls5y, 8) + yn(i.s2CertificationVerified, 8) + yn(i.s3MaterialsWarnings, 4)
+      : round1(((yn(i.s1NoBrandRecalls5y, 8) + yn(i.s3MaterialsWarnings, 4)) * 20) / 12);
 
-  const lines = rubric.criteria.map((criterion) => {
-    const entry = product.scores[criterion.id];
-    weighted += criterion.weight * entry.score;
-    weights += criterion.weight;
+  const specs =
+    ypn(i.p1SpecsPublished, 8, 4) + ypn(i.p2MeasurableClaims, 6, 3) + yn(i.p3ClaimsConfirmed, 6);
 
-    const capped = !!criterion.critical && entry.score < criterion.critical.minimum;
-    if (capped) {
-      cap = Math.min(cap, criterion.critical!.cap);
-      cappedBy.push(criterion.id);
-    }
+  const brand =
+    yn(i.b1SiteContactAddress, 5) +
+    yn(i.b2UsptoTrademark, 5) +
+    (i.b3YearsOnMarket >= 3 ? 5 : i.b3YearsOnMarket >= 1 ? 2 : 0);
 
-    return {
-      id: criterion.id,
-      name: criterion.name,
-      weight: criterion.weight,
-      score: entry.score,
-      source: entry.source,
-      note: entry.note,
-      capped,
-    };
+  const warranty =
+    (i.w1WarrantyYears >= 2 ? 8 : i.w1WarrantyYears >= 1 ? 5 : 0) +
+    yn(i.w2WarrantyTermsClear, 4) +
+    yn(i.w3PartsOrSupport, 3);
+
+  const pillars: Pillar[] = [
+    { key: "evidence", name: "Independent evidence", points: evidence, max: 30 },
+    { key: "safety", name: "Safety & compliance", points: safety, max: 20 },
+    { key: "specs", name: "Specs & claims transparency", points: specs, max: 20 },
+    { key: "brand", name: "Brand accountability", points: brand, max: 15 },
+    { key: "warranty", name: "Warranty & support", points: warranty, max: 15 },
+  ];
+
+  const gated = (status: TrustStatus): TrustScore => ({
+    status,
+    total: null,
+    band: null,
+    confidence: null,
+    pillars,
+    version: METHODOLOGY_VERSION,
   });
+  if (i.activeRecall === "Y") return gated("active-recall");
+  if (i.e1IndependentSources < 2) return gated("not-enough-evidence");
 
-  const uncapped = Math.round((10 * weighted) / weights);
+  const total = Math.round(pillars.reduce((sum, p) => sum + p.points, 0));
   return {
-    total: Math.min(uncapped, cap),
-    uncapped,
-    cappedBy,
-    lines,
-    rubricVersion: rubric.version,
+    status: "scored",
+    total,
+    band: total >= 85 ? "Excellent" : total >= 70 ? "Good" : total >= 55 ? "Fair" : "Poor",
+    confidence:
+      handsOnTested || i.e1IndependentSources >= 5
+        ? "High"
+        : i.e1IndependentSources >= 3
+          ? "Medium"
+          : "Low",
+    pillars,
+    version: METHODOLOGY_VERSION,
   };
 }
+
+export const trustStatusLabel: Record<Exclude<TrustStatus, "scored">, string> = {
+  "active-recall": "Not recommended: active recall",
+  "not-enough-evidence": "Not enough evidence yet",
+};

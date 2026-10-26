@@ -6,6 +6,8 @@ export const site = {
   description:
     "Scored, side-by-side comparisons of the gadgets and tools that make small-space living easier.",
   defaultAuthor: "João Coelho",
+  // Placeholder until the mailbox exists.
+  correctionsEmail: "corrections@trustliohome.com",
 };
 
 export const subcategories: Record<

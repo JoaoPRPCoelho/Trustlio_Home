@@ -21,9 +21,9 @@ export default function Disclosure() {
         </p>
         <p>As an Amazon Associate we earn from qualifying purchases.</p>
         <p>
-          Commissions never affect our trust scores. Scores come from a published rubric, and we
-          earn the same commission whether a product scores well or badly. See{" "}
-          <Link href="/methodology/trust-score/">how the trust score works</Link>.
+          Commissions never affect our Trust Scores. Scores come from fixed, published checks, and
+          we earn the same commission whether a product scores well or badly. See{" "}
+          <Link href="/methodology/trust-score/">how the Trust Score works</Link>.
         </p>
         <p>
           We only say a product was tested when we used it ourselves. Otherwise the page says the

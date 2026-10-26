@@ -3,7 +3,6 @@
   "name": "Example Robot Vacuum C",
   "brand": "Example Brand",
   "model": "C",
-  "rubric": "robot-vacuum",
   "subcategories": [
     "small-space"
   ],
@@ -31,30 +30,60 @@
     "Runtime (min)": 90
   },
   "evidence": "research-based",
-  "scores": {
-    "small-space-fit": {
-      "score": 8,
-      "source": "Example source: replace with a real citation"
+  "trust": {
+    "reviewed": "2026-10-26",
+    "summary": "Placeholder summary for Example Robot Vacuum C, which is not a real product.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 1,
+      "e2Consensus": "N",
+      "e3NoRecurringFailure": "N",
+      "s1NoBrandRecalls5y": "N",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "Y",
+      "p1SpecsPublished": "Y",
+      "p2MeasurableClaims": "Partial",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2UsptoTrademark": "Y",
+      "b3YearsOnMarket": 4,
+      "w1WarrantyYears": 1,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
     },
-    "performance": {
-      "score": 6,
-      "source": "Example source: replace with a real citation"
-    },
-    "reliability": {
-      "score": 6,
-      "source": "Example source: replace with a real citation"
-    },
-    "safety": {
-      "score": 3,
-      "source": "Example source: replace with a real citation"
-    },
-    "support": {
-      "score": 5,
-      "source": "Example source: replace with a real citation"
-    },
-    "value": {
-      "score": 9,
-      "source": "Example source: replace with a real citation"
+    "sources": [
+      {
+        "item": "E1",
+        "title": "Example independent review 1",
+        "url": "https://example.com/example-robot-vacuum-c/review-1",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Placeholder: replace with a real source",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC recalls search",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Example",
+        "type": "government",
+        "realUse": false,
+        "note": "Placeholder: replace with a real source",
+        "accessed": "2026-10-26"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "robot-vacuum",
+    "scores": {
+      "small-space-fit": {
+        "score": 8,
+        "source": "Example source: replace with a real citation"
+      },
+      "performance": {
+        "score": 6,
+        "source": "Example source: replace with a real citation"
+      }
     }
   },
   "offers": [

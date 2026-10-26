@@ -10,6 +10,8 @@ export const subcategoryIds = ["small-space", "home-office"] as const;
 export const SubcategoryId = z.enum(subcategoryIds);
 export type SubcategoryId = z.infer<typeof SubcategoryId>;
 
+// Fit rubrics: per-category criteria for the separate "small-space fit" rating.
+// The trust score does not use them (see TrustSchema below).
 export const CriterionSchema = z.object({
   id: z.string(),
   name: z.string(),
@@ -63,6 +65,68 @@ export const CriterionScoreSchema = z.object({
   note: z.string().optional(),
 });
 
+// Trust score v1.0 inputs: one answer per rubric check, the same for every
+// category. Field names match the published methodology and the scoring sheet.
+const YN = z.enum(["Y", "N"]);
+const YPN = z.enum(["Y", "Partial", "N"]);
+const count = z.number().int().nonnegative();
+
+export const TrustInputsSchema = z.object({
+  activeRecall: YN,
+  e1IndependentSources: count,
+  e2Consensus: YPN,
+  e3NoRecurringFailure: YN,
+  s1NoBrandRecalls5y: YN,
+  s2CertificationApplies: YN,
+  s2CertificationVerified: YN,
+  s3MaterialsWarnings: YN,
+  p1SpecsPublished: YPN,
+  p2MeasurableClaims: YPN,
+  p3ClaimsConfirmed: YN,
+  b1SiteContactAddress: YN,
+  b2UsptoTrademark: YN,
+  b3YearsOnMarket: z.number().nonnegative(),
+  w1WarrantyYears: z.number().nonnegative(),
+  w2WarrantyTermsClear: YN,
+  w3PartsOrSupport: YN,
+});
+export type TrustInputs = z.infer<typeof TrustInputsSchema>;
+
+export const TrustSourceSchema = z.object({
+  // The rubric check it supports, e.g. "E1", "S2", "W1".
+  item: z.string().regex(/^[ESPBW][1-3]$/, "Use a rubric item like E1 or W2"),
+  title: z.string(),
+  // Amazon reviews and ratings may not be displayed or used (Associates
+  // Program Policies), so Amazon pages never count as evidence.
+  url: z.url().refine((u) => !/(^|\.)(amazon\.|amzn\.)/.test(new URL(u).hostname), "Amazon is not a score source"),
+  type: z.enum(["editorial", "reddit", "youtube", "forum", "manufacturer", "government", "certification"]),
+  // True when the source shows first-hand use of the product.
+  realUse: z.boolean(),
+  note: z.string(),
+  accessed: isoDate,
+});
+export type TrustSource = z.infer<typeof TrustSourceSchema>;
+
+export const TrustSchema = z
+  .object({
+    reviewed: isoDate,
+    // 2–3 factual sentences shown as "Why this score".
+    summary: z.string().max(600),
+    inputs: TrustInputsSchema,
+    sources: z.array(TrustSourceSchema),
+  })
+  .refine(
+    (t) =>
+      new Set(t.sources.filter((s) => s.item === "E1" && s.realUse).map((s) => s.url)).size ===
+      t.inputs.e1IndependentSources,
+    "e1IndependentSources must equal the number of E1 sources with realUse",
+  )
+  .refine(
+    (t) => !(t.inputs.s2CertificationApplies === "N" && t.inputs.s2CertificationVerified === "Y"),
+    "A certification can't be verified when none applies",
+  );
+export type Trust = z.infer<typeof TrustSchema>;
+
 export const OfferSchema = z
   .object({
     merchant: z.string(),
@@ -77,7 +141,6 @@ export const ProductSchema = z.object({
   brand: z.string(),
   model: z.string(),
   gtin: z.string().optional(),
-  rubric: z.string(),
   subcategories: z.array(SubcategoryId).min(1),
   priceBand: z.object({
     min: z.number().nonnegative(),
@@ -90,7 +153,14 @@ export const ProductSchema = z.object({
   cons: z.array(z.string()).min(1),
   specs: z.record(z.string(), z.union([z.string(), z.number()])),
   evidence: EvidenceLevel,
-  scores: z.record(z.string(), CriterionScoreSchema),
+  trust: TrustSchema,
+  // Optional small-space fit rating against the category's fit rubric.
+  fit: z
+    .object({
+      rubric: z.string(),
+      scores: z.record(z.string(), CriterionScoreSchema),
+    })
+    .optional(),
   offers: z.array(OfferSchema).min(1),
   lastVerified: isoDate,
   // Placeholder data used to develop the templates. Example pages are

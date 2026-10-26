@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Breadcrumbs, JsonLd, PageShell } from "@/components/layout";
 import { AffiliateDisclosure, ExampleBanner } from "@/components/notices";
 import { ComparisonTable, ProductCard } from "@/components/product";
+import { trustScoreText } from "@/components/trust-score";
 import { getGuide, getProduct, guideSlugs } from "@/lib/data";
 import { guidePath, hubPath } from "@/lib/paths";
 import { SubcategoryId } from "@/lib/schemas";
@@ -76,7 +77,7 @@ export default async function GuidePage({ params }: PageProps<"/[subcategory]/[s
               <a href={`#${product.id}`} className="underline">
                 {product.name}
               </a>{" "}
-              <span className="text-muted">({product.trust.total}/100)</span>
+              <span className="text-muted">(Trust Score {trustScoreText(product.trustScore)})</span>
             </li>
           ))}
         </ol>
