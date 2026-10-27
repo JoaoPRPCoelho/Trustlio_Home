@@ -1,0 +1,186 @@
+{
+  "id": "tapo-rv30-max-plus",
+  "name": "Tapo RV30 Max Plus",
+  "brand": "Tapo",
+  "model": "RV30 Max Plus",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 250,
+    "max": 330,
+    "currency": "USD"
+  },
+  "summary": "A budget robot vacuum and mop with a self-emptying dock that stands only 9 × 6.5 in on the floor, the smallest auto-empty dock in this guide. Independent tests found strong pickup on hard floors and accurate LiDAR maps, but weak obstacle detection and a basic mop.",
+  "idealFor": [
+    "Studios and one-bedrooms with mostly hard floors",
+    "Tight budgets that still want a self-emptying dock"
+  ],
+  "pros": [
+    "Self-emptying dock with a 9 × 6.5 in footprint and a 3 L bag",
+    "Strong debris pickup on hardwood in Tom's Guide tests",
+    "Precise LiDAR maps, with up to four saved maps"
+  ],
+  "cons": [
+    "Weak obstacle detection: pick up cables and light objects first",
+    "Basic mop plate that can't lift over carpet",
+    "Picked up 68% of pet hair on carpet in Tom's Guide tests"
+  ],
+  "specs": {
+    "Robot height (in)": 3.9,
+    "Dock (W × D × H, in)": "9 × 6.5 × 13",
+    "Dock": "Auto-empty, 3 L bag",
+    "Rated suction (Pa)": "5,300",
+    "Mopping": "Mop plate, no lift",
+    "Warranty": "1 year"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-26",
+    "summary": "Three independent hands-on reviews agree it cleans hard floors well and maps accurately, and none report a failure in common. TP-Link publishes measurable specs, a 1-year warranty with an RMA process, a US address and replacement parts. Safety scores 8/20: no CPSC recalls for the brand, but we could not verify a UL/ETL listing or FCC ID for this model, and materials aren't declared.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 3,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "Partial",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2UsptoTrademark": "Y",
+      "b3YearsOnMarket": 6,
+      "w1WarrantyYears": 1,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "Tom's Guide: TP-Link Tapo RV30 Max Plus review",
+        "url": "https://www.tomsguide.com/home/tp-link-tapo-rv30-max-plus-review",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Christian de Looper, Feb 2025. Lab pickup on hardwood 98.6% Cheerios, 95.7% litter, 93.4% pet hair; on carpet 99.7%, 89%, 67.8%. Mop can't lift over carpet",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "E1",
+        "title": "nextpit: Tapo RV30 Max Plus review",
+        "url": "https://nextpit.com/tapo-rv30-max-plus-review",
+        "type": "editorial",
+        "realUse": true,
+        "note": "84% oats and 81% sand on tile, 69% sand on carpet; precise LiDAR map; obstacle detection weak",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "E1",
+        "title": "netzwelt: TP-Link Tapo RV30 Max Plus Testbericht",
+        "url": "https://www.netzwelt.de/saugroboter/tp-link-tapo-rv30-max-plus-testbericht.html",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Richard W. Schaber, Nov 2024 (German). Grade 2.7; precise mapping, nearly 3 h runtime; cheap plastics, doesn't detect cables or fringes",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'TP-Link' since 2021-10-26",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=TP-Link&RecallDateStart=2021-10-26",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned for TP-Link or Tapo",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "S3",
+        "title": "Tapo RV30 Max Plus installation and user guide",
+        "url": "https://www.tp-link.com/us/document/50267/",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Important safety instructions published; materials not declared; no FCC ID or UL/ETL mark in the guide",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "P1",
+        "title": "Tapo RV30 Max Plus datasheet",
+        "url": "https://www.tp-link.com/us/document/50263/",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Robot 13 × 3.9 in, dock 9 × 6.5 × 13 in, 5,300 Pa, 52–55 dB, up to 150 min, 3 L bag; no weight or materials",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B1",
+        "title": "Tapo RV30 Max Plus user guide, manufacturer details",
+        "url": "https://www.tp-link.com/us/document/50267/",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "TP-Link Systems Inc., 10 Mauchly, Irvine, CA 92618; US support line 1-866-225-8139",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B2",
+        "title": "Justia mirror of USPTO records: TAPO (serial 97519944)",
+        "url": "https://trademarks.justia.com/975/19/tapo-97519944.html",
+        "type": "government",
+        "realUse": false,
+        "note": "Filed 2022 by TP-Link Corporation Limited, covers robotic vacuum cleaners; application pending, not yet registered",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B3",
+        "title": "fccid.io: TP-Link grantee TE7, Tapo smart bulb Wi-Fi module",
+        "url": "https://fccid.io/TE7",
+        "type": "government",
+        "realUse": false,
+        "note": "FCC filing TE7LM500 for a Tapo product dated 2020-03-11, so the Tapo line has sold for over 6 years",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "W1",
+        "title": "TP-Link US replacement and warranty",
+        "url": "https://www.tp-link.com/us/support/replacement-warranty/",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Robot vacuums bought from 9/1/2023: 1-year warranty, accessories 30 days; RMA process via myproducts.tp-link.com and phone support",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "W3",
+        "title": "Tapo US store: RV30 Max Plus",
+        "url": "https://us.store.tapo.com/products/tapo-rv30-max-plus-5300pa-suction-robot-vacuum-mop-with-auto-empty-dock",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Sells replacement accessory kit (RVA105), dust bags (RVA202) and mop cloths (RVA301)",
+        "accessed": "2026-10-26"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "robot-vacuum",
+    "scores": {
+      "footprint": {
+        "score": 7,
+        "source": "Tapo datasheet: robot 3.9 in tall (3), dock 9 × 6.5 in = 58.5 sq in (4)"
+      },
+      "cleaning": {
+        "score": 7,
+        "source": "Tom's Guide lab tests (90.7 overall, 67.8% pet hair on carpet); nextpit 84% oats on tile, 69% sand on carpet"
+      },
+      "navigation": {
+        "score": 5,
+        "source": "Accurate LiDAR maps but weak obstacle detection in nextpit and netzwelt tests"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "tapo-us",
+      "url": "https://us.store.tapo.com/products/tapo-rv30-max-plus-5300pa-suction-robot-vacuum-mop-with-auto-empty-dock"
+    }
+  ],
+  "lastVerified": "2026-10-26"
+}

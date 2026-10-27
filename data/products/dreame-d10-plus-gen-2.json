@@ -1,0 +1,170 @@
+{
+  "id": "dreame-d10-plus-gen-2",
+  "name": "Dreame D10 Plus Gen 2",
+  "brand": "Dreame",
+  "model": "D10 Plus Gen 2",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 300,
+    "max": 400,
+    "currency": "USD"
+  },
+  "summary": "A budget self-emptying robot vacuum that is excellent on hard floors and quiet while it runs, with a 3-year warranty on the robot and base. It is weak on carpet hair and obstacles, its base is bigger than the Tapo's, and Dreame now lists it as discontinued.",
+  "idealFor": [
+    "Hard-floor apartments where noise matters",
+    "Buyers who value a longer warranty"
+  ],
+  "pros": [
+    "Self-emptying into a 4 L bag (Dreame claims up to 90 days)",
+    "100% hair and cereal pickup on hard floors in Tom's Guide tests",
+    "Quiet while vacuuming: 55.4 dB in TechGearLab tests",
+    "3-year warranty on robot and base (battery 1 year)"
+  ],
+  "cons": [
+    "Discontinued by Dreame: buy only while new stock lasts",
+    "Weak on carpet hair (40% on low pile in Tom's Guide tests)",
+    "Weak obstacle avoidance: clear cords and socks first",
+    "Base takes 11.7 × 16 in of floor"
+  ],
+  "specs": {
+    "Robot height (in)": 3.8,
+    "Dock (W × D × H, in)": "11.7 × 16 × 16.8",
+    "Dock": "Auto-empty, 4 L bag",
+    "Rated suction (Pa)": "6,000",
+    "Mopping": "Detachable pad, no lift",
+    "Warranty": "3 years (battery 1 year)"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-26",
+    "summary": "Two independent hands-on reviews agree it cleans hard floors very well and struggles with carpet hair, so confidence is low. Dreame offers a 3-year warranty on the robot and base, but its US site lists no postal address. Safety scores 8/20: no CPSC recalls, but we could not verify a UL/ETL listing or FCC ID. Dreame lists this model under discontinued products.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 2,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "Partial",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "N",
+      "b2UsptoTrademark": "Y",
+      "b3YearsOnMarket": 7,
+      "w1WarrantyYears": 3,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "Tom's Guide: Dreame D10 Plus Gen 2 review",
+        "url": "https://www.tomsguide.com/home/dreame-d10-plus-gen-2-review",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Ashley Thieme, May 2026, home and lab tests. Hard floor: 100% hair and Rice Krispies; low-pile carpet hair 40%, high-pile 12%; obstacle avoidance hit or miss; short dock cord",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "E1",
+        "title": "TechGearLab: Dreame D10 Plus Gen 2 review",
+        "url": "https://www.techgearlab.com/reviews/smart-home/robot-vacuum/dreame-d10-plus-gen-2",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Rachael Lamore, Apr 2026, bought by GearLab. 55.4 dB vacuuming, 78 dB emptying; 76% carpet, 56% pet hair; navigation 5.3/10; notes Dreame phased it out for the D20 Plus",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'Dreame' since 2021-10-26",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Dreame&RecallDateStart=2021-10-26",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned for Dreame",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "P1",
+        "title": "Dreame US store: D10 Plus Gen 2",
+        "url": "https://store.dreametech.com/robot-vacuum/d10-plus-gen-2",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Robot 350 × 350 × 96.3 mm, 3.23 kg; base 298 × 406 × 427 mm, 3.75 kg; 6,000 Pa; 5,200 mAh; 4 L bag; only the brush material listed",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B1",
+        "title": "Dreame terms and conditions",
+        "url": "https://www.dreametech.com/pages/terms-conditions",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Dreame International (HongKong) Limited, phone +1 (866) 977-5177 and support.na@dreame.tech; no postal address",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B2",
+        "title": "Justia mirror of USPTO records: DREAME (serial 90517485)",
+        "url": "https://trademarks.justia.com/905/17/dreame-90517485.html",
+        "type": "government",
+        "realUse": false,
+        "note": "Filed 2021 by Dreame Technology (Tianjin), covers robot vacuum cleaners; application pending, not registered",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B3",
+        "title": "Justia: Dreame Technology (Suzhou) trademark filings",
+        "url": "https://trademarks.justia.com/owners/dreame-technology-suzhou-co-ltd-5081398",
+        "type": "government",
+        "realUse": false,
+        "note": "DREAMETECH (serial 88488684) filed June 2019 for robotic vacuum cleaners",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "W1",
+        "title": "Dreame US after-sales policy",
+        "url": "https://support.dreametech.com/hc/en-us/articles/16736241560079-After-Sales-Policy",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Robot body and bases 3 years, battery 1 year, consumables 1 month; claim by email or phone; only for purchases from Dreame or its Amazon US store",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "W3",
+        "title": "Dreame: accessories for discontinued models, D10 Plus Gen 2",
+        "url": "https://www.dreametech.com/collections/robot-vacuum-accessories-for-discontinued-models/robot-vacuums-d10-plus-gen-2",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Dust bags and accessory kits still sold; model listed as discontinued",
+        "accessed": "2026-10-26"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "robot-vacuum",
+    "scores": {
+      "footprint": {
+        "score": 6,
+        "source": "Dreame product page: robot 3.8 in tall (3), base 298 × 406 mm = about 187 sq in (3)"
+      },
+      "cleaning": {
+        "score": 6,
+        "source": "Tom's Guide: 100% on hard floors, 40% hair on low-pile and 12% on high-pile carpet; TechGearLab 56% pet hair"
+      },
+      "navigation": {
+        "score": 5,
+        "source": "Accurate maps but navigation and obstacle avoidance 5.3/10 in TechGearLab tests; hit or miss in Tom's Guide"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "dreame-us",
+      "url": "https://store.dreametech.com/robot-vacuum/d10-plus-gen-2"
+    }
+  ],
+  "lastVerified": "2026-10-26"
+}

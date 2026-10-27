@@ -1,0 +1,169 @@
+{
+  "id": "roborock-saros-10r",
+  "name": "Roborock Saros 10R",
+  "brand": "Roborock",
+  "model": "Saros 10R",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 900,
+    "max": 1600,
+    "currency": "USD"
+  },
+  "summary": "A premium robot vacuum and mop that is about 3.1 in tall, low enough for most sofas and bed frames, with the best obstacle avoidance in this guide. The trade-offs are the price and a large, heavy dock.",
+  "idealFor": [
+    "Homes with low sofas and bed frames",
+    "Cluttered rooms where obstacle avoidance matters most"
+  ],
+  "pros": [
+    "About 3.1 in tall: the lowest robot in this guide",
+    "Avoided 24 of 24 obstacles in Vacuum Wars tests, the best in this guide",
+    "Full-service dock: auto-empty, mop washing, optional removable mops"
+  ],
+  "cons": [
+    "Expensive, even on sale",
+    "Large dock (about 15 × 18.7 in, around 25 lb) that needs clear space",
+    "Pet hair clogged the dock's emptying tube in TechRadar's test",
+    "Vacuuming is loud, according to MacRumors"
+  ],
+  "specs": {
+    "Robot height (in)": 3.1,
+    "Dock (W × D × H, in)": "15 × 18.7 × 19.2",
+    "Dock": "Auto-empty, mop wash and dry",
+    "Rated suction (Pa)": "20,000",
+    "Mopping": "Dual spinning pads, auto removal",
+    "Warranty": "1 year"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-26",
+    "summary": "Three independent hands-on reviews agree it cleans and navigates very well and fits under low furniture. Roborock publishes a 1-year warranty, spare parts support and a contact address, but its product page omits suction and dock dimensions. Safety scores 8/20: no CPSC recalls for Roborock, but we could not verify a UL/ETL listing or FCC ID for this model.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 3,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "Partial",
+      "p2MeasurableClaims": "Partial",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2UsptoTrademark": "Y",
+      "b3YearsOnMarket": 9,
+      "w1WarrantyYears": 1,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "BGR: Roborock Saros 10R review",
+        "url": "https://bgr.com/reviews/roborock-saros-10r-review/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "José Adorno, Feb 2025, about a month. 3.14 in tall; tangled cables until a no-go zone was set, then reliable avoidance",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "E1",
+        "title": "MacRumors: Roborock Saros 10R review",
+        "url": "https://macrumors.com/review/roborock-saros-10r",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Juli Clover, May 2025, two months of daily use; unit provided by Roborock. Thorough on wood and cat hair, rarely stuck; loud vacuuming; heavy dock",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "E1",
+        "title": "TechRadar: Roborock Saros 10 vs Saros 10R",
+        "url": "https://www.techradar.com/home/robot-vacuums/roborock-saros-10r-vs-saros-10-robot-vacuum",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Derek Adams, May 2025, side-by-side use. 7.98 cm tall, dock 18.7 × 15 × 19.2 in; better mopping than the Saros 10; pet hair clogged the dock tube",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'Roborock' since 2021-10-26",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Roborock&RecallDateStart=2021-10-26",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned for Roborock, also none with Roborock as importer",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "P1",
+        "title": "Roborock US: Saros 10R product page",
+        "url": "https://us.roborock.com/products/roborock-saros-10r",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Robot weight 9.04 lb, dock 25.13 lb, 6,400 mAh; dimensions listed inconsistently; no suction figure, dock dimensions or materials",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B1",
+        "title": "Roborock US privacy policy, contact section",
+        "url": "https://us.roborock.com/pages/privacy-policy",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Beijing Roborock Technology Co., Ltd. postal address; US customer care 1-855-960-4321",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B2",
+        "title": "Justia mirror of USPTO records: ROBOROCK (reg. 5547360)",
+        "url": "https://trademarks.justia.com/876/07/roborock-87607288.html",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered Aug 21, 2018 for robotic vacuum cleaners; filed 2017",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "W1",
+        "title": "Roborock US returns and replacements",
+        "url": "https://us.roborock.com/pages/returns-and-replacements",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "1-year limited warranty from purchase; claims via support@roborock.com with proof of purchase",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "W3",
+        "title": "Roborock US repair policy and spare parts support",
+        "url": "https://us.roborock.com/pages/repair-policy-and-spare-parts-support",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Spare parts on request through support, paid repair out of warranty",
+        "accessed": "2026-10-26"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "robot-vacuum",
+    "scores": {
+      "footprint": {
+        "score": 7,
+        "source": "BGR and TechRadar: robot 3.14 in tall (5); TechRadar dock 18.7 × 15 in = 280 sq in (2)"
+      },
+      "cleaning": {
+        "score": 8,
+        "source": "Vacuum Wars test data (vacuumwars.com/compare/robot-vacuums/roborock_saros_10r/): 80 carpet deep clean, 91.5 pet hair, 0 hair tangle; MacRumors thorough on wood and cat hair"
+      },
+      "navigation": {
+        "score": 9,
+        "source": "Vacuum Wars Mova P10 Pro Ultra review lists the Saros 10R at 24/24 obstacles; MacRumors rarely stuck; BGR needed a no-go zone for cables"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "roborock-us",
+      "url": "https://us.roborock.com/products/roborock-saros-10r"
+    }
+  ],
+  "lastVerified": "2026-10-26"
+}

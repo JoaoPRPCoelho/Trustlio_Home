@@ -1,0 +1,178 @@
+{
+  "id": "eufy-omni-e25",
+  "name": "eufy Omni E25",
+  "brand": "eufy",
+  "model": "Omni E25",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 600,
+    "max": 1300,
+    "currency": "USD"
+  },
+  "summary": "An all-in-one robot vacuum and roller mop whose dock empties the bin and washes and dries the mop. Independent tests put it near the top for pet hair, tangle resistance and obstacle avoidance, but the dock is the biggest in this guide and the robot is 4.4 in tall.",
+  "idealFor": [
+    "Pet owners who can spare floor space for a dock",
+    "Apartments with a mix of carpet and hard floors"
+  ],
+  "pros": [
+    "Dock empties the bin, washes and dries the roller mop",
+    "93% pet hair pickup and 0% hair wrap in Vacuum Wars tests",
+    "Avoided 21 of 24 obstacles in Vacuum Wars tests"
+  ],
+  "cons": [
+    "Biggest dock here: 14.6 × 19.1 in and 17.3 in tall",
+    "4.4 in tall, so it won't fit under many low sofas",
+    "Initial mapping took several attempts in TechRadar's test",
+    "Weak edge cleaning"
+  ],
+  "specs": {
+    "Robot height (in)": 4.4,
+    "Dock (W × D × H, in)": "14.6 × 19.1 × 17.3",
+    "Dock": "Auto-empty, mop wash and dry, 3 L bag",
+    "Rated suction (Pa)": "20,000",
+    "Mopping": "Self-cleaning roller mop, lifts on carpet",
+    "Warranty": "1 year"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-26",
+    "summary": "Three independent hands-on reviews agree it vacuums and mops well, with strong pet-hair results. eufy publishes measurable claims, a 12-month warranty with a claim process and a US address, but its US product page lists no dimensions or weight. Safety scores 8/20: no CPSC recalls for eufy robot vacuums (Anker's recalls were power banks, speakers and coolers), but we could not verify a UL/ETL listing or FCC ID.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 3,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "N",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2UsptoTrademark": "Y",
+      "b3YearsOnMarket": 10,
+      "w1WarrantyYears": 1,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "TechRadar: eufy E25 Omni review",
+        "url": "https://www.techradar.com/home/robot-vacuums/eufy-e25-omni-review",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Tim Gee, Dec 2025, used over two floors. Robot 4.4 in tall, dock 14.6 × 19.1 × 17.3 in; excellent max-mode mopping, strong obstacle avoidance; mapping needed several attempts",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "E1",
+        "title": "Vacuum Wars: eufy E25 Omni review",
+        "url": "https://vacuumwars.com/eufy-e25-omni-robot-vacuum-review/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Bought by Vacuum Wars. 88% carpet deep clean, 93% pet hair, 0% hair wrap, 21/24 obstacles; below-average suction and crevice pickup",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "E1",
+        "title": "Expert Reviews: eufy Omni E25 review",
+        "url": "https://www.expertreviews.co.uk/home-garden/vacuums-cleaning/eufy-omni-e25-review",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Alun Taylor, Sept 2025, two-bed home. Near 100% rice and dog hair; quiet; bulky base; wedged a wheel once",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'eufy' since 2021-10-26",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=eufy&RecallDateStart=2021-10-26",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned for eufy. A title search for Anker returns power banks, speakers, coolers, a scooter and a bath seat, none for floor care",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "P1",
+        "title": "eufy US: Robot Vacuum Omni E25",
+        "url": "https://www.eufy.com/products/t2353111",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "20,000 Pa, 3 L bag for up to 75 days, 1.8 L dirty-water tank; no robot or dock dimensions, weight or materials in the page text",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B1",
+        "title": "eufy privacy policy, details of controllers",
+        "url": "https://www.eufy.com/policies/privacy-policy",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Fantasia Trading LLC, 5350 Ontario Mills Pkwy, Suite 100, Ontario, CA 91764; support@eufy.com",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B2",
+        "title": "Justia mirror of USPTO records: EUFY ROBOVAC (reg. 5448539)",
+        "url": "https://trademarks.justia.com/876/14/eufy-87614083.html",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered April 2018 for robotic vacuum cleaners; owner Anker Innovations Limited. EUFY reg. 5570593 also covers robotic vacuums",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "B3",
+        "title": "Justia mirror of USPTO records: EUFY (reg. 5570593)",
+        "url": "https://trademarks.justia.com/878/23/eufy-87823810.html",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered 2018 for vacuum cleaners and robotic cleaners; first EUFY filings date from 2016",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "W1",
+        "title": "eufy warranty policy",
+        "url": "https://www.eufy.com/policies/refund-policy",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "RoboVac robot vacuums 12 months; claim with proof of purchase, serial number and photos or video, after pre-approval from support",
+        "accessed": "2026-10-26"
+      },
+      {
+        "item": "W3",
+        "title": "eufy: dirty water tank for Omni E25",
+        "url": "https://www.eufy.com/ca/products/t2353111-81",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "eufy sells replacement parts for the E25, such as the dirty water tank",
+        "accessed": "2026-10-26"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "robot-vacuum",
+    "scores": {
+      "footprint": {
+        "score": 3,
+        "source": "TechRadar specs: robot 4.4 in tall (1), dock 14.6 × 19.1 in = 279 sq in (2)"
+      },
+      "cleaning": {
+        "score": 8,
+        "source": "Vacuum Wars 88% carpet deep clean, 93% pet hair, 0% wrap; below-average crevice pickup; Expert Reviews near 100% on rice and dog hair"
+      },
+      "navigation": {
+        "score": 8,
+        "source": "Vacuum Wars 21/24 obstacles and fast coverage; TechRadar strong avoidance, but fussy first mapping"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "eufy-us",
+      "url": "https://www.eufy.com/products/t2353111"
+    }
+  ],
+  "lastVerified": "2026-10-26"
+}
