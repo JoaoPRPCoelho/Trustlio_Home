@@ -42,6 +42,7 @@ const productNode = (p: ProductView) => ({
   brand: { "@type": "Brand", name: p.brand },
   model: p.model,
   ...(p.gtin ? { gtin: p.gtin } : {}),
+  ...(p.images.length ? { image: p.images.map((i) => absoluteUrl(i.src)) } : {}),
 });
 
 const itemList = (items: string[]) => ({

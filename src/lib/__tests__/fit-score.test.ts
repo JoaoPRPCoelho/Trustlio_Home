@@ -42,6 +42,8 @@ const product = (scores: Record<string, number>): Product => ({
     ),
   },
   offers: [{ merchant: "amazon-us", asin: "B000000000" }],
+  images: [],
+  videos: [],
   lastVerified: "2026-10-26",
   example: false,
 });
