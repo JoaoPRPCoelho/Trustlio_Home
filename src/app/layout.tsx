@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JsonLd, SiteFooter, SiteHeader } from "@/components/layout";
+import { Analytics, JsonLd, SiteFooter, SiteHeader } from "@/components/layout";
 import { site } from "@/lib/site";
 import { organization, website } from "@/lib/structured-data";
 import "./globals.css";
@@ -19,6 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteHeader />
         {children}
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );

@@ -8,6 +8,9 @@ export const site = {
   defaultAuthor: "João Coelho",
   // Placeholder until the mailbox exists.
   correctionsEmail: "corrections@trustliohome.com",
+  // Cloudflare Web Analytics site token (public: it ships in every page).
+  // Cookieless, so no consent banner. Empty means no beacon is rendered.
+  cloudflareAnalyticsToken: "",
 };
 
 export const subcategories: Record<

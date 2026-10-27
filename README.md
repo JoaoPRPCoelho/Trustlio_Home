@@ -77,6 +77,7 @@ sitemap. None is left in the repo; the flag stays for building new templates.
 
 - [ ] Replace `replace-me-20` in `data/merchants/amazon-us.json` with the real Associates tracking tag.
 - [ ] Review the disclosure, privacy and about pages (marked DRAFT in the source).
+- [ ] Set `cloudflareAnalyticsToken` in `src/lib/site.ts` (Cloudflare dashboard → Web Analytics → the site → Manage site, manual JS snippet).
 - [x] Set the fit rubric weights (`data/rubrics/robot-vacuum.json` v1.0).
 - [ ] Add Amazon offers (ASIN from SiteStripe) to the real products once the Associates account is approved; they link to the brand stores until then.
 - [ ] Create the corrections mailbox in `src/lib/site.ts` (`correctionsEmail`).

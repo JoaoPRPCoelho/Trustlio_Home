@@ -12,6 +12,20 @@ export function JsonLd({ data }: { data: object | object[] }) {
   );
 }
 
+// The manual snippet, so it works whether or not Cloudflare can inject it into
+// static-asset responses. Turn off automatic setup in the dashboard to avoid
+// counting visits twice.
+export function Analytics() {
+  if (!site.cloudflareAnalyticsToken) return null;
+  return (
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon={JSON.stringify({ token: site.cloudflareAnalyticsToken })}
+    />
+  );
+}
+
 export function Breadcrumbs({ crumbs }: { crumbs: { name: string; path: string }[] }) {
   return (
     <>
