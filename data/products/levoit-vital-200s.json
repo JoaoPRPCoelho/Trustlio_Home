@@ -1,0 +1,179 @@
+{
+  "id": "levoit-vital-200s",
+  "name": "Levoit Vital 200S",
+  "brand": "Levoit",
+  "model": "Vital 200S (LAP-V201S)",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 150,
+    "max": 200,
+    "currency": "USD"
+  },
+  "summary": "A slim, rectangular purifier rated at 250 cfm, enough for most studios. Three independent hands-on reviews agree it cleans fast, and HouseFresh's measured CADR matches Levoit's rating. Its bonded filter has to be replaced as one piece, and the carbon layer can run out before the year is up.",
+  "idealFor": [
+    "Most studios up to about 400 sq ft",
+    "Buyers who want an app and auto mode at a mid-range price"
+  ],
+  "pros": [
+    "HouseFresh measured 249 cfm (PM1) at top speed, in line with the 250 cfm rating",
+    "Cleared HouseFresh's 728 cu ft test room in 23 minutes",
+    "App with auto mode and filter tracking; no ionizer"
+  ],
+  "cons": [
+    "Bonded filter: the carbon often runs out within about 6 months (HouseFresh)",
+    "Less cleaning at quiet speeds than the Coway (128 vs 151 cfm under 45 dBA)",
+    "The air quality sensor needs cleaning about every two months"
+  ],
+  "specs": {
+    "Rated CADR, smoke (cfm)": 250,
+    "Footprint (W × D, in)": "15.6 × 8.5",
+    "Height (in)": 19.8,
+    "Weight (lb)": 13.2,
+    "Noise at 3 ft, sleep to max (dBA)": "38.3–57.7 (HouseFresh)",
+    "Filter life (months)": 12,
+    "Ionizer": "None",
+    "App": "Yes"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-27",
+    "summary": "Three independent hands-on reviews agree it cleans quickly, and HouseFresh's measured CADR matches the rating. Levoit publishes measurable specs, a 2-year warranty with a clear claim process and a US address. Safety scores 8/20: no CPSC recalls for the brand, but we couldn't find this model on CARB's public list, and materials aren't declared.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 3,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "Partial",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2UsptoTrademark": "Y",
+      "b3YearsOnMarket": 7,
+      "w1WarrantyYears": 2,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "HouseFresh: Levoit Vital 200S review",
+        "url": "https://housefresh.com/levoit-vital-200s-review/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Danny Ashton, bought with own money and used at home for over two years. PM1 CADR 249 cfm at top, 128 cfm under 45 dBA; test room cleared in 23 min; 38.3–57.7 dBA at 3 ft; bonded filter, carbon often spent within 6 months",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "E1",
+        "title": "Live Science: Levoit Vital 200S review",
+        "url": "https://www.livescience.com/levoit-vital-200s-review",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Joanne Lewsley, May 2023, a week in a 140 sq ft bedroom with a particle meter. Incense PM2.5 down 97.9% in 15 min; about 24 dB on auto, up to 54 dB at max; found it large and boxy",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "E1",
+        "title": "Reviewed: Levoit Vital 200S air purifier review",
+        "url": "https://reviewed.com/home-outdoors/content/levoit-vital-200s-air-purifier-review",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Gabriel Morgan, tested by Dr. Dave Ellerby, Aug 2023. Particle and VOC removal in Reviewed's top 10; lab-tested the pet and toxin filter options; no defects reported",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'Levoit' since 2021-10-27",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Levoit&RecallDateStart=2021-10-27",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned; none with Levoit as importer or VeSync as manufacturer either",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "S2",
+        "title": "California Air Resources Board: List of CARB-certified air cleaning devices",
+        "url": "https://ww2.arb.ca.gov/list-carb-certified-air-cleaning-devices",
+        "type": "certification",
+        "realUse": false,
+        "note": "LAP-V201S not found in the part of the list we could read (notifications from Dec 2025 on). Levoit shows a CARB logo on the product page, but we count only listings we can verify",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "P1",
+        "title": "Levoit US: Vital 200S-P product page",
+        "url": "https://levoit.com/products/vital-200s-p-smart-air-purifier",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Model LAP-V201S-WUS; 250 cfm CADR; 388 sq ft at 4.8 ACH; 15.6 × 8.5 × 19.8 in; 23–54 dB; 50 W; no weight or materials listed",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "B1",
+        "title": "Levoit Limited Product Warranty",
+        "url": "https://levoit.com/pages/warranty-policy-levoit",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Arovast Corporation, 1202 N. Miller St., Suite A, Anaheim, CA 92806; toll-free 1-855-686-3835",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "B2",
+        "title": "Justia mirror of USPTO records: LEVOIT CORE (reg. 6604736)",
+        "url": "https://trademarks.justia.com/886/11/levoit-88611849.html",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered Jan 4, 2022 for air purifiers (class 11); first use July 2019",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "W1",
+        "title": "Levoit Limited Product Warranty",
+        "url": "https://levoit.com/pages/warranty-policy-levoit",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "2 years from purchase, no registration needed; claims through support.levoit.com with proof of purchase; repair, replace or refund",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "W3",
+        "title": "Levoit US: Vital 200S-P product page",
+        "url": "https://levoit.com/products/vital-200s-p-smart-air-purifier",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Replacement filters sold by Levoit: standard, pet, toxin and smoke versions",
+        "accessed": "2026-10-27"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "air-purifier",
+    "scores": {
+      "coverage": {
+        "score": 9,
+        "source": "Levoit rates CADR 250 cfm; HouseFresh measured 249 cfm PM1 at top speed"
+      },
+      "quiet": {
+        "score": 7,
+        "source": "HouseFresh: 128 cfm PM1 CADR under 45 dBA at 3 ft"
+      },
+      "footprint": {
+        "score": 7,
+        "source": "Levoit product page: 15.6 × 8.5 in = 133 sq in"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "levoit-us",
+      "url": "https://levoit.com/products/vital-200s-p-smart-air-purifier"
+    }
+  ],
+  "lastVerified": "2026-10-27"
+}

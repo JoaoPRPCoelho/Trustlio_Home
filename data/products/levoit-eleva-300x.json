@@ -1,0 +1,170 @@
+{
+  "id": "levoit-eleva-300x",
+  "name": "Levoit Eleva 300X",
+  "brand": "Levoit",
+  "model": "Eleva 300X (LAP-C341S)",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 100,
+    "max": 150,
+    "currency": "USD"
+  },
+  "summary": "A small cylinder launched in 2026, with an AHAM Verifide CADR of 161 cfm, enough for a studio up to about 250 sq ft. HouseFresh named it the best small purifier for most people. It's new, so only two independent reviews exist so far.",
+  "idealFor": [
+    "Small studios and alcoves up to about 250 sq ft",
+    "Tight floor space: about 9.4 in across"
+  ],
+  "pros": [
+    "AHAM Verifide CADR (161 cfm); HouseFresh measured 165 cfm",
+    "Separate HEPA (rated up to 2 years) and carbon filters, replaced on their own",
+    "CARB certification verified; Energy Star 3.0"
+  ],
+  "cons": [
+    "Too small for studios much over 250 sq ft",
+    "Clearly audible at top speed (55.4 dBA at 3 ft)",
+    "New model: only two independent reviews so far"
+  ],
+  "specs": {
+    "Rated CADR, smoke (cfm)": 161,
+    "Footprint (W × D, in)": "9.4 × 9.4",
+    "Height (in)": 15.1,
+    "Weight (lb)": 9.9,
+    "Noise at 3 ft, sleep to max (dBA)": "35.8–55.4 (HouseFresh)",
+    "Filter life (months)": "HEPA up to 24, carbon 6–12",
+    "Ionizer": "None",
+    "App": "Yes"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-27",
+    "summary": "Two independent hands-on reviews agree it works well for its size, and HouseFresh's measured CADR matches the AHAM-verified rating. Its CARB certification is on the state's public list, and Levoit publishes dimensions, weight, a 2-year warranty and a US address. Confidence is low because the model is new and has only two independent reviews.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 2,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "Y",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "Partial",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2UsptoTrademark": "Y",
+      "b3YearsOnMarket": 7,
+      "w1WarrantyYears": 2,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "HouseFresh: The best small air purifiers",
+        "url": "https://housefresh.com/small-air-purifiers/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Danny Ashton, Oct 2026, top pick. Tested in HouseFresh's room: PM1 CADR 165 cfm at top, 115 cfm under 45 dBA; 35.8 dBA (sleep) to 55.4 dBA (Turbo) at 3 ft",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "E1",
+        "title": "SmartWorld: Levoit Eleva 300X review (Italian)",
+        "url": "https://www.smartworld.it/recensioni/levoit-eleva-300x",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Lorenzo Delli, Sept 2026, several weeks running almost continuously in a 20 m² living room. Responsive PM sensors; loud at top speed; bulkier than slim towers. Sample from Levoit, no payment or preview",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'Levoit' since 2021-10-27",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Levoit&RecallDateStart=2021-10-27",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned; none with Levoit as importer or VeSync as manufacturer either",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "S2",
+        "title": "California Air Resources Board: List of CARB-certified air cleaning devices",
+        "url": "https://ww2.arb.ca.gov/list-carb-certified-air-cleaning-devices",
+        "type": "certification",
+        "realUse": false,
+        "note": "Levoit LAP-C341S-WUSZ (the model number in the Eleva 300X manual), mechanical, notified 2026-06-30, EO G-26-154",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "P1",
+        "title": "Levoit US: Eleva 300X product page",
+        "url": "https://levoit.com/products/levoit-eleva-300-smart-air-purifier",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "AHAM Verifide CADR 161 cfm; 250 sq ft at 4.8 ACH; 9.4 × 9.4 × 15.1 in; 9.9 lb; 20–50 dB; 25.5 W; Energy Star 3.0; no materials declared",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "B1",
+        "title": "Levoit Limited Product Warranty",
+        "url": "https://levoit.com/pages/warranty-policy-levoit",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Arovast Corporation, 1202 N. Miller St., Suite A, Anaheim, CA 92806; toll-free 1-855-686-3835",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "B2",
+        "title": "Justia mirror of USPTO records: LEVOIT CORE (reg. 6604736)",
+        "url": "https://trademarks.justia.com/886/11/levoit-88611849.html",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered Jan 4, 2022 for air purifiers (class 11); first use July 2019",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "W1",
+        "title": "Levoit Limited Product Warranty",
+        "url": "https://levoit.com/pages/warranty-policy-levoit",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "2 years from purchase, no registration needed; claims through support.levoit.com with proof of purchase",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "W3",
+        "title": "Levoit US: Eleva 300X product page",
+        "url": "https://levoit.com/products/levoit-eleva-300-smart-air-purifier",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "HEPA filter and four carbon filter types sold separately by Levoit",
+        "accessed": "2026-10-27"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "air-purifier",
+    "scores": {
+      "coverage": {
+        "score": 6,
+        "source": "AHAM Verifide CADR 161 cfm (Levoit); HouseFresh measured 165 cfm PM1"
+      },
+      "quiet": {
+        "score": 6,
+        "source": "HouseFresh: 115 cfm PM1 CADR under 45 dBA at 3 ft"
+      },
+      "footprint": {
+        "score": 10,
+        "source": "Levoit product page: 9.4 × 9.4 in = 88 sq in"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "levoit-us",
+      "url": "https://levoit.com/products/levoit-eleva-300-smart-air-purifier"
+    }
+  ],
+  "lastVerified": "2026-10-27"
+}
