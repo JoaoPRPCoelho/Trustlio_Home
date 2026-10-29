@@ -1,0 +1,170 @@
+{
+  "id": "coway-airmega-mighty2",
+  "name": "Coway Airmega Mighty2",
+  "brand": "Coway",
+  "model": "Airmega Mighty2 (AP-1512N)",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 250,
+    "max": 300,
+    "currency": "USD"
+  },
+  "summary": "The 2026 successor to Coway's long-running Mighty. HouseFresh measured the most cleaning at quiet fan speeds of the mainstream purifiers here, and its CARB certification is on the state's public list. It's the widest unit in this guide and has no app.",
+  "idealFor": [
+    "Studios where you sleep a few feet from the purifier",
+    "Buyers who want set-and-forget with no app or ionizer"
+  ],
+  "pros": [
+    "Cleaned about 151 cfm at 42.6 dBA (Speed 2) in HouseFresh's tests",
+    "No ionizer; CARB certification verified on the state's list",
+    "12-month filter and a washable pre-filter"
+  ],
+  "cons": [
+    "Widest footprint here: 16.9 × 9.3 in",
+    "No app, and the buttons aren't backlit",
+    "Smart mode is timid: it drops to Sleep in the dark (HouseFresh) and stayed on low while cooking (House Digest)"
+  ],
+  "specs": {
+    "Rated CADR, smoke (cfm)": 240,
+    "Footprint (W × D, in)": "16.9 × 9.3",
+    "Height (in)": 17.9,
+    "Weight (lb)": 15.2,
+    "Noise at 3 ft, sleep to max (dBA)": "35.9–56.9 (HouseFresh)",
+    "Filter life (months)": 12,
+    "Ionizer": "None",
+    "App": "No"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-27",
+    "summary": "Two independent hands-on reviews agree it cleans well and quietly, and HouseFresh's measured CADR matches Coway's rating. Its CARB certification is on the state's public list, and Coway publishes full dimensions, a US contact and warranty terms. It loses points for having only two sources and no declared materials, and we count the 1-year whole-unit warranty, not the longer motor coverage.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 2,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "Y",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "Partial",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2UsptoTrademark": "Y",
+      "b3YearsOnMarket": 10,
+      "w1WarrantyYears": 1,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "HouseFresh: Coway Airmega Mighty2 (AP-1512N) review",
+        "url": "https://housefresh.com/coway-airmega-mighty2-ap-1512n-review/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Danny Ashton, June 2026, bought two units (the first rattled at low speed, the replacement didn't). PM1 CADR about 260 cfm at Turbo and 151 at Speed 2; 728 cu ft room cleared in 23 min; 35.9–56.9 dBA at 3 ft; 3-year warranty stated",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "E1",
+        "title": "House Digest: Coway Airmega Mighty2 review",
+        "url": "https://www.housedigest.com/2272117/review-coway-airmega-mighty2/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Kim W.S., Sept 2026, used in a 500 sq ft studio with cooking and incense tests. Sleep and level 1 inaudible at about 15 ft; Turbo about 55 dB; Smart mode stayed on level 1 during cooking. Review unit, source not named",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'Coway' since 2021-10-27",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Coway&RecallDateStart=2021-10-27",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned. A title search for 'air purifier' since 2021 returns only Aroeve and Brother recalls",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "S2",
+        "title": "California Air Resources Board: List of CARB-certified air cleaning devices",
+        "url": "https://ww2.arb.ca.gov/list-carb-certified-air-cleaning-devices",
+        "type": "certification",
+        "realUse": false,
+        "note": "Airmega Mighty2 AP-1512N and color variants, mechanical, notified 2026-03-06, EO G-26-042 to G-26-044. CARB certification requires electrical safety testing and an ozone limit",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "P1",
+        "title": "Coway US: Airmega Mighty2 AP-1512N product page",
+        "url": "https://cowaymega.com/products/airmega-mighty2-ap-1512n",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "CADR 240 smoke / 242 dust / 249 pollen; 16.9 × 17.9 × 9.3 in; 15.2 lb; 19–50 dB; 56 W; 12-month filter; no materials declared",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "B1",
+        "title": "Coway US: Warranty & Registration",
+        "url": "https://cowaymega.com/pages/warranty-registration",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Coway USA, Inc., 4221 Wilshire Blvd. #210, Los Angeles, CA 90010; 1-800-285-0982; info@cowaymega.com",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "B2",
+        "title": "Justia mirror of USPTO records: AIRMEGA (reg. 5067276)",
+        "url": "https://trademarks.justia.com/868/34/airmega-86834067.html",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered Oct 25, 2016 for air purifiers and air cleaning units (class 11); filed 2015",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "W1",
+        "title": "Coway US: Warranty & Registration",
+        "url": "https://cowaymega.com/pages/warranty-registration",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "1 year on internal and functional parts for all Airmega models; motor and electronics 3 years for models not in the 2- or 5-year groups (Mighty2 isn't named). Claims by email or phone with proof of purchase and a video",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "W3",
+        "title": "Coway US: Airmega Mighty2 AP-1512N product page",
+        "url": "https://cowaymega.com/products/airmega-mighty2-ap-1512n",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Replacement filter set sold by Coway; washable pre-filter; parts and accessories section on the store",
+        "accessed": "2026-10-27"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "air-purifier",
+    "scores": {
+      "coverage": {
+        "score": 9,
+        "source": "Coway rates smoke CADR 240 cfm; HouseFresh measured about 260 cfm PM1 at Turbo"
+      },
+      "quiet": {
+        "score": 8,
+        "source": "HouseFresh: about 151 cfm at Speed 2, 42.6 dBA at 3 ft"
+      },
+      "footprint": {
+        "score": 6,
+        "source": "Coway product page: 16.9 × 9.3 in = 157 sq in"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "coway-us",
+      "url": "https://cowaymega.com/products/airmega-mighty2-ap-1512n"
+    }
+  ],
+  "lastVerified": "2026-10-27"
+}

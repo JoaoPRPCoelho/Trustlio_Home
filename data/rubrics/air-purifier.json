@@ -1,0 +1,30 @@
+{
+  "id": "air-purifier",
+  "name": "Air purifiers",
+  "version": "1.0",
+  "updated": "2026-10-27",
+  "criteria": [
+    {
+      "id": "coverage",
+      "name": "Room coverage for a studio",
+      "description": "Smoke CADR against a 400 sq ft studio with 8 ft ceilings, which needs about 267 cfm under AHAM's two-thirds rule. Smoke CADR (cfm): 267 or more = 10, 230–266 = 9, 200–229 = 8, 170–199 = 7, 140–169 = 6, 110–139 = 5, below 110 = 3. We use the maker's rated smoke CADR, or the independent measurement when it is more than 10% lower.",
+      "weight": 40,
+      "critical": {
+        "minimum": 5,
+        "cap": 60
+      }
+    },
+    {
+      "id": "quiet",
+      "name": "Quiet cleaning",
+      "description": "In a studio you sleep and work in the same room as the purifier, so we score how much air it cleans while staying under 45 dBA at 3 ft in independent tests. Sub-45 dBA CADR (cfm): 200 or more = 10, 150–199 = 8, 120–149 = 7, 100–119 = 6, 70–99 = 5, below 70 or only the lowest fan speed stays under 45 dBA = 4.",
+      "weight": 35
+    },
+    {
+      "id": "footprint",
+      "name": "Floor footprint",
+      "description": "Floor area of the unit (width × depth) from the maker's published dimensions or an independent measurement. Up to 90 sq in = 10, up to 120 = 8, up to 140 = 7, up to 160 = 6, larger = 4.",
+      "weight": 25
+    }
+  ]
+}
