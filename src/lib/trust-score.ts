@@ -1,11 +1,11 @@
 import type { TrustInputs } from "./schemas";
 
-// Trust score v1.0: how safe a purchase is, from public, verifiable evidence.
+// Trust score v1.1: how safe a purchase is, from public, verifiable evidence.
 // Five fixed pillars worth 100 points, the same for every category, after two
 // gates. It never uses Amazon reviews, ratings or prices, and commission never
 // enters it. Mirrors the published methodology and the scoring sheet.
 
-export const METHODOLOGY_VERSION = "1.0";
+export const METHODOLOGY_VERSION = "1.1";
 
 export type PillarKey = "evidence" | "safety" | "specs" | "brand" | "warranty";
 
@@ -52,7 +52,7 @@ export function computeTrustScore(i: TrustInputs, handsOnTested: boolean): Trust
 
   const brand =
     yn(i.b1SiteContactAddress, 5) +
-    yn(i.b2UsptoTrademark, 5) +
+    yn(i.b2TrademarkRegistered, 5) +
     (i.b3YearsOnMarket >= 3 ? 5 : i.b3YearsOnMarket >= 1 ? 2 : 0);
 
   const warranty =

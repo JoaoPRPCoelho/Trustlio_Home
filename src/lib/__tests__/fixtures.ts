@@ -14,7 +14,7 @@ export const trustInputs: TrustInputs = {
   p2MeasurableClaims: "Partial",
   p3ClaimsConfirmed: "Y",
   b1SiteContactAddress: "Y",
-  b2UsptoTrademark: "Y",
+  b2TrademarkRegistered: "Y",
   b3YearsOnMarket: 2,
   w1WarrantyYears: 1,
   w2WarrantyTermsClear: "Y",

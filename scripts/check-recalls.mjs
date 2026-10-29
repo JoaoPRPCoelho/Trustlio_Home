@@ -9,6 +9,9 @@
 // Exits 2 when something needs a person: CPSC has no "active" flag, so a match
 // means "read the recall notice", then set trust.inputs.activeRecall or
 // s1NoBrandRecalls5y by hand. Writes recalls-report.json for the CI artifact.
+// The EU Safety Gate and the UK government's product safety recalls list have no
+// equivalent API here, so products sold in the UK or EU are listed as needing
+// a manual check there; that alone doesn't fail the run.
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
@@ -76,7 +79,25 @@ async function smoke() {
   if (recalls.length === 0) throw new Error("CPSC API returned no BISSELL recalls; check the query");
 }
 
+const MANUAL_CHECKS = {
+  uk: "UK Product Safety Alerts, Reports and Recalls (gov.uk/product-safety-alerts-reports-recalls)",
+  eu: "EU Safety Gate (ec.europa.eu/safety-gate-alerts)",
+};
+
+export function manualChecks(product, merchantMarkets) {
+  const markets = new Set(product.offers.map((o) => merchantMarkets.get(o.merchant)));
+  return Object.entries(MANUAL_CHECKS)
+    .filter(([market]) => markets.has(market))
+    .map(([, check]) => check);
+}
+
 async function main() {
+  const merchantDir = join(ROOT, "data/merchants");
+  const merchantMarkets = new Map();
+  for (const f of (await readdir(merchantDir)).filter((f) => f.endsWith(".json"))) {
+    const m = JSON.parse(await readFile(join(merchantDir, f), "utf8"));
+    merchantMarkets.set(m.id, m.market);
+  }
   const dir = join(ROOT, "data/products");
   const products = [];
   for (const f of (await readdir(dir)).filter((f) => f.endsWith(".json")).sort()) {
@@ -92,13 +113,15 @@ async function main() {
     const s1Conflict = recalls.length > 0 && p.trust.inputs.s1NoBrandRecalls5y === "Y";
     const missedRecall = flagged.length > 0 && p.trust.inputs.activeRecall === "N";
     if (missedRecall || s1Conflict) needsReview++;
-    report.products.push({ id: p.id, brand: p.brand, brandRecalls5y: recalls.length, flagged, s1Conflict });
+    const manual = manualChecks(p, merchantMarkets);
+    report.products.push({ id: p.id, brand: p.brand, brandRecalls5y: recalls.length, flagged, s1Conflict, manualChecks: manual });
     console.log(
       `${p.id}: ${recalls.length} brand recall(s)` +
         (flagged.length ? `, ${flagged.length} mention this product` : "") +
         (missedRecall ? ": REVIEW activeRecall" : "") +
         (s1Conflict ? ": REVIEW s1NoBrandRecalls5y" : ""),
     );
+    for (const check of manual) console.log(`  also check by hand: ${check}`);
   }
   console.log(`Checked ${products.length} product(s).`);
 

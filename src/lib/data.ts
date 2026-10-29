@@ -8,6 +8,7 @@ import {
   ProductSchema,
   RubricSchema,
   type GuideMeta,
+  type Market,
   type Merchant,
   type Product,
   type Rubric,
@@ -66,7 +67,16 @@ function load() {
         if (!rubric) throw new Error(`Product "${p.id}" uses unknown rubric "${p.fit.rubric}"`);
         computeFitScore(p, rubric);
       }
-      resolveOffers(p, merchants);
+      const offerMarkets = new Set(resolveOffers(p, merchants).map((o) => o.market));
+      const priced = new Set(p.priceBands.map((b) => b.market));
+      for (const m of offerMarkets) {
+        if (!priced.has(m)) throw new Error(`Product "${p.id}" has a ${m} offer but no ${m} priceBand`);
+      }
+      for (const eq of p.equivalents) {
+        if (eq.product === p.id || !products.has(eq.product)) {
+          throw new Error(`Product "${p.id}" lists an unknown equivalent "${eq.product}"`);
+        }
+      }
       for (const img of p.images) {
         if (!fs.existsSync(path.join(root, "public", img.src))) {
           throw new Error(`Product "${p.id}" lists a missing image: public${img.src}`);
@@ -79,6 +89,8 @@ function load() {
 }
 
 export type ProductView = Omit<Product, "offers"> & {
+  // Markets the product is sold in, in the order its offers list them.
+  markets: Market[];
   trustScore: TrustScore;
   fitScore?: FitScore;
   offers: ResolvedOffer[];
@@ -88,12 +100,14 @@ export type ProductView = Omit<Product, "offers"> & {
 function view(p: Product): ProductView {
   const { rubrics, merchants } = load();
   const rubric = p.fit ? rubrics.get(p.fit.rubric)! : undefined;
+  const offers = resolveOffers(p, merchants);
   return {
     ...p,
     trustScore: computeTrustScore(p.trust.inputs, p.evidence === "hands-on-tested"),
     fitScore: rubric ? computeFitScore(p, rubric) : undefined,
     rubricName: rubric?.name,
-    offers: resolveOffers(p, merchants),
+    offers,
+    markets: [...new Set(offers.map((o) => o.market))],
   };
 }
 

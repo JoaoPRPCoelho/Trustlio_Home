@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 600,
-    "max": 1300,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 600,
+      "max": 1300
+    }
+  ],
   "summary": "An all-in-one robot vacuum and roller mop whose dock empties the bin and washes and dries the mop. Independent tests put it near the top for pet hair, tangle resistance and obstacle avoidance, but the dock is the biggest in this guide and the robot is 4.4 in tall.",
   "idealFor": [
     "Pet owners who can spare floor space for a dock",
@@ -52,7 +54,7 @@
       "p2MeasurableClaims": "Y",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "Y",
-      "b2UsptoTrademark": "Y",
+      "b2TrademarkRegistered": "Y",
       "b3YearsOnMarket": 10,
       "w1WarrantyYears": 1,
       "w2WarrantyTermsClear": "Y",

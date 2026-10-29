@@ -13,6 +13,7 @@ export function trustDataset() {
       product: p.name,
       brand: p.brand,
       model: p.model,
+      markets: p.markets.join(" "),
       url: absoluteUrl(reviewPath(p)),
       status: p.trustScore.status,
       score: p.trustScore.total,
@@ -34,7 +35,7 @@ export function trustDataset() {
 }
 
 const CSV_COLUMNS = [
-  "id", "product", "brand", "model", "url", "status", "score", "band", "confidence",
+  "id", "product", "brand", "model", "markets", "url", "status", "score", "band", "confidence",
   "pillar_evidence", "pillar_safety", "pillar_specs", "pillar_brand", "pillar_warranty",
   "evidence", "sources", "reviewed", "methodologyVersion",
 ];

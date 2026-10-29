@@ -52,16 +52,19 @@ Both live in the product's data file, and the build checks their rights.
   experience: that's a simulated demonstration or a fake testimonial under FTC
   rules, label or not.
 
-**Trust Score v1.0** (`src/lib/trust-score.ts`, page `/methodology/trust-score/`):
+**Trust Score v1.1** (`src/lib/trust-score.ts`, page `/methodology/trust-score/`):
 five fixed pillars worth 100 points, the same for every category: independent
 evidence 30, safety & compliance 20, specs & claims transparency 20, brand
 accountability 15, warranty & support 15. No score is published under an
-active CPSC recall or with fewer than two independent sources with real use.
+active recall in a market where we link to the product (CPSC, EU Safety Gate,
+UK product safety recalls) or with fewer than two independent sources with
+real use. v1.1 made the checks market-neutral for UK/EU products; US scores
+didn't change.
 Confidence (High/Medium/Low) is shown next to it. Amazon reviews, ratings and
 prices never enter it, and Amazon pages are rejected as sources.
 
 Fill a product's `trust.inputs` with the scoring sheet
-(`docs/trust-score-rubric-v1.0.xlsx`): yellow columns are answers, blue ones
+(`docs/trust-score-rubric-v1.1.xlsx`): yellow columns are answers, blue ones
 compute the score, and the Rubric tab has the rules. `e1IndependentSources`
 must equal the number of `E1` sources with `realUse: true`, or the build fails.
 
@@ -80,10 +83,29 @@ means a product needs a person: read the recall notice, then update
 `activeRecall` or `s1NoBrandRecalls5y`. Run it by hand from the Actions tab
 (workflow_dispatch) or locally with `node scripts/check-recalls.mjs`.
 
+The EU Safety Gate and the UK list have no API wired in, so for products sold
+in the UK or EU the run prints a reminder to check them by hand, and the
+methodology says so. Do it before publishing and at every review.
+
+## Markets
+
+The site links to stores in the US (`us`), the UK (`uk`) and the EU (`eu`).
+Every merchant has a `market`, and a product has one `priceBands` entry per
+market it is sold in, in that market's currency; the build fails if an offer's
+market has no price band. Pages with several markets group the buy buttons by
+market.
+
+When a product is sold as a different model in another market (a Nuki lock
+for European cylinders vs. one for US deadbolts), each model gets its own data
+file and score, and `equivalents` links them, with a note on what differs. A
+hands-on test covers only the model we used.
+
 ## Affiliate links
 
-- Amazon offers link straight to `amazon.com/dp/<ASIN>?tag=<tag>`; never
-  through a redirect (Associates policy).
+- Amazon offers link straight to `<amazonDomain>/dp/<ASIN>?tag=<tag>`; never
+  through a redirect (Associates policy). OneLink (one US account) sends
+  visitors from the UK, EU and other countries to the same product in their
+  local store; a different model for another market needs its own offer.
 - Other merchants go through `/go/<product>/<merchant>/`. The build writes
   Cloudflare's `_redirects` file from the product data.
 - Every page with offers shows the FTC/Amazon disclosure above the first link.

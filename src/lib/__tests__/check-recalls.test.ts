@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { checkProduct, matchRecall } from "../../../scripts/check-recalls.mjs";
+import { checkProduct, manualChecks, matchRecall } from "../../../scripts/check-recalls.mjs";
 
 // Shape of a real CPSC record (RecallID 10302), trimmed.
 const recall = {
@@ -28,5 +28,11 @@ describe("check-recalls", () => {
     const recalls = await checkProduct({ name: "X", brand: "Apollo", model: "X1" }, async () => [recall]);
     expect(recalls).toHaveLength(1);
     expect(recalls[0]).toMatchObject({ recallId: 10302, date: "2025-06-05" });
+  });
+
+  it("asks for a manual check where the product is sold in the UK or EU", () => {
+    const merchantMarkets = new Map([["amazon-us", "us"], ["amazon-uk", "uk"]]);
+    expect(manualChecks({ offers: [{ merchant: "amazon-us" }] }, merchantMarkets)).toEqual([]);
+    expect(manualChecks({ offers: [{ merchant: "amazon-uk" }] }, merchantMarkets)).toHaveLength(1);
   });
 });
