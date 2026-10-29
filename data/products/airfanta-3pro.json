@@ -1,0 +1,180 @@
+{
+  "id": "airfanta-3pro",
+  "name": "AirFanta 3Pro",
+  "brand": "AirFanta",
+  "model": "3Pro",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 150,
+    "max": 200,
+    "currency": "USD"
+  },
+  "summary": "A cube of four PC fans and HEPA panels that cleans far more air per dollar and per decibel than any conventional purifier here. Three independent testers confirm the numbers. It has no app, sensor or auto mode, it looks industrial, and the small brand gives only an email address for support.",
+  "idealFor": [
+    "Studios over 400 sq ft, or wildfire smoke",
+    "Buyers who care about clean air per dollar more than looks"
+  ],
+  "pros": [
+    "Most cleaning at quiet speeds here: 213 cfm under 45 dBA (HouseFresh)",
+    "Cleared HouseFresh's test room in 17 minutes at top speed",
+    "Packs flat for moving or travel"
+  ],
+  "cons": [
+    "No app, sensor, auto mode or filter reminder",
+    "Industrial look; one reviewer found assembly fiddly",
+    "Support by email only; no postal address published",
+    "Out of stock at AirFanta's US store when we checked"
+  ],
+  "specs": {
+    "Rated CADR, smoke (cfm)": "413 (no test standard named)",
+    "Footprint (W × D, in)": "12.6 × 12.6",
+    "Height (in)": 12.6,
+    "Weight (lb)": "6–7.7 (reviewer measurements)",
+    "Noise at 3 ft, sleep to max (dBA)": "36.1–56.3 (HouseFresh)",
+    "Filter life (months)": "6–12",
+    "Ionizer": "None",
+    "App": "No"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-29",
+    "summary": "Three independent hands-on reviews agree it delivers unusually high CADR for the price, and their measurements back AirFanta's rating. It loses most points on accountability: the website gives an email but no postal address, its US trademark filing from 2024 has no confirmed registration, and the 1-year warranty has no published terms. Its CARB certification is on the state's public list.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 3,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "Y",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "N",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "N",
+      "b2UsptoTrademark": "N",
+      "b3YearsOnMarket": 2,
+      "w1WarrantyYears": 1,
+      "w2WarrantyTermsClear": "N",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "HouseFresh: AirFanta 3Pro review",
+        "url": "https://housefresh.com/airfanta-3pro-review/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Danny Ashton, Sept 2024 (updated Oct 2026), bought with own money. PM1 CADR 353 cfm at top, 213 under 45 dBA; test room cleared in 17 min; 36.1–56.3 dBA at 3 ft; 12.6 in cube, 7.7 lb; cites independent CADR tests of 413 cfm at 12 V",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "E1",
+        "title": "BreatheSafeAir: AirFanta 3Pro review",
+        "url": "https://breathesafeair.com/airfanta-3pro-review/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Ethan Brooke, Dec 2024 test (updated Aug 2026), two weeks in his office; unit sent by AirFanta, not sponsored. Bedroom incense test under 20 min at top speed; 61.6 dBA at 2 m at top; no app or sensors",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "E1",
+        "title": "Air Purifier First: AirFanta 3Pro review",
+        "url": "https://www.airpurifierfirst.com/review/airfanta-3pro/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Milan Antonic, Oct 2025, bought the unit. PM2.5 103.2 → 4.3 µg/m³ in 60 min in a 560 sq ft room; 40.1–62.5 dBA; 6 lb; long, awkward assembly; H11 filters",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'AirFanta' since 2021-10-27",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=AirFanta&RecallDateStart=2021-10-27",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "S2",
+        "title": "California Air Resources Board: List of CARB-certified air cleaning devices",
+        "url": "https://ww2.arb.ca.gov/list-carb-certified-air-cleaning-devices",
+        "type": "certification",
+        "realUse": false,
+        "note": "Airfanta 3Pro, mechanical, notified 2024-08-20, EO G-24-200. Checked in the list's search box",
+        "accessed": "2026-10-29"
+      },
+      {
+        "item": "P2",
+        "title": "AirFanta: 3Pro product page",
+        "url": "https://air-fanta.com/products/airfanta-3pro",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "CADR 413 cfm (702 m³/h), no test standard named; 35–55 dB and 2.2–33.2 W by speed; 600 g carbon in the carbon set; no dimensions or weight; out of stock",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "B1",
+        "title": "AirFanta: home page",
+        "url": "https://air-fanta.com",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Contact email airfanta@air-fanta.com; ships from California and New Jersey; no postal address or phone",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "B2",
+        "title": "Justia mirror of USPTO records: Guangzhou Fengruijing Technology Device Co., Ltd.",
+        "url": "https://trademarks.justia.com/owners/guangzhou-fengruijing-technology-device-co-ltd-6025720",
+        "type": "government",
+        "realUse": false,
+        "note": "AIRFANTA application serial 98744077 filed Sept 10, 2024 for air purifiers; we couldn't confirm it is registered",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "W1",
+        "title": "AirFanta: home page",
+        "url": "https://air-fanta.com",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "One-year warranty and 30-day trial; no published coverage terms or claim process (HouseFresh reports claims by email with photos or video)",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "W3",
+        "title": "AirFanta: 3Pro product page",
+        "url": "https://air-fanta.com/products/airfanta-3pro",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "HEPA and HEPA + carbon replacement filters sold by AirFanta",
+        "accessed": "2026-10-27"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "air-purifier",
+    "scores": {
+      "coverage": {
+        "score": 10,
+        "source": "AirFanta rates 413 cfm; HouseFresh measured 353 cfm PM1, still above 267"
+      },
+      "quiet": {
+        "score": 10,
+        "source": "HouseFresh: 213 cfm PM1 CADR under 45 dBA at 3 ft"
+      },
+      "footprint": {
+        "score": 6,
+        "source": "HouseFresh and Air Purifier First: 12.6 × 12.6 in = 159 sq in"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "airfanta",
+      "url": "https://air-fanta.com/products/airfanta-3pro"
+    }
+  ],
+  "lastVerified": "2026-10-29"
+}

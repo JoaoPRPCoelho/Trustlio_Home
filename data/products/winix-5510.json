@@ -1,0 +1,170 @@
+{
+  "id": "winix-5510",
+  "name": "Winix 5510",
+  "brand": "Winix",
+  "model": "5510",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBand": {
+    "min": 200,
+    "max": 250,
+    "currency": "USD"
+  },
+  "summary": "The app-connected successor to the Winix 5500-2, rated for 392 sq ft by AHAM. It packs studio-sized cleaning into the slimmest full-size body here, but it's loud at top speed and Winix publishes few specs or warranty terms.",
+  "idealFor": [
+    "Studios around 400 sq ft with a narrow spot by a wall or desk",
+    "Buyers who want the 5500-2's performance with an app"
+  ],
+  "pros": [
+    "AHAM room rating of 392 sq ft; HouseFresh measured 249 cfm (PM1)",
+    "Slim body: about 13.6 × 8.3 in on the floor",
+    "PlasmaWave ionizer can be switched off"
+  ],
+  "cons": [
+    "Loud at top speed: 67.2 dBA at 3 ft in HouseFresh's tests",
+    "Auto mode relies on an odor sensor and may ignore dust and pollen (Air Purifier First)",
+    "New Filter Q set doesn't fit the older 5500-2"
+  ],
+  "specs": {
+    "Rated CADR, smoke (cfm)": 253,
+    "Footprint (W × D, in)": "13.6 × 8.3",
+    "Height (in)": 22.2,
+    "Weight (lb)": 13.3,
+    "Noise at 3 ft, sleep to max (dBA)": "35.2–67.2 (HouseFresh)",
+    "Filter life (months)": 12,
+    "Ionizer": "PlasmaWave, can be turned off",
+    "App": "Yes"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-29",
+    "summary": "Two independent hands-on reviews agree it cleans a studio-sized room quickly, and their measurements match the AHAM rating. Winix's own page lists no dimensions, weight or noise figures and no warranty terms beyond '2-year warranty'. Its CARB certification is on the state's public list, and there are no CPSC recalls for the brand.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 2,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "Y",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "N",
+      "p2MeasurableClaims": "Partial",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2UsptoTrademark": "Y",
+      "b3YearsOnMarket": 24,
+      "w1WarrantyYears": 2,
+      "w2WarrantyTermsClear": "N",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "HouseFresh: Winix 5510 review",
+        "url": "https://housefresh.com/winix-5510-review/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Danny Ashton, Oct 2026, bought with own money. PM1 CADR about 249 cfm at top, 125 under 45 dBA; test room cleared in 24 min; 35.2–67.2 dBA at 3 ft; filters about $80 a year",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "E1",
+        "title": "Air Purifier First: Winix 5510 review",
+        "url": "https://www.airpurifierfirst.com/review/winix-5510/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Milan Antonic, May 2025, used in a living room and office (site buys its units). PM2.5 104.9 → 4.7 µg/m³ in 60 min in a 320 sq ft room; 40.2–65.7 dBA; measured 13.6 × 8.3 × 22.2 in, 13.3 lb; odor-only auto sensor",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'Winix' since 2021-10-27",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Winix&RecallDateStart=2021-10-27",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "S2",
+        "title": "California Air Resources Board: List of CARB-certified air cleaning devices",
+        "url": "https://ww2.arb.ca.gov/list-carb-certified-air-cleaning-devices",
+        "type": "certification",
+        "realUse": false,
+        "note": "WINIX 5510, electronic, notified 2024-10-03, EO G-24-234. Checked in the list's search box",
+        "accessed": "2026-10-29"
+      },
+      {
+        "item": "P2",
+        "title": "Winix America: 5510 product page",
+        "url": "https://www.winixamerica.com/?p=412972",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "AHAM Verifide room size 392 sq ft; ozone 0.22 ppbv (8-hr TWA, 30 m³ chamber); 2-year warranty. No CADR figures, dimensions, weight, noise or power on the page",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "B1",
+        "title": "Winix America: company news page footer",
+        "url": "https://www.winixamerica.com/?p=448927",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Winix America Inc., 3000 Lakeside Drive, Suite 305S, Bannockburn, IL 60015; (877) 699-4649",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "B2",
+        "title": "Justia mirror of USPTO records: WINIX (reg. 5797677)",
+        "url": "https://trademark.justia.com/880/46/winix-88046624.html",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered July 9, 2019 for household air cleaners (class 11); first use in commerce Oct 1, 2002",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "W2",
+        "title": "Winix America: warranty request page",
+        "url": "https://www.winixamerica.com/warranty/",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "A request form and phone number only; no published warranty length, coverage or exclusions. Air Purifier First reports 1 year, extended to 2 on registration",
+        "accessed": "2026-10-27"
+      },
+      {
+        "item": "W3",
+        "title": "Winix America: company news page with filter store",
+        "url": "https://www.winixamerica.com/?p=448927",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Replacement filters sold by Winix; phone support 8 am–6 pm CST",
+        "accessed": "2026-10-27"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "air-purifier",
+    "scores": {
+      "coverage": {
+        "score": 9,
+        "source": "AHAM room rating 392 sq ft (Winix), about 253 cfm smoke CADR (Air Purifier First); HouseFresh measured 249 cfm PM1"
+      },
+      "quiet": {
+        "score": 7,
+        "source": "HouseFresh: 125 cfm PM1 CADR under 45 dBA at 3 ft"
+      },
+      "footprint": {
+        "score": 8,
+        "source": "Air Purifier First measurement: 13.6 × 8.3 in = 113 sq in"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "winix-us",
+      "url": "https://www.winixamerica.com/?p=412972"
+    }
+  ],
+  "lastVerified": "2026-10-29"
+}
