@@ -135,6 +135,61 @@ export const OfferSchema = z
   })
   .refine((o) => o.asin || o.url, "An offer needs an asin or a url");
 
+const notAmazon = (u: string) => !/(^|\.)(amazon\.|amzn\.|media-amazon\.)/.test(new URL(u).hostname);
+
+// Product images are self-hosted under public/images/ and each one carries the
+// license it was published under. Amazon images may only come from its API, so
+// they never enter this list, and nothing is hotlinked.
+export const ImageLicense = z.enum([
+  // Photographed by us.
+  "own",
+  // Written permission from the brand, for this site. `source` points to it.
+  "brand-permission",
+  // A press kit or content feed (e.g. Open Icecat) whose terms cover this use.
+  "press-kit",
+  "cc0",
+  "cc-by",
+  "cc-by-sa",
+]);
+export type ImageLicense = z.infer<typeof ImageLicense>;
+
+export const ProductImageSchema = z.object({
+  src: z.string().regex(/^\/images\/products\/[a-z0-9-]+\/[a-z0-9-]+\.(webp|jpg|png)$/, "Self-host under /images/products/<product>/"),
+  alt: z.string().min(3),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  license: ImageLicense,
+  // Shown under the image, e.g. "Photo: Roborock" or "Photo: Trustlio Home".
+  credit: z.string().min(2),
+  // Where the license or permission is recorded: a URL, or a citation such as
+  // "Email from Roborock PR, 2026-11-03". Not needed for our own photos.
+  source: z.string().min(3).optional(),
+  // True when the image was generated or materially altered with AI.
+  aiGenerated: z.boolean().default(false),
+  obtained: isoDate,
+}).refine((i) => i.license === "own" || i.source, "Only our own photos may skip `source`")
+  .refine((i) => !i.source?.startsWith("http") || notAmazon(i.source), "Amazon images only come from its API");
+export type ProductImage = z.infer<typeof ProductImageSchema>;
+
+// Videos are YouTube embeds through the official player. `kind` decides the
+// caption, so a third-party review never looks like ours and an AI video never
+// looks like real footage.
+export const ProductVideoSchema = z
+  .object({
+    youtubeId: z.string().regex(/^[A-Za-z0-9_-]{11}$/, "An 11-character YouTube video id"),
+    title: z.string(),
+    channel: z.string(),
+    kind: z.enum(["independent-review", "manufacturer", "own", "ai-generated"]),
+    // AI videos only: what was generated, shown next to the video. Never use AI
+    // to show the product cleaning, working or being used.
+    aiDisclosure: z.string().min(10).optional(),
+    // When we last checked the video is up and embeddable.
+    accessed: isoDate,
+  })
+  .refine((v) => v.kind !== "ai-generated" || v.aiDisclosure, "AI videos need an aiDisclosure")
+  .refine((v) => v.kind === "ai-generated" || !v.aiDisclosure, "aiDisclosure is only for AI videos");
+export type ProductVideo = z.infer<typeof ProductVideoSchema>;
+
 export const ProductSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   name: z.string(),
@@ -162,6 +217,9 @@ export const ProductSchema = z.object({
     })
     .optional(),
   offers: z.array(OfferSchema).min(1),
+  // The first image is the main one, shown on cards.
+  images: z.array(ProductImageSchema).default([]),
+  videos: z.array(ProductVideoSchema).default([]),
   lastVerified: isoDate,
   // Placeholder data used to develop the templates. Example pages are
   // noindexed, bannered and left out of the sitemap.
