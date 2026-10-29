@@ -38,8 +38,8 @@
   },
   "evidence": "research-based",
   "trust": {
-    "reviewed": "2026-10-27",
-    "summary": "Two independent hands-on reviews agree it cleans a studio-sized room quickly, and their measurements match the AHAM rating. Winix's own page lists no dimensions, weight or noise figures and no warranty terms beyond '2-year warranty'. Safety scores 8/20: no CPSC recalls for the brand, but we couldn't find the 5510 on CARB's public list.",
+    "reviewed": "2026-10-29",
+    "summary": "Two independent hands-on reviews agree it cleans a studio-sized room quickly, and their measurements match the AHAM rating. Winix's own page lists no dimensions, weight or noise figures and no warranty terms beyond '2-year warranty'. Its CARB certification is on the state's public list, and there are no CPSC recalls for the brand.",
     "inputs": {
       "activeRecall": "N",
       "e1IndependentSources": 2,
@@ -47,7 +47,7 @@
       "e3NoRecurringFailure": "Y",
       "s1NoBrandRecalls5y": "Y",
       "s2CertificationApplies": "Y",
-      "s2CertificationVerified": "N",
+      "s2CertificationVerified": "Y",
       "s3MaterialsWarnings": "N",
       "p1SpecsPublished": "N",
       "p2MeasurableClaims": "Partial",
@@ -93,8 +93,8 @@
         "url": "https://ww2.arb.ca.gov/list-carb-certified-air-cleaning-devices",
         "type": "certification",
         "realUse": false,
-        "note": "Winix 5530, C710, AT40 and AT41 are listed, but the 5510 is not in the part of the list we could read (notifications from Dec 2025 on)",
-        "accessed": "2026-10-27"
+        "note": "WINIX 5510, electronic, notified 2024-10-03, EO G-24-234. Checked in the list's search box",
+        "accessed": "2026-10-29"
       },
       {
         "item": "P2",
@@ -166,5 +166,5 @@
       "url": "https://www.winixamerica.com/?p=412972"
     }
   ],
-  "lastVerified": "2026-10-27"
+  "lastVerified": "2026-10-29"
 }

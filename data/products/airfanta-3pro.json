@@ -39,8 +39,8 @@
   },
   "evidence": "research-based",
   "trust": {
-    "reviewed": "2026-10-27",
-    "summary": "Three independent hands-on reviews agree it delivers unusually high CADR for the price, and their measurements back AirFanta's rating. It loses most points on accountability: the website gives an email but no postal address, its US trademark filing from 2024 has no confirmed registration, and the 1-year warranty has no published terms. No safety listing we could verify.",
+    "reviewed": "2026-10-29",
+    "summary": "Three independent hands-on reviews agree it delivers unusually high CADR for the price, and their measurements back AirFanta's rating. It loses most points on accountability: the website gives an email but no postal address, its US trademark filing from 2024 has no confirmed registration, and the 1-year warranty has no published terms. Its CARB certification is on the state's public list.",
     "inputs": {
       "activeRecall": "N",
       "e1IndependentSources": 3,
@@ -48,7 +48,7 @@
       "e3NoRecurringFailure": "Y",
       "s1NoBrandRecalls5y": "Y",
       "s2CertificationApplies": "Y",
-      "s2CertificationVerified": "N",
+      "s2CertificationVerified": "Y",
       "s3MaterialsWarnings": "N",
       "p1SpecsPublished": "N",
       "p2MeasurableClaims": "Y",
@@ -103,8 +103,8 @@
         "url": "https://ww2.arb.ca.gov/list-carb-certified-air-cleaning-devices",
         "type": "certification",
         "realUse": false,
-        "note": "AirFanta not found in the part of the list we could read (notifications from Dec 2025 on). AirFanta's site links its own UL 507 (by SGS) and CARB certificates, which we couldn't confirm in a public database",
-        "accessed": "2026-10-27"
+        "note": "Airfanta 3Pro, mechanical, notified 2024-08-20, EO G-24-200. Checked in the list's search box",
+        "accessed": "2026-10-29"
       },
       {
         "item": "P2",
@@ -176,5 +176,5 @@
       "url": "https://air-fanta.com/products/airfanta-3pro"
     }
   ],
-  "lastVerified": "2026-10-27"
+  "lastVerified": "2026-10-29"
 }

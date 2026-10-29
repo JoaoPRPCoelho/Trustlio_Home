@@ -38,8 +38,8 @@
   },
   "evidence": "research-based",
   "trust": {
-    "reviewed": "2026-10-27",
-    "summary": "Three independent hands-on reviews agree it cleans quickly, and HouseFresh's measured CADR matches the rating. Levoit publishes measurable specs, a 2-year warranty with a clear claim process and a US address. Safety scores 8/20: no CPSC recalls for the brand, but we couldn't find this model on CARB's public list, and materials aren't declared.",
+    "reviewed": "2026-10-29",
+    "summary": "Three independent hands-on reviews agree it cleans quickly, and HouseFresh's measured CADR matches the rating. Levoit publishes measurable specs, a 2-year warranty with a clear claim process and a US address. Its CARB certification is on the state's public list and there are no CPSC recalls for the brand; it loses safety points only because materials aren't declared.",
     "inputs": {
       "activeRecall": "N",
       "e1IndependentSources": 3,
@@ -47,7 +47,7 @@
       "e3NoRecurringFailure": "Y",
       "s1NoBrandRecalls5y": "Y",
       "s2CertificationApplies": "Y",
-      "s2CertificationVerified": "N",
+      "s2CertificationVerified": "Y",
       "s3MaterialsWarnings": "N",
       "p1SpecsPublished": "Partial",
       "p2MeasurableClaims": "Y",
@@ -102,8 +102,8 @@
         "url": "https://ww2.arb.ca.gov/list-carb-certified-air-cleaning-devices",
         "type": "certification",
         "realUse": false,
-        "note": "LAP-V201S not found in the part of the list we could read (notifications from Dec 2025 on). Levoit shows a CARB logo on the product page, but we count only listings we can verify",
-        "accessed": "2026-10-27"
+        "note": "Levoit LAP-V201S-WUS and -AUSR (EO G-22-455, notified 2022-11-23) and LAP-V201S-KUS (EO G-23-281, 2023-11-02), mechanical. Checked in the list's search box",
+        "accessed": "2026-10-29"
       },
       {
         "item": "P1",
@@ -175,5 +175,5 @@
       "url": "https://levoit.com/products/vital-200s-p-smart-air-purifier"
     }
   ],
-  "lastVerified": "2026-10-27"
+  "lastVerified": "2026-10-29"
 }
