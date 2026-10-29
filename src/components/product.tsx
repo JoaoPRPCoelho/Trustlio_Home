@@ -2,6 +2,7 @@ import Link from "next/link";
 import { formatPriceBand } from "@/lib/affiliate";
 import { getProduct, type ProductView } from "@/lib/data";
 import { reviewPath } from "@/lib/paths";
+import { ImageFigure } from "./media";
 import { EvidenceTag, TrustScoreBadge, trustScoreText } from "./trust-score";
 
 export function BuyButtons({ product }: { product: ProductView }) {
@@ -33,6 +34,9 @@ export function ProductCard({ id, award }: { id: string; award?: string }) {
       id={product.id}
       className="not-prose my-6 rounded-lg border border-border bg-white p-5"
     >
+      {product.images[0] && (
+        <ImageFigure image={product.images[0]} className="mb-4 max-w-xs" />
+      )}
       <div className="flex items-start gap-4">
         <TrustScoreBadge trust={product.trustScore} />
         <div className="flex-1">

@@ -67,6 +67,11 @@ function load() {
         computeFitScore(p, rubric);
       }
       resolveOffers(p, merchants);
+      for (const img of p.images) {
+        if (!fs.existsSync(path.join(root, "public", img.src))) {
+          throw new Error(`Product "${p.id}" lists a missing image: public${img.src}`);
+        }
+      }
     }
     cache = { rubrics, merchants, products };
   }
