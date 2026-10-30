@@ -59,6 +59,16 @@ export function ImageFigure({
       <figcaption className="mt-1 text-xs text-muted">
         {image.aiGenerated && <span className="font-semibold text-warn">AI-generated image. </span>}
         {image.credit}
+        {image.notice && (
+          <>
+            {" "}
+            {image.notice.text}{" "}
+            <a href={image.notice.url} className="underline" rel="license noopener" target="_blank">
+              License
+            </a>
+            .
+          </>
+        )}
       </figcaption>
     </figure>
   );
