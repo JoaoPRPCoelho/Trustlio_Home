@@ -1,26 +1,72 @@
 import Link from "next/link";
-import { formatPriceBand } from "@/lib/affiliate";
+import { formatPriceBands } from "@/lib/affiliate";
 import { getProduct, type ProductView } from "@/lib/data";
 import { reviewPath } from "@/lib/paths";
+import { markets } from "@/lib/schemas";
 import { ImageFigure } from "./media";
 import { EvidenceTag, TrustScoreBadge, trustScoreText } from "./trust-score";
 
-export function BuyButtons({ product }: { product: ProductView }) {
+function OfferLinks({ offers, productId }: { offers: ProductView["offers"]; productId: string }) {
   return (
     <div className="flex flex-wrap gap-2">
-      {product.offers.map((offer) => (
+      {offers.map((offer) => (
         <a
           key={offer.merchant.id}
           href={offer.href}
           rel="sponsored nofollow noopener"
           target="_blank"
-          data-affiliate-product={product.id}
+          data-affiliate-product={productId}
           data-affiliate-merchant={offer.merchant.id}
           className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:opacity-90"
         >
           {offer.merchant.buttonLabel}
         </a>
       ))}
+    </div>
+  );
+}
+
+// One row of buttons per market, labelled when the product is sold in more
+// than one, so a UK reader doesn't land in a US store by mistake.
+export function BuyButtons({ product }: { product: ProductView }) {
+  if (product.markets.length === 1) {
+    return <OfferLinks offers={product.offers} productId={product.id} />;
+  }
+  return (
+    <div className="space-y-2">
+      {product.markets.map((market) => (
+        <div key={market} className="flex flex-wrap items-center gap-2">
+          <span className="w-16 text-sm font-medium text-muted">In the {markets[market].name}</span>
+          <OfferLinks
+            offers={product.offers.filter((o) => o.market === market)}
+            productId={product.id}
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// Points to the model sold in other markets, with its own score, so the
+// evidence on this page is never read as covering a model we didn't check.
+export function Equivalents({ product }: { product: ProductView }) {
+  if (product.equivalents.length === 0) return null;
+  return (
+    <div className="rounded-md border border-border bg-accent-soft/40 px-4 py-3 text-sm">
+      {product.equivalents.map(({ product: id, note }) => {
+        const other = getProduct(id);
+        return (
+          <p key={id}>
+            <span className="font-medium">
+              In the {other.markets.map((m) => markets[m].name).join(" and ")}:
+            </span>{" "}
+            {note}{" "}
+            <Link href={reviewPath(other)} className="underline">
+              {other.name} review
+            </Link>
+          </p>
+        );
+      })}
     </div>
   );
 }
@@ -45,7 +91,7 @@ export function ProductCard({ id, award }: { id: string; award?: string }) {
           )}
           <h3 className="text-lg font-semibold">{product.name}</h3>
           <p className="mt-1 flex flex-wrap items-center gap-2 text-sm text-muted">
-            <span>{formatPriceBand(product.priceBand)}</span>
+            <span>{formatPriceBands(product.priceBands)}</span>
             <EvidenceTag level={product.evidence} />
           </p>
         </div>
@@ -71,6 +117,11 @@ export function ProductCard({ id, award }: { id: string; award?: string }) {
           </ul>
         </div>
       </div>
+      {product.equivalents.length > 0 && (
+        <div className="mt-3">
+          <Equivalents product={product} />
+        </div>
+      )}
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
         <BuyButtons product={product} />
         <Link href={reviewPath(product)} className="text-sm underline">
@@ -122,7 +173,7 @@ export function ComparisonTable({ ids }: { ids: string[] }) {
             <td className="py-2 pr-4 text-muted">Price range</td>
             {products.map((p) => (
               <td key={p.id} className="py-2 pr-4">
-                {formatPriceBand(p.priceBand)}
+                {formatPriceBands(p.priceBands)}
               </td>
             ))}
           </tr>

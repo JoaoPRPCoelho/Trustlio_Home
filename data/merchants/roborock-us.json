@@ -1,6 +1,7 @@
 {
   "id": "roborock-us",
   "name": "Roborock official store (US)",
+  "market": "us",
   "program": "direct",
   "showPrices": false,
   "buttonLabel": "View at Roborock"

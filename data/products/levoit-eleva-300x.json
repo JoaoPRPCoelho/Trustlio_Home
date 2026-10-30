@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 100,
-    "max": 150,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 100,
+      "max": 150
+    }
+  ],
   "summary": "A small cylinder launched in 2026, with an AHAM Verifide CADR of 161 cfm, enough for a studio up to about 250 sq ft. HouseFresh named it the best small purifier for most people. It's new, so only two independent reviews exist so far.",
   "idealFor": [
     "Small studios and alcoves up to about 250 sq ft",
@@ -53,7 +55,7 @@
       "p2MeasurableClaims": "Y",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "Y",
-      "b2UsptoTrademark": "Y",
+      "b2TrademarkRegistered": "Y",
       "b3YearsOnMarket": 7,
       "w1WarrantyYears": 2,
       "w2WarrantyTermsClear": "Y",

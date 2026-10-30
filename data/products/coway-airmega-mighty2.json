@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 250,
-    "max": 300,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 250,
+      "max": 300
+    }
+  ],
   "summary": "The 2026 successor to Coway's long-running Mighty. HouseFresh measured the most cleaning at quiet fan speeds of the mainstream purifiers here, and its CARB certification is on the state's public list. It's the widest unit in this guide and has no app.",
   "idealFor": [
     "Studios where you sleep a few feet from the purifier",
@@ -53,7 +55,7 @@
       "p2MeasurableClaims": "Y",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "Y",
-      "b2UsptoTrademark": "Y",
+      "b2TrademarkRegistered": "Y",
       "b3YearsOnMarket": 10,
       "w1WarrantyYears": 1,
       "w2WarrantyTermsClear": "Y",

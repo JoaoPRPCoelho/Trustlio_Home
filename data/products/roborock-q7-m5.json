@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 200,
-    "max": 300,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 200,
+      "max": 300
+    }
+  ],
   "summary": "A budget robot vacuum and mop whose charge-only dock is just 6.3 × 2.8 in, small enough to slide under a sofa. Four independent reviews agree it has strong suction and reliable LiDAR mapping for the price, but two hit the same app bugs, and it has no front obstacle sensor.",
   "idealFor": [
     "The smallest apartments, where even a dock tower is too much",
@@ -52,7 +54,7 @@
       "p2MeasurableClaims": "Y",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "Y",
-      "b2UsptoTrademark": "Y",
+      "b2TrademarkRegistered": "Y",
       "b3YearsOnMarket": 9,
       "w1WarrantyYears": 1,
       "w2WarrantyTermsClear": "Y",
