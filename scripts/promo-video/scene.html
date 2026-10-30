@@ -1,0 +1,320 @@
+<!doctype html>
+<!--
+  The Trustlio Home promo video, as one 1280×720 stage. Nothing animates by
+  itself: render(t) draws the frame at t seconds, so render.mjs can step
+  through it frame by frame. Open it in a browser with ?play to preview.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Trustlio Home promo</title>
+<style>
+  @font-face { font-family: Fraunces; src: url(fonts/fraunces.woff2) format("woff2"); font-weight: 100 900; }
+  /* Only for the dotless ı in the wordmark. */
+  @font-face { font-family: Fraunces; src: url(fonts/fraunces-ext.woff2) format("woff2"); font-weight: 100 900; unicode-range: U+0131; }
+  @font-face { font-family: Fraunces; src: url(fonts/fraunces-italic.woff2) format("woff2"); font-weight: 100 900; font-style: italic; }
+  @font-face { font-family: Inter; src: url(fonts/inter-latin-500-normal.woff2) format("woff2"); font-weight: 500; }
+  @font-face { font-family: Inter; src: url(fonts/inter-latin-600-normal.woff2) format("woff2"); font-weight: 600; }
+  @font-face { font-family: Inter; src: url(fonts/inter-latin-700-normal.woff2) format("woff2"); font-weight: 700; }
+
+  :root {
+    --background: #f8f5ee; --surface: #ffffff; --foreground: #14231f; --muted: #5f6b66;
+    --border: #e6dfd0; --brand: #1a5c4c; --brand-deep: #123f35; --accent: #1a6b58;
+    --accent-soft: #e2efe9; --gold: #f0b44c; --gold-soft: #fbf0d9; --warn: #9a5b00;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { background: var(--background); }
+  body { width: 1280px; height: 720px; overflow: hidden; font-family: Inter, sans-serif; color: var(--foreground); }
+  #stage { position: relative; width: 1280px; height: 720px; overflow: hidden;
+    background:
+      radial-gradient(circle at 88% 12%, var(--gold-soft), transparent 42%),
+      radial-gradient(circle at 8% 92%, var(--accent-soft), transparent 46%),
+      var(--background); }
+  .abs { position: absolute; will-change: transform, opacity; }
+  .headline { left: 0; right: 0; top: 74px; text-align: center; font-family: Fraunces; font-weight: 600;
+    font-size: 58px; letter-spacing: -0.02em; line-height: 1.05; font-variation-settings: "opsz" 144; }
+  .headline em { color: var(--accent); }
+  .headline.small { font-size: 46px; }
+
+  /* Scenes 1–2: the room, the boxes, the hype tags */
+  .box { width: 132px; height: 112px; border-radius: 14px; background: #fff; border: 3px solid var(--foreground); }
+  .box::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 26px;
+    border-bottom: 3px solid var(--foreground); background: var(--gold-soft); border-radius: 11px 11px 0 0; }
+  .box::after { content: ""; position: absolute; left: 50%; top: 0; width: 22px; height: 46px; margin-left: -11px;
+    background: var(--gold); border: 3px solid var(--foreground); border-top: 0; border-radius: 0 0 4px 4px; }
+  .tag { padding: 7px 14px; border-radius: 999px; font-weight: 700; font-size: 20px; letter-spacing: 0.04em;
+    white-space: nowrap; border: 3px solid var(--foreground); }
+  .tag.a { background: var(--gold); }
+  .tag.b { background: #f6c9b8; }
+  .tag.c { background: #fff; }
+  .check { width: 64px; height: 64px; border-radius: 50%; background: var(--brand); display: grid; place-items: center;
+    box-shadow: 0 8px 20px rgba(18, 63, 53, 0.25); }
+
+  /* Scene 3: Trust Score */
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 28px;
+    box-shadow: 0 24px 50px -20px rgba(20, 35, 31, 0.25); }
+  .score-num { font-family: Fraunces; font-weight: 700; font-size: 92px; line-height: 1; letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums; }
+  .row { width: 520px; }
+  .row-label { display: flex; justify-content: space-between; font-size: 26px; font-weight: 600; }
+  .row-label span:last-child { font-variant-numeric: tabular-nums; }
+  .row-label small { font-weight: 500; color: var(--muted); font-size: 26px; }
+  .track { margin-top: 10px; height: 14px; border-radius: 999px; background: var(--accent-soft); overflow: hidden; }
+  .fill { height: 100%; border-radius: 999px; background: var(--brand); transform-origin: left; }
+  .note { font-size: 19px; color: var(--muted); font-weight: 500; }
+
+  /* Scene 4: guides */
+  .pill { padding: 10px 22px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border);
+    font-size: 20px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+    display: flex; align-items: center; gap: 12px; box-shadow: 0 6px 16px -8px rgba(20, 35, 31, 0.2); }
+  .pill i { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); display: block; }
+  .guide { width: 470px; padding: 30px 32px; }
+  .guide .eyebrow { font-size: 18px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .guide h3 { margin-top: 14px; font-family: Fraunces; font-weight: 600; font-size: 34px; line-height: 1.12; letter-spacing: -0.01em; }
+  .guide .more { margin-top: 18px; font-size: 21px; font-weight: 600; color: var(--accent); }
+  .guide svg { display: block; }
+
+  /* Scene 5: logo */
+  .logo { left: 0; right: 0; top: 226px; display: flex; justify-content: center; align-items: baseline; gap: 22px; }
+  .word { font-family: Fraunces; font-weight: 700; font-size: 168px; line-height: 1; letter-spacing: -0.02em;
+    display: flex; font-variation-settings: "opsz" 144; }
+  .word span { display: inline-block; position: relative; }
+  .home { font-size: 40px; font-weight: 600; letter-spacing: 0.22em; color: var(--accent); }
+  .url { left: 0; right: 0; top: 470px; text-align: center; font-size: 34px; font-weight: 600; color: var(--brand-deep); letter-spacing: 0.01em; }
+  .tagline { left: 0; right: 0; top: 528px; text-align: center; font-family: Fraunces; font-style: italic; font-size: 34px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <!-- Headlines, one per scene -->
+  <h1 class="abs headline" id="h1">Too many “best” picks?</h1>
+  <h1 class="abs headline" id="h2">We check the <em>evidence</em> first.</h1>
+  <h1 class="abs headline small" id="h3">Trust Score: 5 pillars, 100 points, public sources.</h1>
+  <h1 class="abs headline" id="h4">Picked for <em>small</em> homes.</h1>
+
+  <!-- Scene 1: a small room, line drawn -->
+  <svg class="abs" id="room" style="left:140px;top:250px" width="1000" height="420" viewBox="0 0 1000 420" fill="none"
+       stroke="#14231f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 380H980" />
+    <rect x="640" y="30" width="200" height="150" rx="10" />
+    <path d="M740 30v150M640 105h200" />
+    <path d="M60 380v-70h28M60 310a14 14 0 0 1 28 0" opacity="0.35" />
+    <path d="M880 380v-38h52v38M872 342h68" opacity="0.35" />
+    <path d="M906 342c-14-40 4-70 0-92M906 300c20-18 30-14 34-30M906 316c-18-12-30-10-36-26" opacity="0.35" />
+  </svg>
+  <div id="boxes"></div>
+  <div id="tags"></div>
+  <div class="abs check" id="check">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2"
+         stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+  </div>
+  <svg class="abs" id="lens" width="170" height="170" viewBox="0 0 170 170" fill="none">
+    <circle cx="66" cy="66" r="50" fill="rgba(226,239,233,0.55)" stroke="#1a5c4c" stroke-width="12" />
+    <path d="M104 104l46 46" stroke="#1a5c4c" stroke-width="18" stroke-linecap="round" />
+    <path d="M44 48a28 28 0 0 1 22-12" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.8" />
+  </svg>
+
+  <!-- Scene 3: score ring and pillar bars (illustrative numbers, not a real product) -->
+  <div class="abs card" id="scoreCard" style="left:120px;top:208px;width:1040px;height:420px">
+    <svg class="abs" style="left:60px;top:60px" width="300" height="300" viewBox="0 0 300 300">
+      <circle cx="150" cy="150" r="124" stroke="#e2efe9" stroke-width="22" fill="none" />
+      <circle id="ring" cx="150" cy="150" r="124" stroke="#1a5c4c" stroke-width="22" fill="none"
+              stroke-linecap="round" transform="rotate(-90 150 150)" />
+    </svg>
+    <div class="abs" style="left:60px;top:126px;width:300px;text-align:center">
+      <div class="score-num" id="scoreNum">0</div>
+      <div style="margin-top:6px;font-size:19px;font-weight:600;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase">Trust Score</div>
+    </div>
+    <div class="abs" id="rows" style="left:440px;top:34px"></div>
+    <div class="abs note" id="note" style="left:440px;top:372px">Illustrative example. Every check links to a public source.</div>
+  </div>
+
+  <!-- Scene 4: small-space fit and the guides -->
+  <div class="abs pill" id="pill"><i></i>Small-space fit</div>
+  <div class="abs card guide" id="g1">
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1a5c4c" stroke-width="3.5" stroke-linecap="round">
+      <circle cx="32" cy="32" r="26" /><circle cx="32" cy="32" r="8" /><path d="M14 20c4-5 10-8 18-8" />
+    </svg>
+    <p class="eyebrow">Buying guide</p>
+    <h3>Best Robot Vacuums for Small Apartments</h3>
+    <p class="more">Who should buy what, first →</p>
+  </div>
+  <div class="abs card guide" id="g2">
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1a5c4c" stroke-width="3.5" stroke-linecap="round">
+      <rect x="16" y="6" width="32" height="52" rx="8" /><path d="M24 18h16M24 26h16M24 34h16" /><circle cx="32" cy="47" r="3" />
+    </svg>
+    <p class="eyebrow">Buying guide</p>
+    <h3>Best Air Purifiers for Studio Apartments</h3>
+    <p class="more">Who should buy what, first →</p>
+  </div>
+
+  <!-- Scene 5: the logo, with the house as the dot on the i -->
+  <div class="abs logo" id="logo">
+    <div class="word" id="word"></div>
+    <div class="home" id="home">HOME</div>
+  </div>
+  <div class="abs url" id="url">trustliohome.com</div>
+  <div class="abs tagline" id="tagline">Checked before you buy.</div>
+</div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+  const p = (t, a, b) => clamp((t - a) / (b - a));
+  const outCubic = (x) => 1 - Math.pow(1 - x, 3);
+  const inOut = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+  const outBack = (x) => { const c = 1.70158, d = c + 1; return 1 + d * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+  // Fades in over [a, a+f] and out over [b-f, b].
+  const window_ = (t, a, b, f = 0.35) => Math.min(p(t, a, a + f), 1 - p(t, b - f, b));
+  const set = (el, { x = 0, y = 0, s = 1, r = 0, o = 1 } = {}) => {
+    el.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg) scale(${s})`;
+    el.style.opacity = o;
+  };
+
+  const DURATION = 15;
+
+  // Scene 1 boxes: position on the floor and their hype tag.
+  const boxes = [
+    { x: 250, y: 518, tag: "BEST!", cls: "a", tx: -10, ty: -58, r: -8 },
+    { x: 400, y: 518, tag: "#1 PICK", cls: "b", tx: -14, ty: -56, r: 6 },
+    { x: 574, y: 518, tag: "TOP RATED", cls: "c", tx: -26, ty: -60, r: -4 },
+    { x: 750, y: 518, tag: "MUST-HAVE", cls: "a", tx: -24, ty: -56, r: 7 },
+    { x: 325, y: 400, tag: "BEST EVER", cls: "c", tx: -24, ty: -56, r: 5 },
+    { x: 660, y: 400, tag: "#1!!", cls: "b", tx: 18, ty: -56, r: -9 },
+  ].map((b, i) => {
+    const box = document.createElement("div");
+    box.className = "abs box";
+    box.style.left = b.x + "px"; box.style.top = b.y + "px";
+    const tag = document.createElement("div");
+    tag.className = "abs tag " + b.cls;
+    tag.textContent = b.tag;
+    tag.style.left = b.x + b.tx + "px"; tag.style.top = b.y + b.ty + "px";
+    $("boxes").append(box);
+    $("tags").append(tag);
+    return { ...b, box, tag, i };
+  });
+  const HERO = 2; // the box that gets checked
+
+  const pillars = [
+    ["Independent evidence", 25, 30], ["Safety & compliance", 17, 20], ["Specs & claims", 16, 20],
+    ["Brand accountability", 12, 15], ["Warranty & support", 12, 15],
+  ].map(([name, pts, max]) => {
+    const row = document.createElement("div");
+    row.className = "row";
+    row.style.marginBottom = "14px";
+    row.innerHTML = `<div class="row-label"><span>${name}</span><span><b class="pts">0</b><small>/${max}</small></span></div>
+      <div class="track"><div class="fill"></div></div>`;
+    $("rows").append(row);
+    return { row, pts, max, num: row.querySelector(".pts"), fill: row.querySelector(".fill") };
+  });
+  const TOTAL = pillars.reduce((s, x) => s + x.pts, 0);
+  const RING = 2 * Math.PI * 124;
+  $("ring").setAttribute("stroke-dasharray", RING);
+
+  // The wordmark, letter by letter. The i is dotless; the house is its dot.
+  const letters = [..."trustlıo"].map((ch) => {
+    const s = document.createElement("span");
+    s.textContent = ch;
+    $("word").append(s);
+    return s;
+  });
+  const iSpan = letters[6];
+  iSpan.insertAdjacentHTML("beforeend",
+    `<svg id="house" viewBox="0 0 12 11" style="position:absolute;left:50%;top:0.07em;width:0.36em;margin-left:-0.18em;overflow:visible">
+       <path d="M1 5.4 6 1l5 4.4V10H1z" fill="#f0b44c" /></svg>`);
+
+  function render(t) {
+    // Headlines
+    const heads = [["h1", 0.15, 2.7], ["h2", 2.75, 5.0], ["h3", 5.1, 9.05], ["h4", 9.1, 11.7]];
+    for (const [id, a, b] of heads) {
+      const o = window_(t, a, b, 0.3);
+      set($(id), { y: (1 - outCubic(p(t, a, a + 0.45))) * 26, o });
+    }
+
+    // Scene 1–2: room, boxes and tags
+    set($("room"), { o: window_(t, 0, 3.2, 0.3) * 0.9 });
+    for (const b of boxes) {
+      const pop = outBack(p(t, 0.25 + b.i * 0.16, 0.6 + b.i * 0.16));
+      const wobble = Math.sin(t * 9 + b.i * 1.7) * 3;
+      if (b.i === HERO) {
+        // Moves to the centre and grows, then leaves with scene 2.
+        const m = inOut(p(t, 2.9, 3.5));
+        set(b.box, { x: (574 - 574) * m, y: -150 * m, s: Math.max(0, pop) * (1 + 0.5 * m), o: Math.min(1, pop * 3) * (1 - p(t, 4.75, 5.05)) });
+      } else {
+        const leave = p(t, 2.75, 3.25);
+        const dir = b.x < 574 ? -1 : 1;
+        set(b.box, { x: dir * 140 * inOut(leave), s: Math.max(0, pop), o: Math.min(1, pop * 3) * (1 - leave) });
+      }
+      // Tags drop off with gravity when scene 2 starts.
+      const fall = Math.max(0, t - (2.55 + b.i * 0.05));
+      set(b.tag, {
+        y: (1 - pop) * 20 + 900 * fall * fall,
+        r: b.r + wobble + fall * 160 * (b.i % 2 ? 1 : -1),
+        s: Math.max(0, outBack(p(t, 0.45 + b.i * 0.16, 0.8 + b.i * 0.16))),
+        o: 1 - p(fall, 0.25, 0.5),
+      });
+    }
+    // Magnifying glass sweeps over the centred box, then the check lands.
+    const lensIn = outCubic(p(t, 3.3, 3.75));
+    const sweep = Math.sin(p(t, 3.5, 4.6) * Math.PI * 1.5) * 70;
+    set($("lens"), {
+      x: 560 + sweep + (1 - lensIn) * 300, y: 300 + (1 - lensIn) * 160 + Math.cos(t * 5) * 6,
+      r: -8 + sweep * 0.08, o: lensIn * (1 - p(t, 4.45, 4.7)),
+    });
+    $("lens").style.left = "0px"; $("lens").style.top = "0px";
+    set($("check"), { x: 706, y: 336, s: outBack(p(t, 4.45, 4.75)), o: p(t, 4.45, 4.55) * (1 - p(t, 4.75, 5.05)) });
+    $("check").style.left = "0px"; $("check").style.top = "0px";
+
+    // Scene 3: Trust Score
+    const card = window_(t, 5.0, 9.05, 0.35);
+    set($("scoreCard"), { y: (1 - outCubic(p(t, 5.0, 5.5))) * 40, o: card });
+    const ring = inOut(p(t, 5.45, 7.4));
+    $("ring").setAttribute("stroke-dashoffset", RING * (1 - (TOTAL / 100) * ring));
+    $("scoreNum").textContent = Math.round(TOTAL * ring);
+    pillars.forEach((pl, i) => {
+      const k = outCubic(p(t, 5.55 + i * 0.28, 6.35 + i * 0.28));
+      set(pl.row, { x: (1 - k) * 30, o: p(t, 5.5 + i * 0.28, 5.8 + i * 0.28) });
+      pl.fill.style.transform = `scaleX(${(pl.pts / pl.max) * k})`;
+      pl.num.textContent = Math.round(pl.pts * k);
+    });
+    set($("note"), { o: p(t, 7.3, 7.7) });
+
+    // Scene 4: small-space fit and guides
+    const s4 = window_(t, 9.1, 11.7, 0.3);
+    $("pill").style.left = "640px"; $("pill").style.top = "196px";
+    set($("pill"), { x: -$("pill").offsetWidth / 2, s: outBack(p(t, 9.2, 9.6)), o: s4 });
+    const g1 = outCubic(p(t, 9.4, 9.95)), g2 = outCubic(p(t, 9.6, 10.15));
+    $("g1").style.left = "120px"; $("g1").style.top = "290px";
+    $("g2").style.left = "690px"; $("g2").style.top = "290px";
+    set($("g1"), { x: (1 - g1) * -120, r: (1 - g1) * -5 - 1.2 * g1, o: Math.min(g1, s4) });
+    set($("g2"), { x: (1 - g2) * 120, r: (1 - g2) * 5 + 1.2 * g2, y: 14, o: Math.min(g2, s4) });
+
+    // Scene 5: logo
+    const out = 1 - p(t, 14.55, 14.95);
+    letters.forEach((l, i) => {
+      const k = outCubic(p(t, 11.8 + i * 0.08, 12.2 + i * 0.08));
+      set(l, { y: (1 - k) * 50, o: k * out });
+    });
+    const drop = p(t, 12.6, 13.05);
+    const bounce = drop < 1 ? -260 * Math.pow(1 - outCubic(drop), 1) : 0;
+    const squash = 1 + Math.sin(p(t, 13.0, 13.25) * Math.PI) * 0.12;
+    const house = $("house");
+    house.style.transform = `translateY(${bounce}px) scaleX(${squash}) scaleY(${2 - squash})`;
+    house.style.transformOrigin = "50% 100%";
+    house.style.opacity = p(t, 12.6, 12.7);
+    set($("home"), { x: (1 - outCubic(p(t, 12.9, 13.4))) * -20, o: p(t, 12.9, 13.3) * out });
+    set($("url"), { y: (1 - outCubic(p(t, 13.15, 13.6))) * 20, o: p(t, 13.15, 13.5) * out });
+    set($("tagline"), { y: (1 - outCubic(p(t, 13.35, 13.8))) * 20, o: p(t, 13.35, 13.7) * out });
+  }
+
+  window.render = render;
+  window.DURATION = DURATION;
+  render(0);
+  if (location.search.includes("play")) {
+    const start = performance.now();
+    const loop = (now) => { render(((now - start) / 1000) % DURATION); requestAnimationFrame(loop); };
+    requestAnimationFrame(loop);
+  }
+</script>
+</body>
+</html>
