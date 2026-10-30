@@ -167,6 +167,22 @@
       "url": "https://us.roborock.com/products/roborock-saros-10r"
     }
   ],
+  "images": [
+    {
+      "src": "/images/products/roborock-saros-10r/icecat-1.jpg",
+      "alt": "Roborock Saros 10R robot docked in its multifunction base",
+      "width": 532,
+      "height": 590,
+      "license": "press-kit",
+      "credit": "Image: Roborock via Open Icecat.",
+      "source": "https://icecat.biz/en/p/roborock/00810125543043/robot+vacuums-0810125543043-saros+10r-130219109.html",
+      "notice": {
+        "text": "Database Right data-sheet 2026 Icecat. All rights reserved. Provided “AS IS”, without warranty, under the Open Content License.",
+        "url": "https://iceclog.com/open-content-license/"
+      },
+      "obtained": "2026-10-30"
+    }
+  ],
   "videos": [
     {
       "youtubeId": "-eYPr2R7J4g",

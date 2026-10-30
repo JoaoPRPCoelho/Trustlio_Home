@@ -168,5 +168,77 @@
       "url": "https://store.dreametech.com/robot-vacuum/d10-plus-gen-2"
     }
   ],
-  "lastVerified": "2026-10-26"
+  "lastVerified": "2026-10-26",
+  "images": [
+    {
+      "src": "/images/products/dreame-d10-plus-gen-2/icecat-1.jpg",
+      "alt": "Dreame D10 Plus Gen 2 robot vacuum seen from above",
+      "width": 3000,
+      "height": 3000,
+      "license": "press-kit",
+      "credit": "Image: Dreame via Open Icecat.",
+      "source": "https://icecat.biz/en/p/dreame/rld32gd/robot+vacuums-6976233676081-d10+plus+gen+2-131666064.html",
+      "notice": {
+        "text": "Database Right data-sheet 2026 Icecat. All rights reserved. Provided “AS IS”, without warranty, under the Open Content License.",
+        "url": "https://iceclog.com/open-content-license/"
+      },
+      "obtained": "2026-10-30"
+    },
+    {
+      "src": "/images/products/dreame-d10-plus-gen-2/icecat-2.jpg",
+      "alt": "Dreame D10 Plus Gen 2 auto-empty dock on its own",
+      "width": 3000,
+      "height": 3000,
+      "license": "press-kit",
+      "credit": "Image: Dreame via Open Icecat.",
+      "source": "https://icecat.biz/en/p/dreame/rld32gd/robot+vacuums-6976233676081-d10+plus+gen+2-131666064.html",
+      "notice": {
+        "text": "Database Right data-sheet 2026 Icecat. All rights reserved. Provided “AS IS”, without warranty, under the Open Content License.",
+        "url": "https://iceclog.com/open-content-license/"
+      },
+      "obtained": "2026-10-30"
+    },
+    {
+      "src": "/images/products/dreame-d10-plus-gen-2/icecat-3.jpg",
+      "alt": "Dreame D10 Plus Gen 2 robot docked in its auto-empty base",
+      "width": 3000,
+      "height": 3000,
+      "license": "press-kit",
+      "credit": "Image: Dreame via Open Icecat.",
+      "source": "https://icecat.biz/en/p/dreame/rld32gd/robot+vacuums-6976233676081-d10+plus+gen+2-131666064.html",
+      "notice": {
+        "text": "Database Right data-sheet 2026 Icecat. All rights reserved. Provided “AS IS”, without warranty, under the Open Content License.",
+        "url": "https://iceclog.com/open-content-license/"
+      },
+      "obtained": "2026-10-30"
+    },
+    {
+      "src": "/images/products/dreame-d10-plus-gen-2/icecat-4.jpg",
+      "alt": "Dreame D10 Plus Gen 2 docked, seen from the front",
+      "width": 3000,
+      "height": 3000,
+      "license": "press-kit",
+      "credit": "Image: Dreame via Open Icecat.",
+      "source": "https://icecat.biz/en/p/dreame/rld32gd/robot+vacuums-6976233676081-d10+plus+gen+2-131666064.html",
+      "notice": {
+        "text": "Database Right data-sheet 2026 Icecat. All rights reserved. Provided “AS IS”, without warranty, under the Open Content License.",
+        "url": "https://iceclog.com/open-content-license/"
+      },
+      "obtained": "2026-10-30"
+    },
+    {
+      "src": "/images/products/dreame-d10-plus-gen-2/icecat-5.jpg",
+      "alt": "Underside of the Dreame D10 Plus Gen 2 with brushes and mop pad",
+      "width": 3000,
+      "height": 3000,
+      "license": "press-kit",
+      "credit": "Image: Dreame via Open Icecat.",
+      "source": "https://icecat.biz/en/p/dreame/rld32gd/robot+vacuums-6976233676081-d10+plus+gen+2-131666064.html",
+      "notice": {
+        "text": "Database Right data-sheet 2026 Icecat. All rights reserved. Provided “AS IS”, without warranty, under the Open Content License.",
+        "url": "https://iceclog.com/open-content-license/"
+      },
+      "obtained": "2026-10-30"
+    }
+  ]
 }

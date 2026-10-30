@@ -184,5 +184,49 @@
       "url": "https://us.store.tapo.com/products/tapo-rv30-max-plus-5300pa-suction-robot-vacuum-mop-with-auto-empty-dock"
     }
   ],
-  "lastVerified": "2026-10-26"
+  "lastVerified": "2026-10-26",
+  "images": [
+    {
+      "src": "/images/products/tapo-rv30-max-plus/icecat-1.jpg",
+      "alt": "Tapo RV30 Max Plus robot vacuum next to its auto-empty dock",
+      "width": 1000,
+      "height": 1000,
+      "license": "press-kit",
+      "credit": "Image: TP-Link via Open Icecat.",
+      "source": "https://icecat.biz/en/p/tp-link/tapo+rv30+max+plus/robot+vacuums-8885020625141-robot+vacuum+cleaner+-+auto-empty+dock-122732696.html",
+      "notice": {
+        "text": "Database Right data-sheet 2026 Icecat. All rights reserved. Provided “AS IS”, without warranty, under the Open Content License.",
+        "url": "https://iceclog.com/open-content-license/"
+      },
+      "obtained": "2026-10-30"
+    },
+    {
+      "src": "/images/products/tapo-rv30-max-plus/icecat-2.jpg",
+      "alt": "Tapo RV30 Max Plus robot docked, seen from the front",
+      "width": 1000,
+      "height": 1000,
+      "license": "press-kit",
+      "credit": "Image: TP-Link via Open Icecat.",
+      "source": "https://icecat.biz/en/p/tp-link/tapo+rv30+max+plus/robot+vacuums-8885020625141-robot+vacuum+cleaner+-+auto-empty+dock-122732696.html",
+      "notice": {
+        "text": "Database Right data-sheet 2026 Icecat. All rights reserved. Provided “AS IS”, without warranty, under the Open Content License.",
+        "url": "https://iceclog.com/open-content-license/"
+      },
+      "obtained": "2026-10-30"
+    },
+    {
+      "src": "/images/products/tapo-rv30-max-plus/icecat-3.jpg",
+      "alt": "Underside of the Tapo RV30 Max Plus with brush and mop pad",
+      "width": 1000,
+      "height": 1000,
+      "license": "press-kit",
+      "credit": "Image: TP-Link via Open Icecat.",
+      "source": "https://icecat.biz/en/p/tp-link/tapo+rv30+max+plus/robot+vacuums-8885020625141-robot+vacuum+cleaner+-+auto-empty+dock-122732696.html",
+      "notice": {
+        "text": "Database Right data-sheet 2026 Icecat. All rights reserved. Provided “AS IS”, without warranty, under the Open Content License.",
+        "url": "https://iceclog.com/open-content-license/"
+      },
+      "obtained": "2026-10-30"
+    }
+  ]
 }

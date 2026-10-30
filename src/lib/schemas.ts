@@ -191,6 +191,10 @@ export const ProductImageSchema = z.object({
   // Where the license or permission is recorded: a URL, or a citation such as
   // "Email from Roborock PR, 2026-11-03". Not needed for our own photos.
   source: z.string().min(3).optional(),
+  // A notice the license requires next to the image, ending in a link to the
+  // license itself. Open Icecat needs its database-right notice and "AS IS"
+  // disclaimer on each copy.
+  notice: z.object({ text: z.string().min(3), url: z.string().url() }).optional(),
   // True when the image was generated or materially altered with AI.
   aiGenerated: z.boolean().default(false),
   obtained: isoDate,
