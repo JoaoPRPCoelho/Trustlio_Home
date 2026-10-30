@@ -67,6 +67,12 @@ Fill a product's `trust.inputs` with the scoring sheet
 (`docs/trust-score-rubric-v1.1.xlsx`): yellow columns are answers, blue ones
 compute the score, and the Rubric tab has the rules. `e1IndependentSources`
 must equal the number of `E1` sources with `realUse: true`, or the build fails.
+Up to three of those sources show on the review as "What reviewers found",
+with their `note` as the summary, so write notes that a reader can follow and
+that include what went wrong. A source can also carry a `quote`: at most 30
+words copied exactly from the page, shown in quotes with the link. Only
+professional reviews go there; never consumer reviews from other sites
+(copyright, and EU/UK rules on showing consumer reviews) and never Amazon.
 
 **Small-space fit** (`src/lib/fit-score.ts`) is a separate, optional rating:
 10 × the weighted average of 0–10 criterion scores from the category's fit

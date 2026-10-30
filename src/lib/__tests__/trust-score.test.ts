@@ -83,6 +83,11 @@ describe("TrustSchema", () => {
     expect(TrustSourceSchema.safeParse(source).success).toBe(true);
   });
 
+  it("keeps quotes from sources short", () => {
+    expect(TrustSourceSchema.safeParse({ ...source, quote: "Quiet enough for a bedroom." }).success).toBe(true);
+    expect(TrustSourceSchema.safeParse({ ...source, quote: "word ".repeat(31) }).success).toBe(false);
+  });
+
   it("requires e1IndependentSources to match the listed real-use sources", () => {
     const sources = [1, 2, 3].map((n) => ({ ...source, url: `https://example.com/${n}` }));
     const trust = { reviewed: "2026-10-26", summary: "", inputs: trustInputs, sources };
