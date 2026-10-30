@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Breadcrumbs, JsonLd, PageShell } from "@/components/layout";
 import { AffiliateDisclosure, ExampleBanner } from "@/components/notices";
 import { ImageFigure, VideoFigure } from "@/components/media";
-import { BuyButtons } from "@/components/product";
+import { BuyButtons, Equivalents } from "@/components/product";
 import {
   EvidenceTag,
   FitScoreBreakdown,
@@ -11,7 +11,7 @@ import {
   TrustScoreBadge,
   TrustSources,
 } from "@/components/trust-score";
-import { formatPriceBand } from "@/lib/affiliate";
+import { formatPriceBands } from "@/lib/affiliate";
 import { getProduct, getProducts } from "@/lib/data";
 import { hubPath, reviewPath } from "@/lib/paths";
 import { site, subcategories } from "@/lib/site";
@@ -63,7 +63,7 @@ export default async function ReviewPage({
             {product.name} review
           </h1>
           <p className="flex flex-wrap items-center gap-2 text-sm text-muted">
-            <span className="font-medium text-foreground">{formatPriceBand(product.priceBand)}</span>
+            <span className="font-medium text-foreground">{formatPriceBands(product.priceBands)}</span>
             <EvidenceTag level={product.evidence} />
             <span>· Last verified {product.lastVerified}</span>
           </p>
@@ -85,6 +85,7 @@ export default async function ReviewPage({
         <p>
           <span className="font-semibold">Best for:</span> {product.idealFor.join(" · ")}
         </p>
+        <Equivalents product={product} />
         <BuyButtons product={product} />
       </section>
 

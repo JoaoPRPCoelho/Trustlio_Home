@@ -166,7 +166,7 @@ export function TrustScoreBreakdown({
       </div>
       {trust.status === "active-recall" && (
         <p className="mt-3 text-sm text-warn">
-          This product is under a CPSC recall. Check the recall notice in the sources below before
+          This product is under an active safety recall. Check the recall notice in the sources below before
           using it.
         </p>
       )}
