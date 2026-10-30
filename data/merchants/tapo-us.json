@@ -1,6 +1,7 @@
 {
   "id": "tapo-us",
   "name": "Tapo official store (US)",
+  "market": "us",
   "program": "direct",
   "showPrices": false,
   "buttonLabel": "View at the Tapo store"

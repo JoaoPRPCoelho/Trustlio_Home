@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 200,
-    "max": 250,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 200,
+      "max": 250
+    }
+  ],
   "summary": "The app-connected successor to the Winix 5500-2, rated for 392 sq ft by AHAM. It packs studio-sized cleaning into the slimmest full-size body here, but it's loud at top speed and Winix publishes few specs or warranty terms.",
   "idealFor": [
     "Studios around 400 sq ft with a narrow spot by a wall or desk",
@@ -53,7 +55,7 @@
       "p2MeasurableClaims": "Partial",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "Y",
-      "b2UsptoTrademark": "Y",
+      "b2TrademarkRegistered": "Y",
       "b3YearsOnMarket": 24,
       "w1WarrantyYears": 2,
       "w2WarrantyTermsClear": "N",

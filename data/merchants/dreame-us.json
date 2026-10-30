@@ -1,6 +1,7 @@
 {
   "id": "dreame-us",
   "name": "Dreame official store (US)",
+  "market": "us",
   "program": "direct",
   "showPrices": false,
   "buttonLabel": "View at Dreame"

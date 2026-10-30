@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 300,
-    "max": 400,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 300,
+      "max": 400
+    }
+  ],
   "summary": "A budget self-emptying robot vacuum that is excellent on hard floors and quiet while it runs, with a 3-year warranty on the robot and base. It is weak on carpet hair and obstacles, its base is bigger than the Tapo's, and Dreame now lists it as discontinued.",
   "idealFor": [
     "Hard-floor apartments where noise matters",
@@ -53,7 +55,7 @@
       "p2MeasurableClaims": "Y",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "N",
-      "b2UsptoTrademark": "Y",
+      "b2TrademarkRegistered": "Y",
       "b3YearsOnMarket": 7,
       "w1WarrantyYears": 3,
       "w2WarrantyTermsClear": "Y",

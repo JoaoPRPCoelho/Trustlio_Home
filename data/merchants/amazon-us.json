@@ -1,7 +1,9 @@
 {
   "id": "amazon-us",
   "name": "Amazon",
+  "market": "us",
   "program": "amazon",
+  "amazonDomain": "amazon.com",
   "trackingTag": "replace-me-20",
   "showPrices": false,
   "buttonLabel": "Check price on Amazon"

@@ -1,6 +1,7 @@
 {
   "id": "coway-us",
   "name": "Coway official store (US)",
+  "market": "us",
   "program": "direct",
   "showPrices": false,
   "buttonLabel": "View at Coway"

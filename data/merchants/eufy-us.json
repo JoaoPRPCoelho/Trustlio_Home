@@ -1,6 +1,7 @@
 {
   "id": "eufy-us",
   "name": "eufy official store (US)",
+  "market": "us",
   "program": "direct",
   "showPrices": false,
   "buttonLabel": "View at eufy"

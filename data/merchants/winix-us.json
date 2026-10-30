@@ -1,6 +1,7 @@
 {
   "id": "winix-us",
   "name": "Winix official store (US)",
+  "market": "us",
   "program": "direct",
   "showPrices": false,
   "buttonLabel": "View at Winix"

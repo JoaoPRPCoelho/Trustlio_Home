@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatPriceBand } from "@/lib/affiliate";
+import { formatPriceBands } from "@/lib/affiliate";
 import { getProduct, type Guide, type ProductView } from "@/lib/data";
 import { guidePath, reviewPath } from "@/lib/paths";
 import { EvidenceTag, TrustScoreBadge } from "./trust-score";
@@ -67,7 +67,7 @@ export function ProductTile({
           {product.name}
         </span>
         <span className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted">
-          <span>{formatPriceBand(product.priceBand)}</span>
+          <span>{formatPriceBands(product.priceBands)}</span>
           <EvidenceTag level={product.evidence} />
         </span>
       </span>

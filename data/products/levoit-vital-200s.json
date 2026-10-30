@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 150,
-    "max": 200,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 150,
+      "max": 200
+    }
+  ],
   "summary": "A slim, rectangular purifier rated at 250 cfm, enough for most studios. Three independent hands-on reviews agree it cleans fast, and HouseFresh's measured CADR matches Levoit's rating. Its bonded filter has to be replaced as one piece, and the carbon layer can run out before the year is up.",
   "idealFor": [
     "Most studios up to about 400 sq ft",
@@ -53,7 +55,7 @@
       "p2MeasurableClaims": "Y",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "Y",
-      "b2UsptoTrademark": "Y",
+      "b2TrademarkRegistered": "Y",
       "b3YearsOnMarket": 7,
       "w1WarrantyYears": 2,
       "w2WarrantyTermsClear": "Y",

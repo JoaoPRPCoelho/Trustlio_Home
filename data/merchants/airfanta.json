@@ -1,6 +1,7 @@
 {
   "id": "airfanta",
   "name": "AirFanta official store",
+  "market": "us",
   "program": "direct",
   "showPrices": false,
   "buttonLabel": "View at AirFanta"
