@@ -119,7 +119,17 @@ export const TrustSourceSchema = z.object({
   type: z.enum(["editorial", "reddit", "youtube", "forum", "manufacturer", "government", "certification"]),
   // True when the source shows first-hand use of the product.
   realUse: z.boolean(),
+  // What the source found, in our words. Real-use E1 notes are shown on the
+  // review under "What reviewers found", so keep them readable and balanced.
   note: z.string(),
+  // An optional verbatim line from the source, shown in quotes with its link.
+  // Copy it exactly from the page. Short quotes for comment are allowed (fair
+  // use, EU quotation exception); longer extracts are reproduction.
+  quote: z
+    .string()
+    .max(200)
+    .refine((q) => q.trim().split(/\s+/).length <= 30, "Keep quotes to 30 words or fewer")
+    .optional(),
   accessed: isoDate,
 });
 export type TrustSource = z.infer<typeof TrustSourceSchema>;
