@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { GuideCard, ProductTile, SectionHeading } from "@/components/cards";
-import { ScoreBar, TrustScoreBadge } from "@/components/trust-score";
+import { PromoVideo } from "@/components/promo-video";
 import { getGuides, getProducts } from "@/lib/data";
-import { hubPath, reviewPath } from "@/lib/paths";
+import { hubPath } from "@/lib/paths";
 import { site, subcategories } from "@/lib/site";
 import type { SubcategoryId } from "@/lib/schemas";
 
@@ -81,52 +81,13 @@ export default async function Home() {
             </dl>
           </div>
 
-          {featured && (
-            <div className="rise relative [animation-delay:150ms]">
-              <div
-                className="absolute -inset-3 -rotate-2 rounded-3xl bg-brand/10"
-                aria-hidden="true"
-              />
-              <Link
-                href={reviewPath(featured)}
-                className="group relative block rounded-3xl border border-border bg-surface p-6 shadow-xl transition hover:-translate-y-1"
-              >
-                <p className="text-xs font-semibold uppercase tracking-widest text-muted">
-                  How a Trust Score breaks down
-                </p>
-                <div className="mt-4 flex items-center gap-4">
-                  <TrustScoreBadge trust={featured.trustScore} size="lg" />
-                  <div>
-                    <p className="font-display text-xl font-semibold leading-snug group-hover:text-accent">
-                      {featured.name}
-                    </p>
-                    <p className="text-sm text-muted">
-                      {featured.trustScore.band} · {featured.trustScore.confidence} confidence
-                    </p>
-                  </div>
-                </div>
-                <ul className="mt-6 space-y-3 text-sm">
-                  {featured.trustScore.pillars.map((p) => (
-                    <li key={p.key}>
-                      <span className="flex justify-between">
-                        <span>{p.name}</span>
-                        <span className="font-semibold tabular-nums">
-                          {p.points}
-                          <span className="font-normal text-muted">/{p.max}</span>
-                        </span>
-                      </span>
-                      <span className="mt-1.5 block">
-                        <ScoreBar value={p.points} max={p.max} />
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-5 text-xs text-muted">
-                  Every check links to a public source. Read the full review →
-                </p>
-              </Link>
-            </div>
-          )}
+          <div className="rise relative [animation-delay:150ms]">
+            <div
+              className="absolute -inset-3 -rotate-2 rounded-3xl bg-brand/10"
+              aria-hidden="true"
+            />
+            <PromoVideo />
+          </div>
         </div>
       </section>
 
