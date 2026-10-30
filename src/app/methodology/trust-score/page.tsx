@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "@/components/layout";
 import { getRubrics } from "@/lib/data";
-import { site } from "@/lib/site";
+import { amazonAssociateStatement, site } from "@/lib/site";
 import { METHODOLOGY_VERSION } from "@/lib/trust-score";
 
 export const metadata: Metadata = {
@@ -267,8 +267,8 @@ export default function TrustScoreMethodology() {
 
         <h2>Affiliate disclosure</h2>
         <p>
-          {site.name} is reader-supported. As an Amazon Associate I earn from qualifying purchases.
-          We may also earn from other retailer links. This never changes a score: the checks above
+          {site.name} is reader-supported: we may earn a commission from store links.
+          {site.amazonAssociate && ` ${amazonAssociateStatement}`} This never changes a score: the checks above
           are the same for every product, whether or not we earn from it. See our{" "}
           <Link href="/disclosure/">full disclosure</Link>.
         </p>

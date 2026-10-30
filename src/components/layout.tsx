@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, subcategories } from "@/lib/site";
+import { amazonAssociateStatement, site, subcategories } from "@/lib/site";
 import { breadcrumbs } from "@/lib/structured-data";
 
 export function JsonLd({ data }: { data: object | object[] }) {
@@ -82,7 +82,7 @@ export function SiteFooter() {
           <Link href="/disclosure/">Affiliate disclosure</Link>
           <Link href="/privacy/">Privacy</Link>
         </nav>
-        <p>As an Amazon Associate we earn from qualifying purchases.</p>
+        {site.amazonAssociate && <p>{amazonAssociateStatement}</p>}
         <p>© {new Date().getFullYear()} {site.name}</p>
       </div>
     </footer>
