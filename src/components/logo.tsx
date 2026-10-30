@@ -20,9 +20,11 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
         }`}
       >
         trustl
-        <span className="relative">
+        {/* The house is wider than the i's stem, so the i gets a little room
+            of its own to keep the roof clear of the "l". */}
+        <span className="relative mr-[0.02em] ml-[0.055em]">
           ı
-          <House className="absolute top-[0.07em] left-1/2 w-[0.36em] -translate-x-1/2 transition-transform duration-300 group-hover:-translate-y-0.5" />
+          <House className="absolute top-[0.05em] left-1/2 w-[0.34em] -translate-x-1/2 transition-transform duration-300 group-hover:-translate-y-0.5" />
         </span>
         o
       </span>
