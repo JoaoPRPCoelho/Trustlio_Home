@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 900,
-    "max": 1600,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 900,
+      "max": 1600
+    }
+  ],
   "summary": "A premium robot vacuum and mop that is about 3.1 in tall, low enough for most sofas and bed frames, with the best obstacle avoidance in this guide. The trade-offs are the price and a large, heavy dock.",
   "idealFor": [
     "Homes with low sofas and bed frames",
@@ -52,7 +54,7 @@
       "p2MeasurableClaims": "Partial",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "Y",
-      "b2UsptoTrademark": "Y",
+      "b2TrademarkRegistered": "Y",
       "b3YearsOnMarket": 9,
       "w1WarrantyYears": 1,
       "w2WarrantyTermsClear": "Y",

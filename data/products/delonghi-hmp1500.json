@@ -1,0 +1,195 @@
+{
+  "id": "delonghi-hmp1500",
+  "name": "De'Longhi Mica Panel Heater HMP1500",
+  "brand": "De'Longhi",
+  "model": "HMP1500-6A",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 100,
+      "max": 150
+    }
+  ],
+  "summary": "A fanless micathermic panel that heats silently, so it's the one to run while you sleep or work in the same room. Reviewed and Bob Vila both measured it warming a room steadily, and Bob Vila confirmed its tip-over switch. The front panel gets hot, it's 27 in wide on its feet, and De'Longhi doesn't publish its warranty term on the product page.",
+  "idealFor": [
+    "Anyone who wants silent heat in the room where they sleep",
+    "Renters who can wall-mount it, or have a free stretch of wall to stand it against"
+  ],
+  "pros": [
+    "No fan, so no fan noise",
+    "Raised Reviewed's 1,350 cu ft test room by 6°F in an hour; Reviewed's overall pick",
+    "Raised Bob Vila's 156 sq ft room by 5°F in 18 minutes",
+    "Low setting at 750 W, wall bracket included"
+  ],
+  "cons": [
+    "The front panel gets hot; Bob Vila advises wall-mounting it out of reach of small children",
+    "27.4 × 9.8 in on its feet, the biggest footprint here",
+    "Its thermostat has no set temperature in degrees",
+    "Warranty term not stated on De'Longhi's product page"
+  ],
+  "specs": {
+    "Footprint (W × D, in)": "27.4 × 9.84",
+    "Height (in)": 22.5,
+    "Power (W)": "750 / 1,500",
+    "Heat settings": "2",
+    "Thermostat": "Adjustable dial",
+    "Fan": "None",
+    "Wall mount": "Bracket included"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-30",
+    "summary": "Two independent tests agree it heats a room steadily, and De'Longhi has no CPSC recall in the last five years. De'Longhi gives a US address and has held its US trademark since 1982. It loses points because we couldn't verify a UL or ETL listing, the page lists no weight or materials, and we couldn't find this heater's warranty term or claim process.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 2,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "Y",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "Partial",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2TrademarkRegistered": "Y",
+      "b3YearsOnMarket": 44,
+      "w1WarrantyYears": 0,
+      "w2WarrantyTermsClear": "N",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "Reviewed: The best space heaters",
+        "url": "https://reviewed.com/home-outdoors/best-right-now/the-best-space-heaters",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Best overall, updated Nov 11, 2025. Lab room at 72°F, 1,350 cu ft (180 sq ft), one hour on highest with a watt meter and two rings of sensors: raised the room 6°F, max output near 95°F; aced spot and room tests",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "E1",
+        "title": "Bob Vila: The best energy-efficient space heaters, tested",
+        "url": "https://www.bobvila.com/reviews/best-energy-efficient-space-heaters/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Best micathermic, Oct 2, 2026. 156 sq ft room on high: +5°F in 18 minutes; quiet; shuts off when tipped over; front panel gets hot, so not for homes with small children unless wall-mounted; wall anchors not included",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'DeLonghi' since 2021-10-30",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=DeLonghi&RecallDateStart=2021-10-30",
+        "type": "government",
+        "realUse": false,
+        "note": "No recalls returned",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "S2",
+        "title": "De'Longhi US: Mica Panel Heater HMP1500-6A",
+        "url": "https://www.delonghi.com/en-us/mica-panel-heater/p/HMP1500-6A",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "No UL or ETL listing named on the product page; we haven't found it in a public certification directory yet",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "P1",
+        "title": "De'Longhi US: Mica Panel Heater HMP1500-6A",
+        "url": "https://www.delonghi.com/en-us/mica-panel-heater/p/HMP1500-6A",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "9.84 × 27.4 × 22.5 (no units given); 1,500 W max, 750 W min; 2 settings; adjustable room thermostat; tip-over switch and safety thermostat; wall bracket included; warns it's only suitable for well-insulated spaces or occasional use; no weight or materials listed",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "P3",
+        "title": "Bob Vila: The best energy-efficient space heaters, tested",
+        "url": "https://www.bobvila.com/reviews/best-energy-efficient-space-heaters/",
+        "type": "editorial",
+        "realUse": false,
+        "note": "Confirmed the tip-over shutoff in testing",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B1",
+        "title": "De'Longhi US: Contact us",
+        "url": "https://www.delonghi.com/en-us/contact-us",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "De'Longhi America, Inc., 2 Park Way & Route 17 South, Suite 3A, Upper Saddle River, NJ 07458; 1-800-322-3848",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B2",
+        "title": "trademarkregistration.app mirror of USPTO records: DELONGHI (reg. 1200965)",
+        "url": "https://trademarkregistration.app/Trademark/Details/73276000",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered July 13, 1982 to De'Longhi Appliances S.r.l., class 11: electric convectors, stoves, radiators; live",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B3",
+        "title": "trademarkregistration.app mirror of USPTO records: DELONGHI (reg. 1200965)",
+        "url": "https://trademarkregistration.app/Trademark/Details/73276000",
+        "type": "government",
+        "realUse": false,
+        "note": "US registration since 1982",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "W1",
+        "title": "De'Longhi US: Warranty information",
+        "url": "https://www.delonghi.com/en-us/customer-service/warranty",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "The page links a Home Comfort warranty PDF we couldn't open, and the product page only says 'up to 3 years' across the range. No term for this model, so we score it as unpublished",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "W3",
+        "title": "De'Longhi US: HMP1500-6A support center",
+        "url": "https://www.delonghi.com/en-us/s/HMP1500-6A",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Spare parts section, contact form, chat and authorised service centres; no manual posted yet",
+        "accessed": "2026-10-30"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "space-heater",
+    "scores": {
+      "safety": {
+        "score": 7,
+        "source": "Bob Vila: shuts off when tipped over, but the front panel gets hot"
+      },
+      "quiet": {
+        "score": 10,
+        "source": "No fan (De'Longhi product page); Bob Vila: quiet during operation"
+      },
+      "footprint": {
+        "score": 6,
+        "source": "De'Longhi product page: 27.4 × 9.84 = 270 sq in on its feet, but wall-mountable with an included bracket"
+      },
+      "control": {
+        "score": 4,
+        "source": "De'Longhi product page: adjustable room thermostat, with no digital display or set temperature in degrees listed"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "delonghi-us",
+      "url": "https://www.delonghi.com/en-us/mica-panel-heater/p/HMP1500-6A"
+    }
+  ],
+  "lastVerified": "2026-10-30"
+}

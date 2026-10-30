@@ -37,10 +37,24 @@ export const RubricSchema = z.object({
 });
 export type Rubric = z.infer<typeof RubricSchema>;
 
+// The markets we link to. The site is in English, so "uk" is the UK and "eu"
+// covers EU stores (Ireland first). One product page can carry offers for
+// several markets, and each market has its own currency.
+export const markets = {
+  us: { name: "US", currency: "USD", symbol: "$" },
+  uk: { name: "UK", currency: "GBP", symbol: "£" },
+  eu: { name: "EU", currency: "EUR", symbol: "€" },
+} as const;
+export const Market = z.enum(["us", "uk", "eu"]);
+export type Market = z.infer<typeof Market>;
+
 export const MerchantSchema = z.object({
   id: z.string(),
   name: z.string(),
+  market: Market,
   program: z.enum(["amazon", "direct", "network"]),
+  // Amazon only: the store the links point to, e.g. "amazon.com", "amazon.co.uk".
+  amazonDomain: z.string().regex(/^amazon\.[a-z.]+$/).optional(),
   // Amazon only: the Associates tracking tag appended to product links.
   trackingTag: z.string().optional(),
   // Amazon forbids showing prices that don't come from its API, so this stays
@@ -72,6 +86,8 @@ const YPN = z.enum(["Y", "Partial", "N"]);
 const count = z.number().int().nonnegative();
 
 export const TrustInputsSchema = z.object({
+  // Active recall in any market where the product is sold (CPSC, EU Safety
+  // Gate, UK government product safety recalls list).
   activeRecall: YN,
   e1IndependentSources: count,
   e2Consensus: YPN,
@@ -84,7 +100,8 @@ export const TrustInputsSchema = z.object({
   p2MeasurableClaims: YPN,
   p3ClaimsConfirmed: YN,
   b1SiteContactAddress: YN,
-  b2UsptoTrademark: YN,
+  // Registered at the USPTO, EUIPO or UKIPO, for a market where it is sold.
+  b2TrademarkRegistered: YN,
   b3YearsOnMarket: z.number().nonnegative(),
   w1WarrantyYears: z.number().nonnegative(),
   w2WarrantyTermsClear: YN,
@@ -197,11 +214,23 @@ export const ProductSchema = z.object({
   model: z.string(),
   gtin: z.string().optional(),
   subcategories: z.array(SubcategoryId).min(1),
-  priceBand: z.object({
-    min: z.number().nonnegative(),
-    max: z.number().nonnegative(),
-    currency: z.literal("USD"),
-  }),
+  // One rough price range per market the product is sold in, in that
+  // market's currency (never an Amazon price).
+  priceBands: z
+    .array(
+      z.object({
+        market: Market,
+        min: z.number().nonnegative(),
+        max: z.number().nonnegative(),
+      }),
+    )
+    .min(1),
+  // The same product sold under another model in other markets, e.g. a lock
+  // made for US deadbolts vs. one for European cylinders. Shown on the page
+  // with its own score, so it's clear which model the evidence is about.
+  equivalents: z
+    .array(z.object({ product: z.string(), note: z.string() }))
+    .default([]),
   summary: z.string(),
   idealFor: z.array(z.string()),
   pros: z.array(z.string()).min(1),

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Breadcrumbs, JsonLd, PageShell } from "@/components/layout";
 import { AffiliateDisclosure, ExampleBanner } from "@/components/notices";
 import { ComparisonTable, ProductCard } from "@/components/product";
-import { trustScoreText } from "@/components/trust-score";
+import { ProductTile } from "@/components/cards";
 import { getGuide, getProduct, guideSlugs } from "@/lib/data";
 import { guidePath, hubPath } from "@/lib/paths";
 import { SubcategoryId } from "@/lib/schemas";
@@ -52,6 +52,10 @@ export default async function GuidePage({ params }: PageProps<"/[subcategory]/[s
 
   return (
     <PageShell>
+      <div
+        className="reading-progress fixed inset-x-0 top-0 z-50 h-1 bg-gold"
+        aria-hidden="true"
+      />
       <Breadcrumbs
         crumbs={[
           { name: "Home", path: "/" },
@@ -60,24 +64,37 @@ export default async function GuidePage({ params }: PageProps<"/[subcategory]/[s
         ]}
       />
       {meta.example && <ExampleBanner />}
-      <AffiliateDisclosure />
-      <header className="space-y-2">
-        <h1 className="text-3xl font-semibold">{meta.title}</h1>
-        <p className="text-sm text-muted">
-          By {meta.author} · Updated <time dateTime={meta.updated}>{longDate(meta.updated)}</time>
+      <header className="rise space-y-4">
+        <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+          Buying guide · {subcategories[sub].name}
+        </p>
+        <h1 className="font-display text-4xl leading-tight font-semibold tracking-tight sm:text-5xl">
+          {meta.title}
+        </h1>
+        <p className="max-w-3xl text-lg leading-relaxed text-muted">{meta.description}</p>
+        <p className="flex items-center gap-3 text-sm text-muted">
+          <span
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-brand font-semibold text-white"
+            aria-hidden="true"
+          >
+            {meta.author.charAt(0)}
+          </span>
+          <span>
+            By <span className="font-medium text-foreground">{meta.author}</span> · Updated{" "}
+            <time dateTime={meta.updated}>{longDate(meta.updated)}</time>
+          </span>
         </p>
       </header>
+      <AffiliateDisclosure />
 
-      <section aria-label="Our picks" className="space-y-2">
-        <h2 className="text-xl font-semibold">Our picks at a glance</h2>
-        <ol className="list-decimal space-y-1 pl-5">
+      <section aria-labelledby="picks" className="space-y-4">
+        <h2 id="picks" className="font-display text-2xl font-semibold">
+          Our picks at a glance
+        </h2>
+        <ol className="grid gap-3 sm:grid-cols-2">
           {picks.map(({ product, award }) => (
             <li key={product.id}>
-              <span className="font-medium">{award}:</span>{" "}
-              <a href={`#${product.id}`} className="underline">
-                {product.name}
-              </a>{" "}
-              <span className="text-muted">(Trust Score {trustScoreText(product.trustScore)})</span>
+              <ProductTile product={product} award={award} href={`#${product.id}`} />
             </li>
           ))}
         </ol>
@@ -89,7 +106,7 @@ export default async function GuidePage({ params }: PageProps<"/[subcategory]/[s
         <ProductCard key={product.id} id={product.id} award={award} />
       ))}
 
-      <article className="prose max-w-none">
+      <article className="prose prose-lg max-w-none prose-headings:scroll-mt-24">
         <Body />
       </article>
 

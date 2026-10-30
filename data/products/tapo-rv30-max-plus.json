@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 250,
-    "max": 330,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 250,
+      "max": 330
+    }
+  ],
   "summary": "A budget robot vacuum and mop with a self-emptying dock that stands only 9 × 6.5 in on the floor, the smallest auto-empty dock in this guide. Independent tests found strong pickup on hard floors and accurate LiDAR maps, but weak obstacle detection and a basic mop.",
   "idealFor": [
     "Studios and one-bedrooms with mostly hard floors",
@@ -51,7 +53,7 @@
       "p2MeasurableClaims": "Y",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "Y",
-      "b2UsptoTrademark": "Y",
+      "b2TrademarkRegistered": "Y",
       "b3YearsOnMarket": 6,
       "w1WarrantyYears": 1,
       "w2WarrantyTermsClear": "Y",

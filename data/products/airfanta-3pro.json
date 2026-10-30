@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 150,
-    "max": 200,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 150,
+      "max": 200
+    }
+  ],
   "summary": "A cube of four PC fans and HEPA panels that cleans far more air per dollar and per decibel than any conventional purifier here. Three independent testers confirm the numbers. It has no app, sensor or auto mode, it looks industrial, and the small brand gives only an email address for support.",
   "idealFor": [
     "Studios over 400 sq ft, or wildfire smoke",
@@ -54,7 +56,7 @@
       "p2MeasurableClaims": "Y",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "N",
-      "b2UsptoTrademark": "N",
+      "b2TrademarkRegistered": "N",
       "b3YearsOnMarket": 2,
       "w1WarrantyYears": 1,
       "w2WarrantyTermsClear": "N",

@@ -1,6 +1,7 @@
 {
   "id": "levoit-us",
   "name": "Levoit official store (US)",
+  "market": "us",
   "program": "direct",
   "showPrices": false,
   "buttonLabel": "View at Levoit"

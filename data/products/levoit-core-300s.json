@@ -6,11 +6,13 @@
   "subcategories": [
     "small-space"
   ],
-  "priceBand": {
-    "min": 100,
-    "max": 150,
-    "currency": "USD"
-  },
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 100,
+      "max": 150
+    }
+  ],
   "summary": "Levoit's best-known small purifier, with the smallest footprint here at 8.7 in across. Three independent reviews agree it's a solid small-room unit, but it's rated for about 220 sq ft and gets noisy when pushed, so it's undersized for most studios.",
   "idealFor": [
     "A sleeping alcove or a studio under about 220 sq ft",
@@ -53,7 +55,7 @@
       "p2MeasurableClaims": "Y",
       "p3ClaimsConfirmed": "Y",
       "b1SiteContactAddress": "Y",
-      "b2UsptoTrademark": "Y",
+      "b2TrademarkRegistered": "Y",
       "b3YearsOnMarket": 7,
       "w1WarrantyYears": 2,
       "w2WarrantyTermsClear": "Y",

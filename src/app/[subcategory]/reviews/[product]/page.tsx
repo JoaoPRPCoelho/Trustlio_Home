@@ -2,14 +2,16 @@ import type { Metadata } from "next";
 import { Breadcrumbs, JsonLd, PageShell } from "@/components/layout";
 import { AffiliateDisclosure, ExampleBanner } from "@/components/notices";
 import { ImageFigure, VideoFigure } from "@/components/media";
-import { BuyButtons } from "@/components/product";
+import { BuyButtons, Equivalents } from "@/components/product";
 import {
   EvidenceTag,
   FitScoreBreakdown,
   TrustScoreBreakdown,
+  SourcesDisclosure,
+  TrustScoreBadge,
   TrustSources,
 } from "@/components/trust-score";
-import { formatPriceBand } from "@/lib/affiliate";
+import { formatPriceBands } from "@/lib/affiliate";
 import { getProduct, getProducts } from "@/lib/data";
 import { hubPath, reviewPath } from "@/lib/paths";
 import { site, subcategories } from "@/lib/site";
@@ -52,13 +54,21 @@ export default async function ReviewPage({
       />
       {product.example && <ExampleBanner />}
       <AffiliateDisclosure />
-      <header className="space-y-2">
-        <h1 className="text-3xl font-semibold">{product.name} review</h1>
-        <p className="flex flex-wrap items-center gap-2 text-sm text-muted">
-          <span>{formatPriceBand(product.priceBand)}</span>
-          <EvidenceTag level={product.evidence} />
-          <span>· Last verified {product.lastVerified}</span>
-        </p>
+      <header className="rise flex flex-col-reverse gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="space-y-3">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+            Review · {subcategories[sub].name}
+          </p>
+          <h1 className="font-display text-4xl leading-tight font-semibold tracking-tight sm:text-5xl">
+            {product.name} review
+          </h1>
+          <p className="flex flex-wrap items-center gap-2 text-sm text-muted">
+            <span className="font-medium text-foreground">{formatPriceBands(product.priceBands)}</span>
+            <EvidenceTag level={product.evidence} />
+            <span>· Last verified {product.lastVerified}</span>
+          </p>
+        </div>
+        <TrustScoreBadge trust={product.trustScore} size="lg" />
       </header>
 
       {product.images.length > 0 && (
@@ -69,12 +79,13 @@ export default async function ReviewPage({
         </div>
       )}
 
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">Verdict</h2>
-        <p>{product.summary}</p>
+      <section className="space-y-4 rounded-2xl border-l-4 border-gold bg-surface p-5 shadow-sm sm:p-6">
+        <h2 className="font-display text-2xl font-semibold">Verdict</h2>
+        <p className="text-lg leading-relaxed">{product.summary}</p>
         <p>
-          <span className="font-medium">Best for:</span> {product.idealFor.join(" · ")}
+          <span className="font-semibold">Best for:</span> {product.idealFor.join(" · ")}
         </p>
+        <Equivalents product={product} />
         <BuyButtons product={product} />
       </section>
 
@@ -88,20 +99,26 @@ export default async function ReviewPage({
         <FitScoreBreakdown fit={product.fitScore} rubricName={product.rubricName} />
       )}
 
-      <section className="grid gap-6 sm:grid-cols-2">
-        <div>
-          <h2 className="text-xl font-semibold">Pros</h2>
-          <ul className="mt-2 list-disc pl-5">
+      <section className="grid gap-4 sm:grid-cols-2">
+        <div className="rounded-2xl bg-accent-soft/60 p-5">
+          <h2 className="font-display text-xl font-semibold text-accent">Pros</h2>
+          <ul className="mt-3 space-y-2">
             {product.pros.map((p) => (
-              <li key={p}>{p}</li>
+              <li key={p} className="flex gap-2">
+                <span className="text-accent" aria-hidden="true">+</span>
+                <span>{p}</span>
+              </li>
             ))}
           </ul>
         </div>
-        <div>
-          <h2 className="text-xl font-semibold">Cons</h2>
-          <ul className="mt-2 list-disc pl-5">
+        <div className="rounded-2xl bg-warn-soft/70 p-5">
+          <h2 className="font-display text-xl font-semibold text-warn">Cons</h2>
+          <ul className="mt-3 space-y-2">
             {product.cons.map((c) => (
-              <li key={c}>{c}</li>
+              <li key={c} className="flex gap-2">
+                <span className="text-warn" aria-hidden="true">−</span>
+                <span>{c}</span>
+              </li>
             ))}
           </ul>
         </div>
@@ -109,7 +126,7 @@ export default async function ReviewPage({
 
       {product.videos.length > 0 && (
         <section>
-          <h2 className="text-xl font-semibold">Videos</h2>
+          <h2 className="font-display text-2xl font-semibold">Videos</h2>
           {product.videos.map((video) => (
             <VideoFigure key={video.youtubeId} video={video} />
           ))}
@@ -117,27 +134,27 @@ export default async function ReviewPage({
       )}
 
       <section>
-        <h2 className="text-xl font-semibold">Key specs</h2>
-        <table className="mt-2 w-full text-sm">
+        <h2 className="font-display text-2xl font-semibold">Key specs</h2>
+        <table className="mt-3 w-full overflow-hidden rounded-2xl bg-surface text-sm shadow-sm">
           <tbody>
             {Object.entries(product.specs).map(([key, value]) => (
-              <tr key={key} className="border-b border-border">
-                <td className="py-2 pr-4 text-muted">{key}</td>
-                <td className="py-2">{value}</td>
+              <tr key={key} className="border-b border-border last:border-0 odd:bg-background/50">
+                <th scope="row" className="w-2/5 px-4 py-2.5 text-left font-normal text-muted">
+                  {key}
+                </th>
+                <td className="px-4 py-2.5 font-medium">{value}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </section>
 
-      <section>
-        <h2 className="text-xl font-semibold">Sources behind the Trust Score</h2>
+      <SourcesDisclosure title="Sources behind the Trust Score" count={product.trust.sources.length} open>
         <TrustSources data={product.trust} />
-      </section>
+      </SourcesDisclosure>
 
       {product.fitScore && (
-        <section>
-          <h2 className="text-xl font-semibold">Sources behind the fit rating</h2>
+        <SourcesDisclosure title="Sources behind the fit rating" count={product.fitScore.lines.length}>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
             {product.fitScore.lines.map((line) => (
               <li key={line.id}>
@@ -153,7 +170,7 @@ export default async function ReviewPage({
               </li>
             ))}
           </ul>
-        </section>
+        </SourcesDisclosure>
       )}
 
       <JsonLd data={productReview(product, site.defaultAuthor)} />
