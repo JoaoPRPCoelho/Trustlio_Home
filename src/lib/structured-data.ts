@@ -14,6 +14,7 @@ export const organization = () => ({
   "@type": "Organization",
   name: site.name,
   url: site.url,
+  logo: absoluteUrl("/logo.png"),
 });
 
 export const website = () => ({
