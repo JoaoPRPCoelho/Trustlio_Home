@@ -6,6 +6,7 @@ import { BuyButtons, Equivalents } from "@/components/product";
 import {
   EvidenceTag,
   FitScoreBreakdown,
+  ReviewerFindings,
   TrustScoreBreakdown,
   SourcesDisclosure,
   TrustScoreBadge,
@@ -123,6 +124,8 @@ export default async function ReviewPage({
           </ul>
         </div>
       </section>
+
+      <ReviewerFindings data={product.trust} />
 
       {product.videos.length > 0 && (
         <section>

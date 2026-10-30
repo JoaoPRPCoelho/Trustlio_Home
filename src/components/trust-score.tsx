@@ -252,6 +252,51 @@ export function TrustSources({ data }: { data: Trust }) {
   );
 }
 
+// Up to three independent reviews with first-hand use, the same E1 sources the
+// Trust Score counts. Summaries are ours; never consumer or Amazon reviews, and
+// no Review markup.
+export function ReviewerFindings({ data, max = 3 }: { data: Trust; max?: number }) {
+  const found = data.sources.filter((s) => s.item === "E1" && s.realUse).slice(0, max);
+  if (found.length === 0) return null;
+  return (
+    <section aria-labelledby="reviewer-findings">
+      <h2 id="reviewer-findings" className="font-display text-2xl font-semibold">
+        What reviewers found
+      </h2>
+      <p className="mt-1 text-sm text-muted">
+        Independent reviews with real use, counted in the Trust Score. Summaries are in our words;
+        the full reviews are at the links.
+      </p>
+      <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {found.map((s) => {
+          const [publication, ...rest] = s.title.split(": ");
+          return (
+            <li key={s.url} className="flex flex-col rounded-2xl border border-border bg-surface p-5 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+                {rest.length > 0 ? publication : new URL(s.url).hostname.replace(/^www\./, "")}
+              </p>
+              {s.quote && (
+                <blockquote cite={s.url} className="mt-3 font-display text-lg leading-snug">
+                  &ldquo;{s.quote}&rdquo;
+                </blockquote>
+              )}
+              <p className="mt-3 flex-1 text-sm leading-relaxed">{s.note}.</p>
+              <a
+                href={s.url}
+                className="mt-4 text-sm font-medium text-accent underline underline-offset-2"
+                rel="nofollow noopener"
+                target="_blank"
+              >
+                Read the review<span className="sr-only">: {s.title}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
 // The separate small-space fit rating, from the category's fit rubric.
 export function FitScoreBreakdown({ fit, rubricName }: { fit: FitScore; rubricName: string }) {
   const totalWeight = fit.lines.reduce((sum, line) => sum + line.weight, 0);
