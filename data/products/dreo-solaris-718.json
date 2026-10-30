@@ -1,0 +1,214 @@
+{
+  "id": "dreo-solaris-718",
+  "name": "DREO Solaris 718",
+  "brand": "DREO",
+  "model": "Solaris 718 (Tower Heater 718)",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 100,
+      "max": 150
+    }
+  ],
+  "summary": "A slim 1,500 W tower heater with a digital thermostat in 1°F steps and a remote. Four independent hands-on tests agree it warms a small room quickly, and CNN Underscored measured it at 41 dB at its loudest. It's almost 30 in tall, and DREO's warranty is only one year.",
+  "idealFor": [
+    "Most studios and one-bedroom living rooms",
+    "Anyone who wants a quiet heater with a real thermostat and a remote"
+  ],
+  "pros": [
+    "Warmed the area in front of it by 21°F in 15 minutes in CNN Underscored's test",
+    "Quietest fan heater CNN measured here: 41 dB on its loudest setting",
+    "Digital thermostat from 41 to 95°F in 1°F steps, remote and child lock",
+    "Tip-over switch beeps, then cuts power about 20 seconds after it falls (CNN)"
+  ],
+  "cons": [
+    "Almost 30 in tall, and the conical shape didn't suit every tester",
+    "The remote uses symbols only, with no text labels (Bob Vila, The Gadgeteer)",
+    "1-year warranty (Vornado gives 5 years)",
+    "DREO recalled a different heater, the DR-HSH015, on Oct 29, 2026"
+  ],
+  "specs": {
+    "Footprint (W × D, in)": "7.9 × 7.9",
+    "Height (in)": 29.7,
+    "Weight (lb)": 8,
+    "Power (W)": 1500,
+    "Heat settings": "5 heat, 3 fan",
+    "Thermostat": "Digital, 41–95°F in 1°F steps",
+    "Loudest setting (dB)": "41 (CNN Underscored)",
+    "Warranty": "1 year"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-30",
+    "summary": "Four independent hands-on tests agree it heats a small room quickly and quietly, and none reports a defect. DREO publishes full specs, materials and warnings, an address and a clear claim process. It loses 8 points because DREO recalled another heater in October 2026, 8 because we couldn't verify a UL or ETL listing in a public directory, and 3 for a 1-year warranty.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 4,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "N",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "Y",
+      "p1SpecsPublished": "Y",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2TrademarkRegistered": "Y",
+      "b3YearsOnMarket": 5,
+      "w1WarrantyYears": 1,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "CNN Underscored: The best space heaters",
+        "url": "https://amp.cnn.com/cnn/cnn-underscored/reviews/best-space-heater",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Best space heater. 234 sq ft room, sensors at 3 and 10 ft for 60 min: +21°F in front of it in 15 min without oscillation (11°F with), 95°F at 15 min and 101°F at 1 hr on highest; 41 dB at its loudest; tip-over beeps, then shuts off 20 s after falling; grille doesn't get too hot",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "E1",
+        "title": "Family Handyman: The 6 safest space heaters, tested and reviewed",
+        "url": "https://www.familyhandyman.com/list/safest-space-heaters/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Best overall. Dylan Fischer, rooms of 169–196 sq ft, 4–6 hours per heater: 10°F difference in the center of the room on high; low mode nearly silent; grates took a few minutes to cool after high heat; disliked the conical shape and vague setup directions",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "E1",
+        "title": "Bob Vila: Is the Solaris 718 worth it?",
+        "url": "https://bobvila.com/reviews/major-systems/dreo-space-heater-review",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Glenda Taylor, Sept 27, 2024, at home in a 216 sq ft room: 60°F to 70°F in just under 30 minutes on high; highest mode sounds like white noise; remote has symbols only",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "E1",
+        "title": "HGTV: 7 best space heaters of 2026, tested and reviewed",
+        "url": "https://www.hgtv.com/shopping/product-reviews/best-space-heaters",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Best overall. Kamron Sanders, photos dated Mar 31, 2026; tipped units over while running to check the shutoff; notes no large-room heater reached its claimed 300–400 sq ft",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "P1",
+        "title": "DREO US: Solaris 718 product page",
+        "url": "https://www.dreo.com/products/space-heater-solaris-718",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "7.9 × 7.9 × 29.7 in; 8 lb; 1,500 W; 5 heat and 3 fan settings; 41–95°F digital thermostat in 1°F steps; 300 sq ft; 25 dB on low; V0 flame-retardant material; 45° tip-over and overheat protection; 3 ft clearance warning",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "P3",
+        "title": "Bob Vila: Is the Solaris 718 worth it?",
+        "url": "https://bobvila.com/reviews/major-systems/dreo-space-heater-review",
+        "type": "editorial",
+        "realUse": false,
+        "note": "Heated a 216 sq ft room by 10°F in under 30 minutes, within the 300 sq ft rating",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'Dreo' since 2021-10-30",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Dreo&RecallDateStart=2021-10-30",
+        "type": "government",
+        "realUse": false,
+        "note": "One heater recall: DR-HSH015 (Whole-Room Heater 715), recall 27054, Oct 29, 2026, about 338,800 units made April 2025 to January 2026 that can overheat and ignite. Not this model, but it's the same brand and category",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "S2",
+        "title": "DREO US: Solaris 718 product page",
+        "url": "https://www.dreo.com/products/space-heater-solaris-718",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "No UL or ETL listing named on the product page; we haven't found this model in a public certification directory yet",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B1",
+        "title": "DREO: Warranty Terms & Conditions",
+        "url": "https://www.dreo.com/pages/warranty-terms-conditions",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "377 Valley Rd, Unit #2686, Clifton, NJ 07013; (888) 290-1688; support@dreo.com",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B2",
+        "title": "uspto.report mirror of USPTO records: DREO (reg. 6713383)",
+        "url": "https://uspto.report/TM/90906706",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered Apr 26, 2022 to Hesung Innovation; class 28, not heaters. Its class 11 applications we found (90799640, 90903774) show as pending in the mirrors",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B3",
+        "title": "uspto.report mirror of USPTO records: DREO (reg. 6713383)",
+        "url": "https://uspto.report/TM/90906706",
+        "type": "government",
+        "realUse": false,
+        "note": "First use in commerce Feb 23, 2021",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "W1",
+        "title": "DREO: Warranty Terms & Conditions",
+        "url": "https://www.dreo.com/pages/warranty-terms-conditions",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "12-month limited warranty from purchase; claims by email or phone; keep proof of purchase, or the warranty starts 2 months after the manufacture date; repair or replace",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "W3",
+        "title": "DREO: Contact us",
+        "url": "https://www.dreo.com/pages/contact-us",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Support by email and phone, with regional support contacts and a product recalls page",
+        "accessed": "2026-10-30"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "space-heater",
+    "scores": {
+      "safety": {
+        "score": 10,
+        "source": "CNN Underscored: tip-over shutoff 20 s after falling, grille doesn't get too hot; Family Handyman: most of the unit cool to the touch"
+      },
+      "quiet": {
+        "score": 10,
+        "source": "CNN Underscored: 41 dB at its loudest"
+      },
+      "footprint": {
+        "score": 8,
+        "source": "DREO product page: 7.9 × 7.9 in = 62 sq in"
+      },
+      "control": {
+        "score": 10,
+        "source": "DREO product page: digital thermostat, 41–95°F in 1°F steps"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "dreo-us",
+      "url": "https://www.dreo.com/products/space-heater-solaris-718"
+    }
+  ],
+  "lastVerified": "2026-10-30"
+}

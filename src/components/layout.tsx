@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, subcategories } from "@/lib/site";
+import { amazonAssociateStatement, site, subcategories } from "@/lib/site";
 import { breadcrumbs } from "@/lib/structured-data";
 import { Logo } from "./logo";
 
@@ -141,7 +141,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-2 px-4 py-5 text-xs text-white/55">
-          <p>As an Amazon Associate we earn from qualifying purchases.</p>
+          {site.amazonAssociate ? <p>{amazonAssociateStatement}</p> : <span />}
           <p>
             © {new Date().getFullYear()} {site.name}
           </p>

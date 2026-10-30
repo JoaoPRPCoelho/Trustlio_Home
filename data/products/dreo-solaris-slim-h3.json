@@ -1,0 +1,204 @@
+{
+  "id": "dreo-solaris-slim-h3",
+  "name": "DREO Solaris Slim H3",
+  "brand": "DREO",
+  "model": "Solaris Slim H3 (DR-HSH003)",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 50,
+      "max": 100
+    }
+  ],
+  "summary": "A 16 in ceramic heater that stands on a 5.9 in circle, small enough for a desk corner or a narrow gap by the bed. Three hands-on reviews back it, including two winters in a Brooklyn apartment, but CNN Underscored found it weaker on a desk than the bigger 718 and measured 47 dB at its loudest.",
+  "idealFor": [
+    "Studios where floor space is the tightest constraint",
+    "Heating one person at a desk or by the bed"
+  ],
+  "pros": [
+    "Smallest footprint here: 5.9 × 5.9 in",
+    "Digital thermostat in 1°F steps, 70° oscillation, remote and 12-hour timer",
+    "Used for two winters in a Brooklyn one-bedroom (Apartment Therapy)"
+  ],
+  "cons": [
+    "47 dB at its loudest in CNN Underscored's test, louder than the 718",
+    "CNN found it weaker than the 718 when heating a desk area",
+    "Controls are less intuitive than on other models (Bob Vila)",
+    "1-year warranty, and DREO recalled a different heater on Oct 29, 2026"
+  ],
+  "specs": {
+    "Footprint (W × D, in)": "5.9 × 5.9",
+    "Height (in)": 15.8,
+    "Weight (lb)": 4.63,
+    "Power (W)": "1,000–1,500",
+    "Heat settings": "3 heat, Eco, fan",
+    "Thermostat": "Digital, 41–95°F in 1°F steps",
+    "Loudest setting (dB)": "47 (CNN Underscored)",
+    "Warranty": "1 year"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-30",
+    "summary": "Three independent reviews with real use, though CNN Underscored was less impressed than the other two. DREO publishes dimensions, weight and measurable claims, and Bob Vila's noise figure matches the spec. It loses points for DREO's October 2026 recall of another heater, an unverified UL or ETL listing, no declared materials or warnings on the page and a 1-year warranty.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 3,
+      "e2Consensus": "Partial",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "N",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "Partial",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "Y",
+      "b1SiteContactAddress": "Y",
+      "b2TrademarkRegistered": "Y",
+      "b3YearsOnMarket": 5,
+      "w1WarrantyYears": 1,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "Bob Vila: The best electric heaters, tested",
+        "url": "https://bobvila.com/articles/best-electric-heater",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Best overall, Oct 4, 2026. Michelle Larson used it at her desk; warmed spaces well beyond its 200 sq ft rating; 37.5 dB; reduced humidity least of the 13 heaters over 3 hours; tip-over shutoff; controls less intuitive, no cord storage",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "E1",
+        "title": "Apartment Therapy: Dreo Solaris space heater review",
+        "url": "https://www.apartmenttherapy.com/dreo-solaris-space-heater-review-37179230",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Alicia Kort, two winters heating the living room of a Brooklyn one-bedroom; Eco mode raised the room about 4°F; shuts off when tipped. Dreo sent the unit",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "E1",
+        "title": "CNN Underscored: The best space heaters",
+        "url": "https://amp.cnn.com/cnn/cnn-underscored/reviews/best-space-heater",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Tested, not a top pick: 98°F on highest after 1 hr; 47 dB; weaker performance on a desk than the 718",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "P1",
+        "title": "DREO US: Solaris Slim H3 product page",
+        "url": "https://www.dreo.com/products/dreo-solaris-slim-h3-space-heater",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "5.9 × 5.9 × 15.8 in; 4.63 lb; 1,000–1,500 W; 41–95°F in 1°F steps; 37.5 dB in the specs, 40 dB in the feature list; overheat and tip-over protection; no materials or clearance warnings on the page",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "P3",
+        "title": "Bob Vila: The best electric heaters, tested",
+        "url": "https://bobvila.com/articles/best-electric-heater",
+        "type": "editorial",
+        "realUse": false,
+        "note": "Reports 37.5 dB and heating beyond the 200 sq ft rating",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'Dreo' since 2021-10-30",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Dreo&RecallDateStart=2021-10-30",
+        "type": "government",
+        "realUse": false,
+        "note": "One heater recall: DR-HSH015 (Whole-Room Heater 715), recall 27054, Oct 29, 2026, about 338,800 units made April 2025 to January 2026 that can overheat and ignite. Not this model, but it's the same brand and category",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "S2",
+        "title": "DREO US: Solaris Slim H3 product page",
+        "url": "https://www.dreo.com/products/dreo-solaris-slim-h3-space-heater",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "No UL or ETL listing named on the product page; we haven't found this model in a public certification directory yet",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B1",
+        "title": "DREO: Warranty Terms & Conditions",
+        "url": "https://www.dreo.com/pages/warranty-terms-conditions",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "377 Valley Rd, Unit #2686, Clifton, NJ 07013; (888) 290-1688; support@dreo.com",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B2",
+        "title": "uspto.report mirror of USPTO records: DREO (reg. 6713383)",
+        "url": "https://uspto.report/TM/90906706",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered Apr 26, 2022 to Hesung Innovation; class 28, not heaters. Its class 11 applications we found (90799640, 90903774) show as pending in the mirrors",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B3",
+        "title": "uspto.report mirror of USPTO records: DREO (reg. 6713383)",
+        "url": "https://uspto.report/TM/90906706",
+        "type": "government",
+        "realUse": false,
+        "note": "First use in commerce Feb 23, 2021",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "W1",
+        "title": "DREO: Warranty Terms & Conditions",
+        "url": "https://www.dreo.com/pages/warranty-terms-conditions",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "12-month limited warranty from purchase; claims by email or phone; keep proof of purchase, or the warranty starts 2 months after the manufacture date; repair or replace",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "W3",
+        "title": "DREO support: Solaris Slim H3",
+        "url": "https://support.dreo.com/cs/support/product/solaris-slim-h3/standard",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "US user manuals for DR-HSH003 and DR-HSH003A, troubleshooting and error codes",
+        "accessed": "2026-10-30"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "space-heater",
+    "scores": {
+      "safety": {
+        "score": 7,
+        "source": "Bob Vila and Apartment Therapy confirm the tip-over shutoff; no reviewer reported the grille temperature, and DREO's FAQ says the surface gets hot"
+      },
+      "quiet": {
+        "score": 6,
+        "source": "CNN Underscored: 47 dB at its loudest"
+      },
+      "footprint": {
+        "score": 10,
+        "source": "DREO product page: 5.9 × 5.9 in = 35 sq in"
+      },
+      "control": {
+        "score": 10,
+        "source": "DREO product page: programmable thermostat, 41–95°F in 1°F steps"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "dreo-us",
+      "url": "https://www.dreo.com/products/dreo-solaris-slim-h3-space-heater"
+    }
+  ],
+  "lastVerified": "2026-10-30"
+}

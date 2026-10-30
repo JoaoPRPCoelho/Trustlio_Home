@@ -1,0 +1,36 @@
+{
+  "id": "space-heater",
+  "name": "Space heaters",
+  "version": "1.0",
+  "updated": "2026-10-30",
+  "criteria": [
+    {
+      "id": "safety",
+      "name": "Tip-over and overheat safety",
+      "description": "In a small apartment the heater sits close to a bed, a sofa or a desk, so we score the two shutoffs and how hot the outside gets, from independent tests first and the maker's page second. Tip-over and overheat shutoff, and reviewers found the outside cool to the touch = 10; both shutoffs, but the grille or front panel gets hot, or no reviewer reported its temperature = 7; both shutoffs, but in an independent test the tip-over switch took more than 30 seconds to cut the heat = 5; no tip-over shutoff = 2.",
+      "weight": 35,
+      "critical": {
+        "minimum": 5,
+        "cap": 50
+      }
+    },
+    {
+      "id": "quiet",
+      "name": "Noise",
+      "description": "In a studio the heater runs in the room where you sleep and work. Loudest setting, measured by CNN Underscored where it tested the model: no fan = 10, 42 dB or less = 10, 43–46 = 8, 47–50 = 6, 51–55 = 4, louder = 2.",
+      "weight": 25
+    },
+    {
+      "id": "footprint",
+      "name": "Floor footprint",
+      "description": "Floor area of the unit (width × depth) from the maker's published dimensions. Up to 40 sq in = 10, up to 70 = 8, up to 100 = 6, up to 130 = 4, larger = 2. A heater that can be wall-mounted with an included bracket scores at least 6, because renters may not be allowed to drill.",
+      "weight": 20
+    },
+    {
+      "id": "control",
+      "name": "Thermostat control",
+      "description": "A thermostat that holds a set temperature avoids overheating a small room and wastes less power. Digital thermostat in 1°F steps = 10; digital thermostat in larger steps, or an automatic mode without a set temperature = 7; adjustable thermostat without a set temperature in degrees = 4; no thermostat = 2.",
+      "weight": 20
+    }
+  ]
+}
