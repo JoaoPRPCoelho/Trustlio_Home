@@ -27,8 +27,30 @@ at build time; a missing field or broken reference fails the build.
 | Guides | `content/<subcategory>/guides/<slug>.mdx` | `export const meta = {...}` plus the article body |
 
 Reviews are generated from product data at `/<subcategory>/reviews/<id>/`.
-Inside MDX you can use `<ProductCard id="..." />` and
-`<ComparisonTable ids={["a", "b"]} />`.
+Inside MDX you can use `<ProductCard id="..." />`,
+`<ComparisonTable ids={["a", "b"]} />` and `<ProductVideo id="..." />`.
+
+## Images and videos
+
+Both live in the product's data file, and the build checks their rights.
+
+- **Images** (`images`): self-hosted WebP/JPG/PNG under
+  `public/images/products/<product>/`. Each one needs a `license` (`own`,
+  `brand-permission`, `press-kit`, `cc0`, `cc-by`, `cc-by-sa`), a `credit`
+  shown under it and, unless it's our own photo, a `source` that records the
+  license or permission. Never Amazon images (only its API may supply them),
+  never hotlinks, never a brand image without written terms that cover the use.
+  The first image shows on product cards.
+- **Videos** (`videos`): YouTube embeds through the official player, loaded
+  only on click from youtube-nocookie.com. Only embed videos that have
+  embedding turned on, and set `kind`: `independent-review`, `manufacturer`,
+  `own` or `ai-generated`. The caption follows from the kind, so a third-party
+  review never reads as our test.
+- **AI media**: an `ai-generated` video needs an `aiDisclosure`, and an AI image
+  needs `aiGenerated: true`; both are labelled on the page. Never use AI to
+  show a product cleaning, working or being used, or a person describing an
+  experience: that's a simulated demonstration or a fake testimonial under FTC
+  rules, label or not.
 
 **Trust Score v1.0** (`src/lib/trust-score.ts`, page `/methodology/trust-score/`):
 five fixed pillars worth 100 points, the same for every category: independent
@@ -77,7 +99,7 @@ sitemap. None is left in the repo; the flag stays for building new templates.
 
 - [ ] Replace `replace-me-20` in `data/merchants/amazon-us.json` with the real Associates tracking tag.
 - [ ] Review the disclosure, privacy and about pages (marked DRAFT in the source).
-- [ ] Set `cloudflareAnalyticsToken` in `src/lib/site.ts` (Cloudflare dashboard → Web Analytics → the site → Manage site, manual JS snippet).
+- [x] Set `cloudflareAnalyticsToken` in `src/lib/site.ts` (Cloudflare dashboard → Web Analytics → the site → Manage site, manual JS snippet).
 - [x] Set the fit rubric weights (`data/rubrics/robot-vacuum.json` v1.0).
 - [ ] Add Amazon offers (ASIN from SiteStripe) to the real products once the Associates account is approved; they link to the brand stores until then.
 - [ ] Create the corrections mailbox in `src/lib/site.ts` (`correctionsEmail`).

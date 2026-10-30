@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs, JsonLd, PageShell } from "@/components/layout";
 import { AffiliateDisclosure, ExampleBanner } from "@/components/notices";
+import { ImageFigure, VideoFigure } from "@/components/media";
 import { BuyButtons } from "@/components/product";
 import {
   EvidenceTag,
@@ -60,6 +61,14 @@ export default async function ReviewPage({
         </p>
       </header>
 
+      {product.images.length > 0 && (
+        <div className="grid gap-4 sm:grid-cols-2">
+          {product.images.map((image, i) => (
+            <ImageFigure key={image.src} image={image} priority={i === 0} />
+          ))}
+        </div>
+      )}
+
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">Verdict</h2>
         <p>{product.summary}</p>
@@ -97,6 +106,15 @@ export default async function ReviewPage({
           </ul>
         </div>
       </section>
+
+      {product.videos.length > 0 && (
+        <section>
+          <h2 className="text-xl font-semibold">Videos</h2>
+          {product.videos.map((video) => (
+            <VideoFigure key={video.youtubeId} video={video} />
+          ))}
+        </section>
+      )}
 
       <section>
         <h2 className="text-xl font-semibold">Key specs</h2>

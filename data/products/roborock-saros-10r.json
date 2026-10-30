@@ -165,5 +165,14 @@
       "url": "https://us.roborock.com/products/roborock-saros-10r"
     }
   ],
+  "videos": [
+    {
+      "youtubeId": "-eYPr2R7J4g",
+      "title": "It's a new #1 pick! Roborock Saros 10R Robot Vacuum and Mop",
+      "channel": "Vacuum Wars Extra",
+      "kind": "independent-review",
+      "accessed": "2026-10-27"
+    }
+  ],
   "lastVerified": "2026-10-26"
 }

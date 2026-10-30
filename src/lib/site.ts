@@ -9,8 +9,8 @@ export const site = {
   // Placeholder until the mailbox exists.
   correctionsEmail: "corrections@trustliohome.com",
   // Cloudflare Web Analytics site token (public: it ships in every page).
-  // Cookieless, so no consent banner. Empty means no beacon is rendered.
-  cloudflareAnalyticsToken: "",
+  // Cookieless, so no consent banner. Empty turns the beacon off.
+  cloudflareAnalyticsToken: "1b3bf746ddc049718d419ed9d9c9913f",
 };
 
 export const subcategories: Record<
