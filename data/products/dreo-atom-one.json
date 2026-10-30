@@ -1,0 +1,186 @@
+{
+  "id": "dreo-atom-one",
+  "name": "DREO Atom One",
+  "brand": "DREO",
+  "model": "Atom One",
+  "subcategories": [
+    "small-space"
+  ],
+  "priceBands": [
+    {
+      "market": "us",
+      "min": 40,
+      "max": 60
+    }
+  ],
+  "summary": "A 10 in cube-shaped ceramic heater with a digital thermostat and a remote, around $50 at DREO's list price. Family Handyman and CNN Underscored both found it heats a small room, but in Family Handyman's test it took about two minutes to shut off after it was knocked over, and CNN measured 50 dB at its loudest.",
+  "idealFor": [
+    "A tight budget",
+    "Heating one person at a desk, with someone in the room"
+  ],
+  "pros": [
+    "Raised Family Handyman's test room from 72°F to 80°F on low",
+    "Digital thermostat in 1°F steps, 70° oscillation and a remote at a budget price",
+    "Stable, cube-shaped body; CNN found the grille wasn't scorching"
+  ],
+  "cons": [
+    "Took about two minutes to shut off after being tipped over (Family Handyman)",
+    "Loudest pick here: 50 dB in CNN Underscored's test",
+    "No cord management",
+    "1-year warranty, and DREO recalled a different heater on Oct 29, 2026"
+  ],
+  "specs": {
+    "Footprint (W × D, in)": "6.7 × 5.5",
+    "Height (in)": 10.3,
+    "Weight (lb)": 3.8,
+    "Power (W)": "1,000–1,500",
+    "Heat settings": "3 heat, Eco, fan",
+    "Thermostat": "Digital, 41–95°F in 1°F steps",
+    "Loudest setting (dB)": "50 (CNN Underscored)",
+    "Warranty": "1 year"
+  },
+  "evidence": "research-based",
+  "trust": {
+    "reviewed": "2026-10-30",
+    "summary": "Only two independent hands-on tests so far, and both agree it heats a small room. DREO publishes dimensions and weight, but CNN measured 50 dB against the 37.5 dB claim. It also loses points for DREO's October 2026 recall of another heater, an unverified UL or ETL listing, no declared materials or warnings and a 1-year warranty.",
+    "inputs": {
+      "activeRecall": "N",
+      "e1IndependentSources": 2,
+      "e2Consensus": "Y",
+      "e3NoRecurringFailure": "Y",
+      "s1NoBrandRecalls5y": "N",
+      "s2CertificationApplies": "Y",
+      "s2CertificationVerified": "N",
+      "s3MaterialsWarnings": "N",
+      "p1SpecsPublished": "Partial",
+      "p2MeasurableClaims": "Y",
+      "p3ClaimsConfirmed": "N",
+      "b1SiteContactAddress": "Y",
+      "b2TrademarkRegistered": "Y",
+      "b3YearsOnMarket": 5,
+      "w1WarrantyYears": 1,
+      "w2WarrantyTermsClear": "Y",
+      "w3PartsOrSupport": "Y"
+    },
+    "sources": [
+      {
+        "item": "E1",
+        "title": "Family Handyman: The 6 safest space heaters, tested and reviewed",
+        "url": "https://www.familyhandyman.com/list/safest-space-heaters/",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Best budget. Sydney Manning: 72°F to 80°F on low, then 80°F to 88°F on high; cool to the touch after use; when set on its side it beeped at once but took about two minutes to shut off; no cord management",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "E1",
+        "title": "CNN Underscored: The best space heaters",
+        "url": "https://amp.cnn.com/cnn/cnn-underscored/reviews/best-space-heater",
+        "type": "editorial",
+        "realUse": true,
+        "note": "Tested, not a top pick: +9°F in 30 min; 90°F on highest; 50 dB at its loudest; grille not scorching; stable cube shape",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "P1",
+        "title": "DREO US: Atom One product page",
+        "url": "https://www.dreo.com/products/dreo-atom-one-space-heater",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "6.7 × 5.5 × 10.3 in; 3.8 lb; 1,000–1,500 W; 41–95°F in 1°F steps; 37.5 dB; 70° oscillation; overheat and tip-over protection; no materials or clearance warnings on the page",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "S1",
+        "title": "CPSC Recalls API, title search 'Dreo' since 2021-10-30",
+        "url": "https://www.saferproducts.gov/RestWebServices/Recall?format=json&RecallTitle=Dreo&RecallDateStart=2021-10-30",
+        "type": "government",
+        "realUse": false,
+        "note": "One heater recall: DR-HSH015 (Whole-Room Heater 715), recall 27054, Oct 29, 2026, about 338,800 units made April 2025 to January 2026 that can overheat and ignite. Not this model, but it's the same brand and category",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "S2",
+        "title": "DREO US: Atom One product page",
+        "url": "https://www.dreo.com/products/dreo-atom-one-space-heater",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "No UL or ETL listing named on the product page; we haven't found this model in a public certification directory yet",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B1",
+        "title": "DREO: Warranty Terms & Conditions",
+        "url": "https://www.dreo.com/pages/warranty-terms-conditions",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "377 Valley Rd, Unit #2686, Clifton, NJ 07013; (888) 290-1688; support@dreo.com",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B2",
+        "title": "uspto.report mirror of USPTO records: DREO (reg. 6713383)",
+        "url": "https://uspto.report/TM/90906706",
+        "type": "government",
+        "realUse": false,
+        "note": "Registered Apr 26, 2022 to Hesung Innovation; class 28, not heaters. Its class 11 applications we found (90799640, 90903774) show as pending in the mirrors",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "B3",
+        "title": "uspto.report mirror of USPTO records: DREO (reg. 6713383)",
+        "url": "https://uspto.report/TM/90906706",
+        "type": "government",
+        "realUse": false,
+        "note": "First use in commerce Feb 23, 2021",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "W1",
+        "title": "DREO: Warranty Terms & Conditions",
+        "url": "https://www.dreo.com/pages/warranty-terms-conditions",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "12-month limited warranty from purchase; claims by email or phone; keep proof of purchase, or the warranty starts 2 months after the manufacture date; repair or replace",
+        "accessed": "2026-10-30"
+      },
+      {
+        "item": "W3",
+        "title": "DREO: Contact us",
+        "url": "https://www.dreo.com/pages/contact-us",
+        "type": "manufacturer",
+        "realUse": false,
+        "note": "Support by email and phone, with regional support contacts and a product recalls page",
+        "accessed": "2026-10-30"
+      }
+    ]
+  },
+  "fit": {
+    "rubric": "space-heater",
+    "scores": {
+      "safety": {
+        "score": 5,
+        "source": "Family Handyman: beeped when tipped but took about two minutes to shut off"
+      },
+      "quiet": {
+        "score": 6,
+        "source": "CNN Underscored: 50 dB at its loudest"
+      },
+      "footprint": {
+        "score": 10,
+        "source": "DREO product page: 6.7 × 5.5 in = 37 sq in"
+      },
+      "control": {
+        "score": 10,
+        "source": "DREO product page: digital thermostat, 41–95°F in 1°F steps"
+      }
+    }
+  },
+  "offers": [
+    {
+      "merchant": "dreo-us",
+      "url": "https://www.dreo.com/products/dreo-atom-one-space-heater"
+    }
+  ],
+  "lastVerified": "2026-10-30"
+}
