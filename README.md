@@ -40,7 +40,13 @@ Both live in the product's data file, and the build checks their rights.
   shown under it and, unless it's our own photo, a `source` that records the
   license or permission. Never Amazon images (only its API may supply them),
   never hotlinks, never a brand image without written terms that cover the use.
-  The first image shows on product cards.
+  The first image shows on product cards. On the review page, images and
+  videos share one carousel (`<ProductGallery>`): photos first, then our own
+  videos, the brand's, AI ones, and independent reviews last.
+- **Open Icecat**: images from Open Icecat use `license: "press-kit"`, a
+  `credit` such as "Image: Roborock via Open Icecat" and the product's Icecat
+  URL as `source`. Self-host them, and only after checking that the Open
+  Content License covers this use and the brand is in the free tier.
 - **Videos** (`videos`): YouTube embeds through the official player, loaded
   only on click from youtube-nocookie.com. Only embed videos that have
   embedding turned on, and set `kind`: `independent-review`, `manufacturer`,

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs, JsonLd, PageShell } from "@/components/layout";
 import { AffiliateDisclosure, ExampleBanner } from "@/components/notices";
-import { ImageFigure, VideoFigure } from "@/components/media";
+import { ProductGallery } from "@/components/media";
 import { BuyButtons } from "@/components/product";
 import {
   EvidenceTag,
@@ -71,13 +71,7 @@ export default async function ReviewPage({
         <TrustScoreBadge trust={product.trustScore} size="lg" />
       </header>
 
-      {product.images.length > 0 && (
-        <div className="grid gap-4 sm:grid-cols-2">
-          {product.images.map((image, i) => (
-            <ImageFigure key={image.src} image={image} priority={i === 0} />
-          ))}
-        </div>
-      )}
+      <ProductGallery name={product.name} images={product.images} videos={product.videos} />
 
       <section className="space-y-4 rounded-2xl border-l-4 border-gold bg-surface p-5 shadow-sm sm:p-6">
         <h2 className="font-display text-2xl font-semibold">Verdict</h2>
@@ -123,14 +117,6 @@ export default async function ReviewPage({
         </div>
       </section>
 
-      {product.videos.length > 0 && (
-        <section>
-          <h2 className="font-display text-2xl font-semibold">Videos</h2>
-          {product.videos.map((video) => (
-            <VideoFigure key={video.youtubeId} video={video} />
-          ))}
-        </section>
-      )}
 
       <section>
         <h2 className="font-display text-2xl font-semibold">Key specs</h2>
