@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs, PageShell } from "@/components/layout";
-import { TrustScoreBadge } from "@/components/trust-score";
+import { GuideCard, ProductTile, SectionHeading } from "@/components/cards";
 import { getGuides, productsIn } from "@/lib/data";
-import { guidePath, hubPath, reviewPath } from "@/lib/paths";
+import { hubPath } from "@/lib/paths";
 import { subcategories } from "@/lib/site";
 import { SubcategoryId } from "@/lib/schemas";
 
@@ -32,46 +31,41 @@ export default async function SubcategoryHub({ params }: PageProps<"/[subcategor
   const products = productsIn(sub);
 
   return (
-    <PageShell>
+    <PageShell wide>
       <Breadcrumbs
         crumbs={[
           { name: "Home", path: "/" },
           { name: subcategories[sub].name, path: hubPath(sub) },
         ]}
       />
-      <header className="space-y-2">
-        <h1 className="text-3xl font-semibold">{subcategories[sub].name}</h1>
+      <header className="rise max-w-3xl space-y-3">
+        <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+          {subcategories[sub].name}
+        </h1>
         <p className="text-lg text-muted">{subcategories[sub].tagline}</p>
       </header>
 
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">Buying guides</h2>
-        <ul className="space-y-2">
+      <section className="space-y-6 pt-4">
+        <SectionHeading eyebrow={`${guides.length} guides`} title="Buying guides" />
+        <div className="grid gap-5 md:grid-cols-2">
           {guides.map((g) => (
-            <li key={g.slug}>
-              <Link href={guidePath(sub, g.slug)} className="font-medium underline">
-                {g.meta.title}
-              </Link>
-              <p className="text-sm text-muted">{g.meta.description}</p>
-            </li>
+            <GuideCard key={g.slug} guide={g} />
           ))}
-        </ul>
+        </div>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">Reviews</h2>
-        <ul className="grid gap-3 sm:grid-cols-2">
-          {products.map((p) => (
-            <li key={p.id}>
-              <Link
-                href={reviewPath(p)}
-                className="flex items-center gap-3 rounded-lg border border-border bg-white p-3 hover:border-accent"
-              >
-                <TrustScoreBadge trust={p.trustScore} />
-                <span className="font-medium">{p.name}</span>
-              </Link>
-            </li>
-          ))}
+      <section className="space-y-6 pt-8">
+        <SectionHeading eyebrow={`${products.length} products`} title="Reviews">
+          Sorted by Trust Score.
+        </SectionHeading>
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[...products]
+            .sort((a, b) => (b.trustScore.total ?? -1) - (a.trustScore.total ?? -1))
+            .map((p) => (
+              <li key={p.id}>
+                <ProductTile product={p} />
+              </li>
+            ))}
         </ul>
       </section>
     </PageShell>
